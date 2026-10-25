@@ -1,0 +1,202 @@
+{
+  "updated": "2026-10-25",
+  "source_note": "從 Gmail 訂單信匯入（MUSINSA Global、plain-me 官網、蝦皮 plainme 賣場）。不寫訂單編號、收件人、地址、電話。measurements 為該尺寸實測平量（cm），沒有就留 null，到貨後量好補上。",
+  "items": [
+    {
+      "id": "o-20261024-01", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "BESLOW", "name": "[ORIGINALS] Comfy Single Pleated Selvage Denim Pants", "color": "Indigo", "size": "32", "price": 2304,
+      "category": "pants", "slot": "pants-denim", "role": "主力長褲", "temps": [16, 28],
+      "goodsNo": null, "composition": null, "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "單打褶直筒符合偏好，但 32 號比規則的 33–34 腰小一號。到貨量腰圍平量（目標 42–44）、前襠 30–32、大腿 34–35.5、褲長 99–103；腰圍不到 42cm 就趁還能退時換大一號。"
+    },
+    {
+      "id": "o-20261024-02", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "ESPIONAGE", "name": "Wide Officer Pants", "color": "Beige", "size": "M", "price": 2177,
+      "category": "pants", "slot": "pants-chino", "role": "米色寬褲", "temps": [20, 30],
+      "goodsNo": null, "composition": null, "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "Officer Pants 通常有打褶與微寬直筒，方向對；但 M 號對 33–34 腰可能偏小。到貨先量腰圍平量與褲長，褲長超過 103cm 要修改。"
+    },
+    {
+      "id": "o-20261024-03", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "PRODESHIRT", "name": "[Regular] D-300 Oxford Shirt", "color": "White", "size": "L(50)", "price": 2753,
+      "category": "shirt", "slot": "shirt-bright", "role": "白襯衫亮點／正式", "temps": [20, 28],
+      "goodsNo": null, "composition": null, "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "Regular 版型比規則的微落肩窄。到貨量肩寬（48–51）、胸寬（57–61）、衣長（68–74）；胸寬不到 57 會繃在肚子，建議退換。白色提亮臉色，適合黃偏黑膚色。"
+    },
+    {
+      "id": "o-20261024-04", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "MUSINSA STANDARD", "name": "[City Workers] Tapered Cotton Pants", "color": "Navy", "size": "33", "price": 803,
+      "category": "pants", "slot": "pants-dress", "role": "上班長褲", "temps": [18, 30],
+      "goodsNo": null, "composition": null, "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "33 腰符合；Tapered 錐形褲口可能小於 21cm（規則 21–23）。到貨量褲口與前襠：褲口太小就配蓋過褲頭的長版上衣平衡比例；前襠低於 25cm 屬嚴重，建議退。"
+    },
+    {
+      "id": "o-20261024-05", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "ESPIONAGE", "name": "Selvedge Relaxed Denim Pants", "color": "Dark Indigo", "size": "L", "price": 2414,
+      "category": "pants", "slot": "pants-denim", "role": "深色牛仔", "temps": [14, 26],
+      "goodsNo": null, "composition": null, "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "Relaxed 直筒符合方向。到貨量褲長（Short 100–102）與大腿；原色赤耳丹寧第一次洗會縮，先冷水泡過再量。"
+    },
+    {
+      "id": "o-20261024-06", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "INSILENCE", "name": "[2 PACK] Supima Cotton Premium T-Shirt", "color": "Black ×2", "size": "M", "qty": 2, "price": 1655,
+      "category": "tee", "slot": "tee-dark", "role": "深色內搭／單穿", "temps": [24, 34],
+      "goodsNo": null, "composition": "Supima 棉", "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "M 號比基準 L 小一號，Supima 布面偏軟容易貼身顯肚。到貨量胸寬（57–60）、衣長（68–71）；胸寬不到 57 或衣長不到 68，建議趁還能退時換 L。"
+    },
+    {
+      "id": "o-20261024-07", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "MUSINSA STANDARD", "name": "Wool Blend Oversized Short Balmacaan Coat", "color": "Black", "size": "L", "price": 2338,
+      "category": "outer", "slot": "outer-warm", "role": "冬季外層", "temps": [8, 16],
+      "goodsNo": null, "composition": "羊毛混紡", "measurements": null, "url": null,
+      "verdict": "styling",
+      "verdict_reason": "Balmacaan 大衣多為連肩袖（警告）：肩線會塌、顯得圓。穿法：敞開、內搭有結構的襯衫或厚針織撐出肩線，下身配深色直筒褲。高雄只有寒流天用得到。"
+    },
+    {
+      "id": "o-20261024-08", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "ECORR", "name": "Merino Wool 100 Basic Crew Neck Knit", "color": "Ivory", "size": "2(L)", "price": 1060,
+      "category": "knit", "slot": "knit", "role": "米白針織亮點", "temps": [12, 20],
+      "goodsNo": null, "composition": "美麗諾羊毛 100%", "measurements": null, "url": null,
+      "verdict": "styling",
+      "verdict_reason": "基本款針織多為羅紋下擺（警告）：不要讓羅紋卡在肚子上，可把下擺往上反折一圈，或內搭長版深色 T 露出 2–3cm。美麗諾要手洗平放晾乾、避免摩擦起毛球。米白靠臉能提亮膚色。"
+    },
+    {
+      "id": "o-20261024-09", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "ESPIONAGE", "name": "Type 1 Selvedge Denim Trucker Jacket", "color": "Dark Indigo", "size": "L", "price": 3255,
+      "category": "outer", "slot": "outer-warm", "role": "秋冬外層", "temps": [14, 22],
+      "goodsNo": null, "composition": "赤耳丹寧", "measurements": null, "url": null,
+      "verdict": "styling",
+      "verdict_reason": "Type 1 下擺有腰帶與調節扣，屬收口下擺（警告）。一律敞開穿，內搭比外套長 5–8cm 的 T 或襯衫，讓視線不停在腰際。到貨量肩寬（47–51）、胸寬（57–62）。"
+    },
+    {
+      "id": "o-20261024-10", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "TY", "name": "All Day Stripe Shirt", "color": "Brown", "size": "L", "price": 1534,
+      "category": "shirt", "slot": "shirt-bright", "role": "條紋亮點", "temps": [20, 28],
+      "goodsNo": null, "composition": null, "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "棕色條紋適合黃偏黑膚色。到貨量肩寬（48–51）、胸寬（57–61）、衣長（68–74）。"
+    },
+    {
+      "id": "o-20261024-11", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "MUSINSA STANDARD", "name": "Washable Supima Cotton Henley Neck Knit", "color": "Medium Gray", "size": "L", "price": 1309,
+      "category": "knit", "slot": "tee-long", "role": "秋冬內搭", "temps": [16, 24],
+      "goodsNo": null, "composition": "Supima 棉針織", "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "細針織偏薄軟，要確認不貼肚、下擺不是羅紋收口。中灰接近膚色，搭深色褲與深色外套拉開層次。"
+    },
+    {
+      "id": "o-20261024-12", "date": "2026-10-24", "shop": "MUSINSA Global", "status": "ordered",
+      "brand": "MUSINSA STANDARD", "name": "Washable Supima Cotton Long Sleeve Knitted Polo Shirt", "color": "Black", "size": "L", "price": 1001,
+      "category": "knit", "slot": "knit", "role": "正式感針織", "temps": [16, 24],
+      "goodsNo": null, "composition": "Supima 棉針織", "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "針織 Polo 是 35 歲感的好單品；確認下擺是否羅紋收口與胸寬（57–60）。"
+    },
+
+    {
+      "id": "o-20250331-01", "date": "2025-03-31", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "Billy Pants 比例神褲", "code": "COP3563", "color": null, "size": null, "price": 799,
+      "category": "pants", "slot": "pants-chino", "role": "日常長褲", "temps": [20, 32],
+      "goodsNo": "COP3563", "composition": null, "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "訂單信沒有尺寸與顏色。量褲口與前襠：比例褲多為錐形九分，褲口小於 21cm 就配蓋過褲頭的上衣。"
+    },
+    {
+      "id": "o-20250331-02", "date": "2025-03-31", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "不規則卯釘直筒牛仔褲", "code": "ORD1404-251", "color": null, "size": null, "price": 2280,
+      "category": "pants", "slot": "pants-denim", "role": "牛仔褲", "temps": [16, 28],
+      "goodsNo": "ORD1404-251", "composition": null, "measurements": null, "url": null,
+      "verdict": "ok", "verdict_reason": "直筒符合規則；卯釘細節低調即可，避免同時搭大印花上衣。"
+    },
+    {
+      "id": "o-20250331-03", "date": "2025-03-31", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "重磅寬版好感 TEE", "code": "PLN0041", "color": null, "size": null, "price": 1406,
+      "category": "tee", "slot": "tee-dark", "role": "重磅單穿", "temps": [24, 34],
+      "goodsNo": "PLN0041", "composition": "重磅棉", "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "重磅不透、不貼身，方向正確；寬版的肩寬可能超過 51cm（過度 Oversize 會顯老）。量肩寬與衣長，衣長 68–71 最能修飾肚子。"
+    },
+    {
+      "id": "o-20250331-04", "date": "2025-03-31", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "YOBI 全機能抗 UV 防曬外套", "code": "PLN1108", "color": null, "size": null, "price": 1881,
+      "category": "outer", "slot": "outer-light", "role": "防曬機能外層", "temps": [22, 32],
+      "goodsNo": "PLN1108", "composition": null, "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "高雄日曬很實用。確認是不是雙向拉鍊（單向屬注意）與下擺有沒有收口。"
+    },
+    {
+      "id": "o-20250331-05", "date": "2025-03-31", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "Oversize 和風抗 UV 外套", "code": "PLN1112-241", "color": null, "size": null, "price": 2680,
+      "category": "outer", "slot": "outer-light", "role": "防曬外層", "temps": [22, 32],
+      "goodsNo": "PLN1112-241", "composition": null, "measurements": null, "url": null,
+      "verdict": "styling",
+      "verdict_reason": "Oversize 和風外套肩線大多超出 51cm，容易顯得鬆垮。敞開穿、內搭合身度剛好的深色 T，下身用直筒褲收乾淨。"
+    },
+    {
+      "id": "o-20240319-01", "date": "2024-03-19", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "1616 LOKA 吸濕排汗修身長褲", "code": "COP1677", "color": null, "size": null, "price": 800,
+      "category": "pants", "slot": "pants-light", "role": "機能長褲", "temps": [24, 34],
+      "goodsNo": "COP1677", "composition": "吸濕排汗", "measurements": null, "url": null,
+      "verdict": "styling",
+      "verdict_reason": "修身屬 Slim 褲（警告）。上身配蓋過褲頭 5–8cm 的直筒上衣，避免強調肚子與大腿；之後汰換時改買打褶或直筒版。"
+    },
+    {
+      "id": "o-20240319-02", "date": "2024-03-19", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "重磅寬版好感 TEE", "code": "PLN0041", "qty": 3, "color": null, "size": null, "price": 1280,
+      "category": "tee", "slot": "tee-light", "role": "重磅單穿", "temps": [24, 34],
+      "goodsNo": "PLN0041", "composition": "重磅棉", "measurements": null, "url": null,
+      "verdict": "check",
+      "verdict_reason": "同上一批：量肩寬是否超過 51cm、衣長是否 68–71。三件買了兩年半，檢查領口是否鬆垮。"
+    },
+    {
+      "id": "o-20240319-03", "date": "2024-03-19", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "HERO 丹寧修身直筒長褲", "code": "PLN1805-232", "qty": 2, "color": null, "size": null, "price": 1988,
+      "category": "pants", "slot": "pants-denim", "role": "牛仔褲", "temps": [16, 28],
+      "goodsNo": "PLN1805-232", "composition": "丹寧", "measurements": null, "url": null,
+      "verdict": "styling",
+      "verdict_reason": "修身直筒偏 Slim（警告）。配長版上衣、外套敞開，讓直線從肩膀一路延伸到褲腳。"
+    },
+    {
+      "id": "o-20220724-01", "date": "2022-07-24", "shop": "蝦皮 plainme", "status": "delivered",
+      "brand": "plain-me", "name": "西料直筒畫家長褲", "code": "PLN1801-221", "color": "卡其", "size": "L", "price": 2097,
+      "category": "pants", "slot": "pants-chino", "role": "卡其長褲", "temps": [18, 30],
+      "goodsNo": "PLN1801-221", "composition": "西裝料", "measurements": null, "url": null,
+      "verdict": "ok", "verdict_reason": "直筒西料、卡其色，正好是規則偏好的方向。"
+    },
+    {
+      "id": "o-20220724-02", "date": "2022-07-24", "shop": "蝦皮 plainme", "status": "delivered",
+      "brand": "plain-me", "name": "1616 吸濕排汗打褶長褲", "code": "COP1676", "color": "丹寧藍", "size": "L", "price": 1139,
+      "category": "pants", "slot": "pants-light", "role": "夏季長褲", "temps": [24, 34],
+      "goodsNo": "COP1676", "composition": "吸濕排汗", "measurements": null, "url": null,
+      "verdict": "ok", "verdict_reason": "打褶＋排汗，適合高雄夏天；褲長若超過 103cm 再修。"
+    },
+    {
+      "id": "o-20220724-03", "date": "2022-07-24", "shop": "蝦皮 plainme", "status": "delivered",
+      "brand": "plain-me", "name": "1616 LOKA 吸濕排汗修身長褲", "code": "COP1677", "color": "丹寧藍", "size": "L", "price": 1280,
+      "category": "pants", "slot": "pants-light", "role": "機能長褲", "temps": [24, 34],
+      "goodsNo": "COP1677", "composition": "吸濕排汗", "measurements": null, "url": null,
+      "verdict": "styling",
+      "verdict_reason": "修身屬 Slim 褲（警告）。配蓋過褲頭的直筒上衣；已穿四年，優先淘汰。"
+    },
+    {
+      "id": "o-20220421-01", "date": "2022-04-21", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "plain-me", "name": "CNBW 寬版六分褲", "code": "PLN1708-221", "color": null, "size": null, "price": 2546,
+      "category": null, "slot": null, "role": "短褲（不在規則類別）", "temps": [26, 34],
+      "goodsNo": "PLN1708-221", "composition": null, "measurements": null, "url": null,
+      "verdict": "ok", "verdict_reason": "短褲不在 12 格衣櫥裡，夏天休閒用。"
+    },
+    {
+      "id": "o-20220421-02", "date": "2022-04-21", "shop": "plain-me 官網", "status": "delivered",
+      "brand": "Patagonia", "name": "經典 Baggies 輕便短褲 7 吋", "code": "PTG1702", "color": null, "size": null, "price": 1760,
+      "category": null, "slot": null, "role": "短褲（不在規則類別）", "temps": [26, 34],
+      "goodsNo": "PTG1702", "composition": "尼龍", "measurements": null, "url": null,
+      "verdict": "ok", "verdict_reason": "短褲不在 12 格衣櫥裡，戶外與夏天休閒用。"
+    }
+  ]
+}

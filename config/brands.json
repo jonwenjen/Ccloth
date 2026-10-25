@@ -1,0 +1,138 @@
+{
+  "updated": "2026-10-25",
+  "notes": "status: verified = 已確認官方賣場；needs_url = 還沒找到可以下單的官方賣場，每月分析會跳過並在網站「品牌」標示，請在 store 填網址後改成 verified。",
+  "brands": [
+    {
+      "id": "plain-me",
+      "name": "plain-me",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://www.plain-me.com",
+      "platform": "自架（Fonlego）",
+      "categories": {
+        "all": "https://www.plain-me.com/men/products/clothes/",
+        "new": "https://www.plain-me.com/men/products/new/view-all",
+        "sale": "https://www.plain-me.com/men/products/allsale/"
+      },
+      "product_url_pattern": "https://www.plain-me.com/men/product-detail/{id}",
+      "size_system": "S/M/L/XL（寬版版型，常需降一號）",
+      "reviews": "官網沒有評論；有「plain-me 穿搭」實穿照（身高＋尺寸，沒有體重）。評論改看 momo 同款。",
+      "order_mail_hints": ["plain-me", "plainme"]
+    },
+    {
+      "id": "goopimade",
+      "name": "GOOPiMADE",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://www.goopi.co",
+      "platform": "SHOPLINE",
+      "categories": {
+        "top": "https://www.goopi.co/categories/top",
+        "bottom": "https://www.goopi.co/categories/bottom",
+        "outer": "https://www.goopi.co/categories/jacket-outwear",
+        "new": "https://www.goopi.co/categories/newarrivals-new-arrivals",
+        "goopimade": "https://www.goopi.co/categories/goopimade-1"
+      },
+      "product_url_pattern": "https://www.goopi.co/products/{handle}",
+      "size_system": "Size 1/2/3（日系編號，基準 Size 2；多數為寬鬆版型）",
+      "reviews": "SHOPLINE 評論模組通常是空的；評論改看 Dcard／PTT。",
+      "order_mail_hints": ["goopi", "GOOPiMADE"]
+    },
+    {
+      "id": "wisdom",
+      "name": "WISDOM",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://www.whiterock2008.com.tw/collections/wisdom",
+      "official_site": "https://www.wisdom2009.com/",
+      "platform": "EasyStore（WHITEROCK 代理賣場）",
+      "categories": {
+        "all": "https://www.whiterock2008.com.tw/collections/wisdom"
+      },
+      "product_url_pattern": "https://www.whiterock2008.com.tw/collections/wisdom/products/{handle}",
+      "size_system": "S/M/L/XL",
+      "reviews": "賣場沒有評論；評論改看 Dcard／PTT／IG。",
+      "order_mail_hints": ["whiterock", "WISDOM"]
+    },
+    {
+      "id": "filter017",
+      "name": "Filter017",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://www.crealivedept.com/categories/filter017",
+      "official_site": "https://filter017.com/home",
+      "platform": "SHOPLINE（Crealive Dept.，FILTER017 團隊經營）",
+      "categories": {
+        "brand": "https://www.crealivedept.com/categories/filter017",
+        "short_sleeve": "https://www.crealivedept.com/categories/short-sleeve",
+        "long_sleeve": "https://www.crealivedept.com/categories/long-sleeve",
+        "shirts": "https://www.crealivedept.com/categories/shirts",
+        "jacket": "https://www.crealivedept.com/categories/jacket",
+        "pants": "https://www.crealivedept.com/categories/pants"
+      },
+      "product_url_pattern": "https://www.crealivedept.com/products/{handle}",
+      "size_system": "S/M/L/XL",
+      "reviews": "SHOPLINE 評論模組；多數商品沒有評論。",
+      "order_mail_hints": ["crealive", "filter017"]
+    },
+    {
+      "id": "mixfit",
+      "name": "MIXFIT",
+      "origin": "台灣",
+      "status": "needs_url",
+      "store": null,
+      "candidates": ["https://tw.mixfitmag.com/shop.php"],
+      "notes": "目前找到的「混着 MIXFIT」是線上雜誌與店舖地圖，沒有購物車。請提供 MIXFIT 的購物網址。",
+      "order_mail_hints": ["mixfit"]
+    },
+    {
+      "id": "1973",
+      "name": "1973",
+      "origin": "台灣（韓系街頭複合網拍，含 Boy London）",
+      "status": "needs_url",
+      "store": null,
+      "candidates": ["https://www.boy-london.com.tw/"],
+      "notes": "找不到名為 1973 的賣場；Boy London 台灣站拒絕自動讀取。請提供 1973 的購物網址。韓國進口款適用代購溢價規則。",
+      "premium_applies": true,
+      "order_mail_hints": ["1973", "boy london", "boylondon"]
+    },
+    {
+      "id": "resurrection",
+      "name": "Resurrection",
+      "origin": "待確認（日本 Resurrection Tokyo／英國 Resurrection）",
+      "status": "needs_url",
+      "store": null,
+      "candidates": ["https://resurrection-official.com/", "https://www.resurrection-online.com/"],
+      "notes": "找到兩個同名品牌：日本手工改造品牌（STORES，日圓）與英國利物浦選物店（英鎊），都不是台灣賣場。請確認是哪一個。若是日本品牌，尺寸基準用 Size 2 並適用代購溢價規則。",
+      "premium_applies": true,
+      "order_mail_hints": ["resurrection"]
+    },
+    {
+      "id": "lativ",
+      "name": "Lativ",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://www.lativ.com.tw/home/MEN",
+      "platform": "自架",
+      "categories": {
+        "short_sleeves": "https://www.lativ.com.tw/category/MEN/tops/short_sleeves",
+        "long_sleeves": "https://www.lativ.com.tw/category/MEN/tops/long_sleeves",
+        "knit": "https://www.lativ.com.tw/category/MEN/tops/knit",
+        "casual_shirt": "https://www.lativ.com.tw/category/MEN/shirts/casual_shirt",
+        "oxford_shirt": "https://www.lativ.com.tw/category/MEN/shirts/oxford_shirt",
+        "outer_casual": "https://www.lativ.com.tw/category/MEN/outerwear/casual",
+        "outer_function": "https://www.lativ.com.tw/category/MEN/outerwear/function",
+        "outer_knit": "https://www.lativ.com.tw/category/MEN/outerwear/knitting",
+        "pants": "https://www.lativ.com.tw/category/MEN/bottoms/pants",
+        "jeans": "https://www.lativ.com.tw/category/MEN/bottoms/jeans"
+      },
+      "product_url_pattern": "https://www.lativ.com.tw/product/{id}",
+      "size_system": "S–XXL",
+      "reviews": "官網有評論，身高體重寫在內文開頭（例如「175.85.36」「160/55」），尺寸在品名後；沒有星等。全站最新評論：https://www.lativ.com.tw/comments",
+      "order_mail_hints": ["lativ"]
+    }
+  ],
+  "order_senders": {
+    "musinsa": { "from": "mail.global@musinsa.com", "subjects": ["Your order has been confirmed", "cancel", "refund"] }
+  }
+}

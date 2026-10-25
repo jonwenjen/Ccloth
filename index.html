@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ccloth 選物</title>
+  <meta name="description" content="Robin 的每月男裝選物：尺寸建議、排雷數據、膠囊衣櫥與溫度穿搭。">
+  <meta name="theme-color" content="#1E2A4A">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到內容</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <p class="brandline">Ccloth</p>
+      <h1 id="month-title">本月選物</h1>
+      <p id="summary" class="summary">載入中…</p>
+      <p id="weather" class="weather" hidden></p>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="分頁">
+    <div class="tabs-inner" role="tablist">
+      <button role="tab" data-tab="picks" aria-selected="true">選物</button>
+      <button role="tab" data-tab="deals">折扣</button>
+      <button role="tab" data-tab="outfits">穿搭</button>
+      <button role="tab" data-tab="wardrobe">衣櫥</button>
+      <button role="tab" data-tab="list">清單<span class="count" id="list-count"></span></button>
+      <button role="tab" data-tab="orders">已購</button>
+      <button role="tab" data-tab="trends">潮流</button>
+      <button role="tab" data-tab="brands">品牌</button>
+      <button role="tab" data-tab="method">方法</button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section id="tab-picks" class="panel" role="tabpanel">
+      <div class="filters" id="pick-filters"></div>
+      <ol class="tags" id="pick-list"></ol>
+      <details class="excluded" id="excluded"></details>
+    </section>
+    <section id="tab-deals" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-outfits" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-wardrobe" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-list" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-orders" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-trends" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-brands" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-method" class="panel" role="tabpanel" hidden></section>
+  </main>
+
+  <footer class="foot">
+    <p id="foot-meta"></p>
+    <p><a href="https://github.com/jonwenjen/Ccloth">GitHub repo</a>　<a href="https://github.com/jonwenjen/Ccloth/blob/main/docs/run-log.md">執行紀錄</a></p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
