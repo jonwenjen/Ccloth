@@ -55,8 +55,9 @@
   function thumb(src, alt, cls = '', cat = null) {
     const ph = esc(CAT[cat] || '圖');
     if (!src) return `<span class="thumb ph ${cls}" aria-hidden="true">${ph}</span>`;
-    src = smallImg(src, cls === 'lg' ? 400 : 160);
-    return `<img class="thumb ${cls}" src="${esc(src)}" alt="${esc(alt || '')}" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${ph}" onerror="this.outerHTML='<span class=&quot;thumb ph ${cls}&quot; aria-hidden=&quot;true&quot;>'+this.dataset.ph+'</span>'">`;
+    const small = smallImg(src, cls === 'lg' ? 400 : 160);
+    // 縮圖失敗就退回原圖，原圖也失敗才換成類別字樣
+    return `<img class="thumb ${cls}" src="${esc(small)}" alt="${esc(alt || '')}" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${ph}" data-orig="${small !== src ? esc(src) : ''}" onerror="if(this.dataset.orig){this.src=this.dataset.orig;this.dataset.orig='';}else{this.outerHTML='<span class=&quot;thumb ph ${cls}&quot; aria-hidden=&quot;true&quot;>'+this.dataset.ph+'</span>';}">`;
   }
 
   async function getJSON(path, fallback) {
