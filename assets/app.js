@@ -44,9 +44,18 @@
     const o = S.orders.items.find((x) => x.id === id) || (S.report.items || []).find((x) => x.id === id) || S.list.find((x) => x.id === id);
     return o ? o.category : null;
   };
+  // 原圖常是 2000–3600px，手機只要縮圖：Shopline、Shopify、WHITEROCK 的 CDN 都能指定寬度
+  function smallImg(src, w) {
+    let m = src.match(/^https:\/\/img\.shoplineapp\.com\/media\/image_clips\/([0-9a-f]{24})\//);
+    if (m) return `https://shoplineimg.com/media/${m[1]}/${w}x.webp`;
+    if (/\/cdn\/shop\//.test(src)) return src + (src.includes('?') ? '&' : '?') + 'width=' + w;
+    if (/cdn\.store-assets\.com/.test(src)) return src.replace(/([?&])width=\d+/, `$1width=${w}`).replace(/^([^?]+)$/, `$1?width=${w}`);
+    return src;
+  }
   function thumb(src, alt, cls = '', cat = null) {
     const ph = esc(CAT[cat] || '圖');
     if (!src) return `<span class="thumb ph ${cls}" aria-hidden="true">${ph}</span>`;
+    src = smallImg(src, cls === 'lg' ? 400 : 160);
     return `<img class="thumb ${cls}" src="${esc(src)}" alt="${esc(alt || '')}" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${ph}" onerror="this.outerHTML='<span class=&quot;thumb ph ${cls}&quot; aria-hidden=&quot;true&quot;>'+this.dataset.ph+'</span>'">`;
   }
 
