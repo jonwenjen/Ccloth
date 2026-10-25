@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-25",
-  "notes": "status: verified = 已確認官方賣場；needs_url = 還沒找到可以下單的官方賣場，每月分析會跳過並在網站「品牌」標示，請在 store 填網址後改成 verified。",
+  "notes": "status: verified = 已確認官方賣場，每月分析；needs_url = 還沒找到可以下單的官方賣場；closing = 品牌已宣布退場或售後停止。後兩者每月跳過並在網站「品牌」標示。",
   "brands": [
     {
       "id": "plain-me",
@@ -130,6 +130,144 @@
       "size_system": "S–XXL",
       "reviews": "官網有評論，身高體重寫在內文開頭（例如「175.85.36」「160/55」），尺寸在品名後；沒有星等。全站最新評論：https://www.lativ.com.tw/comments",
       "order_mail_hints": ["lativ"]
+    },
+    {
+      "id": "yangi",
+      "name": "YANGI",
+      "origin": "台灣（楊艾倫主理）",
+      "status": "verified",
+      "added": "2026-10-25",
+      "store": "https://www.yangiofficial.com/products",
+      "platform": "SHOPLINE",
+      "categories": {
+        "tops": "https://www.yangiofficial.com/categories/tops-shirts",
+        "knit": "https://www.yangiofficial.com/categories/knitwear",
+        "outer": "https://www.yangiofficial.com/categories/out-wear",
+        "pants": "https://www.yangiofficial.com/categories/pants"
+      },
+      "product_url_pattern": "https://www.yangiofficial.com/products/{handle}",
+      "size_system": "XS–XL（胸圍、腰圍多為全圍，要除以 2）",
+      "reviews": "評論模組是空的。",
+      "order_mail_hints": ["yangi"]
+    },
+    {
+      "id": "professor-e",
+      "name": "Professor.Ę",
+      "origin": "台灣",
+      "status": "verified",
+      "added": "2026-10-25",
+      "store": "https://professor-e.com/collections/men",
+      "platform": "Shopify（官網以美元標價）",
+      "currency": "USD",
+      "categories": { "men": "https://professor-e.com/collections/men" },
+      "product_url_pattern": "https://professor-e.com/products/{handle}",
+      "size_system": "46／48／50／52（歐碼）",
+      "reviews": "沒有評論。",
+      "notes": "官網只顯示美元，價格依當期匯率換算台幣；運費另計。",
+      "order_mail_hints": ["professor-e", "professor.e"]
+    },
+    {
+      "id": "jerscy",
+      "name": "JERSCY",
+      "origin": "台灣",
+      "status": "verified",
+      "added": "2026-10-25",
+      "store": "https://www.jerscy.com.tw/",
+      "platform": "SHOPLINE",
+      "categories": {
+        "heavyweight": "https://www.jerscy.com.tw/categories/heavyweight",
+        "tee": "https://www.jerscy.com.tw/categories/teetanktop-collection",
+        "long_sleeve": "https://www.jerscy.com.tw/categories/long-sleeve-tee",
+        "shirts": "https://www.jerscy.com.tw/categories/casual-shirts",
+        "knit": "https://www.jerscy.com.tw/categories/knitwearcardigan",
+        "jackets": "https://www.jerscy.com.tw/categories/jackets",
+        "trousers": "https://www.jerscy.com.tw/categories/trousers-joggers",
+        "suit_pants": "https://www.jerscy.com.tw/categories/suit-pants"
+      },
+      "product_url_pattern": "https://www.jerscy.com.tw/products/{id}",
+      "size_system": "S–4XL（3XL、4XL 獨立打版）",
+      "reviews": "評論模組是空的；商品頁有創作者實穿（身高、體重、尺寸）。尺寸表不在頁面文字裡（用 inffits 尺寸工具），需要內建瀏覽器。",
+      "order_mail_hints": ["jerscy"]
+    },
+    {
+      "id": "projext",
+      "name": "PROJEXT",
+      "origin": "台灣",
+      "status": "verified",
+      "added": "2026-10-25",
+      "store": "https://tw.projextco.com/categories/men",
+      "platform": "SHOPLINE",
+      "categories": {
+        "men": "https://tw.projextco.com/categories/men-clothing",
+        "top": "https://tw.projextco.com/categories/top",
+        "bottom": "https://tw.projextco.com/categories/bottom"
+      },
+      "product_url_pattern": "https://tw.projextco.com/products/{handle}",
+      "size_system": "未標示（尺寸表不在頁面文字裡）",
+      "reviews": "評論模組是空的。",
+      "order_mail_hints": ["projext"]
+    },
+    {
+      "id": "mr-henley",
+      "name": "Mr. Henley",
+      "origin": "台灣（Mr. Henley By Wisdom）",
+      "status": "verified",
+      "added": "2026-10-25",
+      "store": "https://www.henley.com.tw/search?filter_name=%E7%94%B7%E5%A3%AB&filter_tag=%E7%94%B7%E5%A3%AB",
+      "platform": "QDM",
+      "categories": { "men": "https://www.henley.com.tw/search?filter_name=%E7%94%B7%E5%A3%AB&filter_tag=%E7%94%B7%E5%A3%AB" },
+      "product_url_pattern": "https://www.henley.com.tw/{handle}",
+      "size_system": "M–2XL（為亞洲身形打版）",
+      "reviews": "有評論欄位，目前多為 0 則；尺寸表不在頁面文字裡。",
+      "order_mail_hints": ["henley"]
+    },
+    {
+      "id": "taichi",
+      "name": "TAICHI 素T專賣",
+      "origin": "台灣",
+      "status": "verified",
+      "added": "2026-10-25",
+      "store": "https://www.taichi-t.com/categories/allproducts",
+      "platform": "SHOPLINE",
+      "categories": {
+        "heavyweight": "https://www.taichi-t.com/categories/heavyweight",
+        "long_sleeves": "https://www.taichi-t.com/categories/long-sleeves",
+        "short_sleeves": "https://www.taichi-t.com/categories/short-sleeve-t-shirt"
+      },
+      "product_url_pattern": "https://www.taichi-t.com/products/{handle}",
+      "size_system": "依身形目標分版型（顯瘦、顯壯、顯高）；尺寸表是圖片",
+      "reviews": "商品頁沒有評論；另有好評頁。",
+      "order_mail_hints": ["taichi"]
+    },
+    {
+      "id": "voux",
+      "name": "VOUX",
+      "origin": "台灣",
+      "status": "closing",
+      "added": "2026-10-25",
+      "store": "https://www.voux.com.tw/product-list.ftl?mid=01",
+      "platform": "自架",
+      "notes": "2026-01 宣布退場：官方說 3/31 停止接單、4/30 停止客服。10/25 官網仍顯示商品與階梯折扣，但商品頁內容錯亂（不同網址顯示同一件、多數標售完）。售後可能已停止，暫不列入選品；確認恢復營運再改回 verified。",
+      "order_mail_hints": ["voux"]
+    },
+    {
+      "id": "cubox",
+      "name": "CUBOX",
+      "origin": "台灣（台北選物店＋自有品牌）",
+      "status": "verified",
+      "added": "2026-10-25",
+      "store": "https://www.cubox2008.com/products",
+      "platform": "SHOPLINE",
+      "categories": {
+        "tops": "https://www.cubox2008.com/categories/tops",
+        "long_shirts": "https://www.cubox2008.com/categories/長襯衫",
+        "outer": "https://www.cubox2008.com/categories/outerwear",
+        "bottoms": "https://www.cubox2008.com/categories/bottoms"
+      },
+      "product_url_pattern": "https://www.cubox2008.com/products/{handle}",
+      "size_system": "M–XL（手工測量 ±2cm）",
+      "reviews": "評論模組是空的。",
+      "order_mail_hints": ["cubox"]
     }
   ],
   "order_senders": {

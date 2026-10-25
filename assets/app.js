@@ -248,6 +248,7 @@
         <dt>厚度標示</dt><dd>${esc(f.thickness || '未標示')}</dd><dt>資料來源</dt><dd>${esc(rv.source || '—')}</dd></dl></div>
       <div class="block"><h4>價格</h4>
         <dl class="kv"><dt>售價</dt><dd>NT$${num(p.sale)}${p.original && p.original !== p.sale ? `（原價 NT$${num(p.original)}）` : ''}</dd>
+        ${it.budget.basis && it.budget.basis !== '台灣售價' ? `<dt>換算</dt><dd>${esc(it.budget.basis)}</dd>` : ''}
         <dt>預算</dt><dd>上限 NT$${num(it.budget.limit)}，${esc(it.budget.status)}</dd>
         ${it.premium_pct != null ? `<dt>代購溢價</dt><dd>${fmt(it.premium_pct)}%</dd>` : ''}
         ${it.budget_reason ? `<dt>加價理由</dt><dd>${esc(it.budget_reason)}</dd>` : ''}</dl></div>
@@ -449,7 +450,7 @@
     $('#tab-brands').innerHTML = `<h2>品牌強項</h2>
       <p class="lead">「${esc(L.label)}」綜合分權重：${Object.entries(L.weights).map(([k, w]) => `${labels[k]} ${w * 100}%`).join('、')}。</p>
       ${(S.report.brands || []).map((b) => {
-        if (b.status !== 'verified') return `<div class="brand pending"><div class="brand-head"><h3>${esc(b.name)}</h3><span class="meta">待確認網址</span></div><p>${esc(b.notes || '')}</p></div>`;
+        if (b.status !== 'verified') return `<div class="brand pending"><div class="brand-head"><h3>${esc(b.name)}</h3><span class="meta">${esc({ needs_url: '待確認網址', closing: '品牌已退場' }[b.status] || '暫不選品')}</span></div><p>${esc(b.notes || '')}</p></div>`;
         const m = b.metrics || {};
         const score = (b.overall || {})[L.id];
         const change = b.overall_change != null ? `（較上月 ${b.overall_change > 0 ? '+' : ''}${fmt(b.overall_change)}）` : '';
@@ -480,6 +481,7 @@
       ['連肩袖、羅紋下擺、Slim 褲、低腰、薄軟布', '—', '警告', `下擺差 ≥ ${R.hem_rule.severe_diff_cm}cm、前襠 < ${a.rise_severe_below_cm}cm`],
       [a.one_way_zip.label, '注意', '—', '—'],
       [a.small_sample.label, '注意', '—', '—'],
+      ...(a.no_chart ? [[a.no_chart.label, '注意', '—', '—']] : []),
     ].map((r) => `<tr>${r.map((c) => `<td>${esc(lv(c))}</td>`).join('')}</tr>`).join('');
     const sr = S.report.self_review || [];
     $('#tab-method').innerHTML = `<div class="method"><h2>選品方法</h2>

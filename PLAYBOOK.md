@@ -78,13 +78,16 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
 
 ### 6.1 範圍
 
-- 只看 `config/brands.json` 裡 `status: verified` 的品牌（目前 plain-me、GOOPiMADE、WISDOM、Filter017、Lativ）。`needs_url` 的品牌在 run-log 提醒 Robin 補網址。
+- 只看 `config/brands.json` 裡 `status: verified` 的品牌（目前 12 個：plain-me、GOOPiMADE、WISDOM、Filter017、Lativ、YANGI、Professor.Ę、JERSCY、PROJEXT、Mr. Henley、TAICHI、CUBOX）。`needs_url` 的品牌在 run-log 提醒 Robin 補網址；`closing`（VOUX）不選品。
+- 新品牌每月至少看 2–3 件，優先補衣櫥缺口與高雄氣候適用的款式。
 - 先算衣櫥缺口（12 格：已購＋清單），缺的格子優先找；每格都至少找 1–2 件候選。
 - 女裝、缺貨不列入（缺貨可以放進候選檔並設 `in_stock: false`，會自動列在剔除）。
 
 ### 6.2 抓資料
 
 - **一般品牌**：WebFetch 類別頁拿商品列表，再 WebFetch 商品頁拿尺寸表、成分、產地、洗標、版型描述、模特兒資訊、評論。同一個網站一次只抓一頁（GOOPi 會限流）。
+- **尺寸表是圖片的品牌**（TAICHI、Mr. Henley、JERSCY、PROJEXT）：用內建瀏覽器打開商品頁，列出描述區圖片，逐張打開判讀「尺寸表」「模特兒資訊」「試穿報告」。TAICHI 的尺寸圖通常在描述最後幾張；Mr. Henley 在商品圖最後一張；極厚 T 官方說與舒適版亨利衫同尺寸。讀不到時寫 `size_fallback`：`{"size": "L", "reason": "官方實穿者 177／71 穿 L…"}`，沒有依據就不寫（網站會顯示「到貨試穿為準」）。
+- **美元標價**（Professor.Ę）：`price.sale` 填換算後台幣，`price.basis` 寫「官網美元價 US$x × 匯率 換算（運費另計）」，候選檔 `fx.rates.USD` 記匯率與日期。
 - **Lativ**：尺寸表是圖片、評論走 API（WebFetch 被 robots.txt 擋）。用 Claude 桌面版內建瀏覽器：
   1. 開任一 Lativ 商品頁。
   2. 用 `javascript_tool` 執行 `scripts/browser/lativ_collect.js`（先改 `IDS`）。輸出會存成檔案。

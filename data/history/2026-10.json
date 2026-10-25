@@ -1,17 +1,20 @@
 {
   "month": "2026-10",
-  "generated_at": "2026-10-25T19:25+08:00",
+  "generated_at": "2026-10-25T20:13+08:00",
   "model": "claude-opus-5-5",
-  "summary": "第一期：5 個已確認品牌共 35 件候選、32 件入選、3 件剔除（1 件缺貨、2 件尺寸超出 8cm 以上）。12 格衣櫥只缺 Overshirt；最推 GOOPi P1-S 黑褲 2 號、Lativ 彈性西裝長褲 L、Lativ 棉質工裝寬版襯衫 S（補 Overshirt）。現有輕外套都是防曬款，雙向拉鍊夾克本期沒有合格款，下期繼續找。MUSINSA 12 件新訂單到貨後先量尺寸，不合趁還能退時處理。",
+  "summary": "10/25 加入 8 個品牌後重跑：13 個已確認品牌共 54 件候選、49 件入選、5 件剔除（1 件缺貨，4 件尺寸超出 8cm 以上或超預算一倍）。前三名不變：GOOPi P1-S 黑褲 2 號、Lativ 彈性西裝長褲 L、Lativ 工裝寬版襯衫 S（補 Overshirt）。新品牌最值得看的是 JERSCY 超級重磅 TEE（L，NT$760）、TAICHI 賈伯斯 JOBS 長袖（L 或 XL，NT$790，全店優惠 10/30 截止）、YANGI Long Sleeve Crewneck（L，NT$3,980，超預算 33%）。VOUX 已退出市場，不選品；JERSCY、PROJEXT 尺寸表讀不到，下單前用官網尺寸工具或到貨試穿。雙向拉鍊夾克仍沒有合格款。MUSINSA 12 件新訂單到貨後先量尺寸。",
   "fx": {
-    "date": "2026-10-25",
-    "rates": {},
-    "note": "本期沒有進口款需要算代購溢價"
+    "date": "2026-10-22",
+    "rates": {
+      "USD": 32.508
+    },
+    "note": "Professor.Ę 官網只顯示美元，依 2026-10-22 新台幣收盤 32.508 換算；台灣品牌不算代購溢價",
+    "source": "https://money.udn.com/money/story/5616/9831461"
   },
   "counts": {
-    "candidates": 35,
-    "picked": 32,
-    "excluded": 3
+    "candidates": 54,
+    "picked": 49,
+    "excluded": 5
   },
   "items": [
     {
@@ -676,6 +679,152 @@
       "prev_rank": null
     },
     {
+      "id": "js-heavytee",
+      "brand": "jerscy",
+      "label": "JERSCY",
+      "name": "超級重磅 TEE（合身版）",
+      "category": "tee",
+      "slot": "tee-dark",
+      "url": "https://www.jerscy.com.tw/products/w0101",
+      "image": "https://img.shoplineapp.com/media/image_clips/6a8d3ac6c7047961bdbab4a9/original.jpg",
+      "colors": [
+        "多色"
+      ],
+      "price": {
+        "sale": 760,
+        "original": 850,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "美國棉 100%（10.9oz）",
+        "weight": "10.9oz",
+        "thickness": "重磅不透",
+        "origin": "台灣",
+        "care": "抑菌防臭處理"
+      },
+      "features": {
+        "fit_name": "合身版"
+      },
+      "size_fallback": {
+        "size": "L",
+        "reason": "官網實穿者 177cm／71kg、178cm／74kg 都穿 L；合身版，介意肚子可試 XL。"
+      },
+      "model": "實穿者：177/71 穿 L、172/64 穿 L、173/65 穿 M、178/74 穿 L",
+      "temps": [
+        24,
+        34
+      ],
+      "experts": {
+        "material": {
+          "score": 4.5,
+          "comment": "10.9oz 美國棉、台灣製，厚到不透。"
+        },
+        "fit": {
+          "score": 3,
+          "comment": "官網沒有可讀的尺寸表；名稱是合身版，肚子可能被勾勒出來，建議 L 或 XL 實穿。"
+        },
+        "build": {
+          "score": 3.5,
+          "comment": "抗菌處理、長年熱賣款；官網沒有評論。"
+        },
+        "care": {
+          "score": 3.5,
+          "comment": "重磅棉不易變形，抑菌防臭。"
+        },
+        "function": {
+          "score": 4,
+          "comment": "高雄夏天單穿不透、不黏身。"
+        }
+      },
+      "summary": "重磅、不透、台灣製、NT$760，深色重磅 T 的好選擇；只差尺寸表要試穿確認。",
+      "pairing": "白邊內搭：裡面一件白 T 露 1cm 領口，下身 1616 打褶長褲或 Officer Pants。",
+      "gender": "men",
+      "in_stock": true,
+      "size_chart": {},
+      "size": {
+        "a": {
+          "size": null,
+          "reason": "沒有尺寸表"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "L",
+        "final_reason": "官網沒有可讀的尺寸表，也沒有同身形評論；官網實穿者 177cm／71kg、178cm／74kg 都穿 L；合身版，介意肚子可試 XL。到貨試穿為準。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "no_chart",
+          "level": 1,
+          "level_name": "注意",
+          "label": "沒有尺寸表",
+          "detail": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.2,
+      "overall": 3.65,
+      "avg5": 3.7,
+      "rank_score": 3.45,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 760.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 5,
+      "prev_rank": null
+    },
+    {
       "id": "fl-oxford",
       "brand": "filter017",
       "label": "FILTER017®",
@@ -840,7 +989,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 5,
+      "rank": 6,
       "prev_rank": null
     },
     {
@@ -999,7 +1148,7 @@
         "status": "超出 72.8%"
       },
       "premium_pct": null,
-      "rank": 6,
+      "rank": 7,
       "prev_rank": null
     },
     {
@@ -1179,7 +1328,183 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 7,
+      "rank": 8,
+      "prev_rank": null
+    },
+    {
+      "id": "tc-jobs",
+      "brand": "taichi",
+      "label": "TAICHI",
+      "name": "顯瘦｜厚挺遮腹有型 賈伯斯 JOBS（長袖）",
+      "category": "tee",
+      "slot": "tee-long",
+      "url": "https://www.taichi-t.com/products/new-jobs",
+      "image": "https://img.shoplineapp.com/media/image_clips/6a6086c06520f9f0dbb7b316/original.png",
+      "colors": [
+        "白",
+        "黑",
+        "鈦空灰"
+      ],
+      "price": {
+        "sale": 790,
+        "original": 880,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "重磅全精梳棉 100%（9.8oz）",
+        "weight": "9.8oz",
+        "thickness": "厚實（官方厚度標示最厚）",
+        "origin": null,
+        "care": "深淺分洗、40°C 以下、中性洗劑、洗衣袋、不可烘乾、不用柔軟精"
+      },
+      "features": {
+        "fit_name": "直筒、預留胸腹空間、寬鬆臂寬"
+      },
+      "size_chart": {
+        "S": {
+          "length": 68,
+          "shoulder": 42,
+          "chest": 50,
+          "sleeve": 57
+        },
+        "M": {
+          "length": 72,
+          "shoulder": 44,
+          "chest": 53,
+          "sleeve": 58
+        },
+        "L": {
+          "length": 74,
+          "shoulder": 46,
+          "chest": 56,
+          "sleeve": 60
+        },
+        "XL": {
+          "length": 76,
+          "shoulder": 48,
+          "chest": 59,
+          "sleeve": 61
+        },
+        "2XL": {
+          "length": 78,
+          "shoulder": 50,
+          "chest": 62,
+          "sleeve": 62
+        }
+      },
+      "size_note": "尺寸表為圖片，已判讀；官方說版型偏大、單穿可選小一碼，誤差 ±3cm",
+      "model": "官方模特兒 178cm／75kg（胸圍 102）穿 L、180／74 穿 L；試穿表 175–180cm／70–80kg 建議 L",
+      "temps": [
+        16,
+        24
+      ],
+      "experts": {
+        "material": {
+          "score": 4.5,
+          "comment": "9.8oz 100% 精梳棉，厚到不透，官方說不易起毛球。"
+        },
+        "fit": {
+          "score": 3.5,
+          "comment": "XL 肩 48、胸 59 都中，但衣長 76（多 5）；L 胸 56（少 1）、衣長 74（多 3）。直筒預留胸腹空間；同身形模特兒 178／75 穿 L。"
+        },
+        "build": {
+          "score": 3.5,
+          "comment": "商品頁顯示 4.8 分、5,240 則評價，但評論要另外載入，本期沒抓內容。"
+        },
+        "care": {
+          "score": 3.5,
+          "comment": "官方洗標完整：40°C 以下、洗衣袋、不可烘乾。"
+        },
+        "function": {
+          "score": 3.5,
+          "comment": "長袖厚棉，16–24°C 單穿，是高雄冬天的主力。"
+        }
+      },
+      "summary": "厚實、直筒、刻意留肚子空間的長袖素 T；L 和 XL 之間要看你想要合身還是蓋臀。",
+      "pairing": "黑色款＋GOOPi P1-S 黑褲＋敞開的 Lativ 工裝襯衫；或灰色款配深色牛仔。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "XL",
+          "reason": "XL：最接近，最大偏差 5cm。肩寬 48（48–51，✓）、胸寬 59（57–60，✓）、長度 76（68–71，+5）"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "XL",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "XL 號長度 76cm，超出 5cm（範圍 68–71）"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.4,
+      "overall": 3.75,
+      "avg5": 3.7,
+      "rank_score": 3.35,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 790.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 9,
       "prev_rank": null
     },
     {
@@ -1338,7 +1663,469 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 8,
+      "rank": 10,
+      "prev_rank": null
+    },
+    {
+      "id": "yg-crewneck",
+      "brand": "yangi",
+      "label": "YANGI",
+      "name": "Long Sleeve Crewneck / Faded Black",
+      "category": "tee",
+      "slot": "tee-long",
+      "url": "https://www.yangiofficial.com/products/long-sleeve-crewneck--faded-black",
+      "image": "https://img.shoplineapp.com/media/image_clips/6aad3f8f7e8290eeb8227320/original.jpg",
+      "colors": [
+        "Faded Black"
+      ],
+      "price": {
+        "sale": 3980,
+        "original": 3980,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "棉 100%（日本 BD TOP Surf Knit 26/1）",
+        "weight": null,
+        "thickness": null,
+        "origin": "布料日本、成衣台灣",
+        "care": "做舊水洗，會再褪色"
+      },
+      "features": {
+        "fit_name": "方正長版"
+      },
+      "size_chart": {
+        "S": {
+          "shoulder": 49.5,
+          "chest": 52,
+          "hem_width": 52,
+          "length": 66,
+          "sleeve": 60
+        },
+        "M": {
+          "shoulder": 50.5,
+          "chest": 54.5,
+          "hem_width": 54.5,
+          "length": 68.5,
+          "sleeve": 61.5
+        },
+        "L": {
+          "shoulder": 51.5,
+          "chest": 57,
+          "hem_width": 57,
+          "length": 71,
+          "sleeve": 63
+        },
+        "XL": {
+          "shoulder": 52.5,
+          "chest": 59.5,
+          "hem_width": 59.5,
+          "length": 73.5,
+          "sleeve": 64.5
+        }
+      },
+      "size_note": "官網胸寬、下擺為全圍（104–119cm），已除以 2",
+      "model": "180cm／65kg 穿 S",
+      "temps": [
+        16,
+        24
+      ],
+      "experts": {
+        "material": {
+          "score": 4,
+          "comment": "日本 26/1 棉針織、台灣製，水洗做舊有質感。"
+        },
+        "fit": {
+          "score": 4,
+          "comment": "L 號肩 51.5（多 0.5）、胸 57、衣長 71；方正長版，下擺不收。"
+        },
+        "build": {
+          "score": 3.5,
+          "comment": "五線拷克拼接；官網沒有評論。"
+        },
+        "care": {
+          "score": 3,
+          "comment": "做舊黑色還會再褪，要反面冷洗。"
+        },
+        "function": {
+          "score": 3,
+          "comment": "16–24°C 單穿或內搭。"
+        }
+      },
+      "budget_reason": "多 33%；日本布料台灣製、L 號幾乎全中，想要一件質感好的長 T 才值得。平價替代是 Lativ 粗紡口袋長 T（NT$399）。",
+      "summary": "版型最貼合規則的設計師長 T：方正、衣長蓋過褲頭，只差價格。",
+      "pairing": "外搭 Lativ 工裝寬版襯衫或 ESPIONAGE Type 1 牛仔夾克（敞開），下身 GOOPi P1-S 黑褲。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "L",
+          "reason": "L：最接近，最大偏差 0.5cm。肩寬 51.5（48–51，+0.5）、胸寬 57（57–60，✓）、長度 71（68–71，✓）"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "L",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 1,
+          "level_name": "注意",
+          "label": "超出尺寸範圍",
+          "detail": "L 號肩寬 51.5cm，超出 0.5cm（範圍 48–51）"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        },
+        {
+          "key": "budget",
+          "level": 1,
+          "level_name": "注意",
+          "label": "超出預算",
+          "detail": "NT$3,980 比上限 NT$3,000 多 32.7%"
+        }
+      ],
+      "penalty": 0.3,
+      "overall": 3.62,
+      "avg5": 3.5,
+      "rank_score": 3.32,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 3980.0,
+        "basis": "台灣售價",
+        "over_pct": 32.7,
+        "status": "超出 32.7%"
+      },
+      "premium_pct": null,
+      "rank": 11,
+      "prev_rank": null
+    },
+    {
+      "id": "px-pants",
+      "brand": "projext",
+      "label": "PROJEXT",
+      "name": "Xolar 防風防潑水長寬褲",
+      "category": "pants",
+      "slot": "pants-light",
+      "url": "https://tw.projextco.com/products/xolar-cooling-uv-water-repellent-pants",
+      "image": "https://img.shoplineapp.com/media/image_clips/6a1321fd59e755f10b7f9870/original.jpg",
+      "colors": [
+        "未標"
+      ],
+      "price": {
+        "sale": 1680,
+        "original": 1880,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "尼龍 88%、彈性纖維 12%，抗 UV、防潑水",
+        "weight": null,
+        "thickness": "輕薄",
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "fit_name": "Relaxed 寬褲"
+      },
+      "temps": [
+        24,
+        34
+      ],
+      "experts": {
+        "material": {
+          "score": 3.5,
+          "comment": "尼龍彈性布，抗 UV 防潑水，夏天涼。"
+        },
+        "fit": {
+          "score": 3,
+          "comment": "Relaxed 寬褲；沒有尺寸表，褲口可能超過 23cm。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "官網沒有評論，車工只能看商品照與品牌一貫水準，到貨要檢查車線。"
+        },
+        "care": {
+          "score": 4,
+          "comment": "尼龍快乾不皺。"
+        },
+        "function": {
+          "score": 4.5,
+          "comment": "高雄夏天的機能長褲：防曬、防潑水、彈性。"
+        }
+      },
+      "summary": "高雄夏天機能長褲的好候選，但要確認褲口不要太寬。",
+      "pairing": "配白 T 或亨利衫，騎車通勤。",
+      "gender": "men",
+      "in_stock": true,
+      "size_chart": {},
+      "size": {
+        "a": {
+          "size": null,
+          "reason": "沒有尺寸表"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": null,
+        "final_reason": "尺寸表與評論都不足，到貨試穿為準。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "no_chart",
+          "level": 1,
+          "level_name": "注意",
+          "label": "沒有尺寸表",
+          "detail": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.2,
+      "overall": 3.48,
+      "avg5": 3.6,
+      "rank_score": 3.28,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 1680.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 12,
+      "prev_rank": null
+    },
+    {
+      "id": "js-pleatpants",
+      "brand": "jerscy",
+      "label": "JERSCY",
+      "name": "打褶休閒直筒西裝褲",
+      "category": "pants",
+      "slot": "pants-dress",
+      "url": "https://www.jerscy.com.tw/products/2622001",
+      "image": "https://img.shoplineapp.com/media/image_clips/6acef88ac81d33001def65c6/original.jpg",
+      "colors": [
+        "多色"
+      ],
+      "price": {
+        "sale": 1152,
+        "original": 1280,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "聚酯纖維＋萊賽爾（比例未標），微彈",
+        "weight": null,
+        "thickness": "適中",
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "fit_name": "前打褶、微寬直筒"
+      },
+      "temps": [
+        16,
+        30
+      ],
+      "experts": {
+        "material": {
+          "score": 3.5,
+          "comment": "聚酯混萊賽爾，微彈、垂墜。"
+        },
+        "fit": {
+          "score": 3.5,
+          "comment": "名稱就是打褶＋微寬直筒，方向完全符合；沒有尺寸表，腰圍與前襠要到貨量。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "官網沒有評論，車工只能看商品照與品牌一貫水準，到貨要檢查車線。"
+        },
+        "care": {
+          "score": 3.5,
+          "comment": "聚酯混紡不易皺。"
+        },
+        "function": {
+          "score": 4,
+          "comment": "上班與休閒都能穿，還有同系列西裝外套。"
+        }
+      },
+      "summary": "打褶微寬直筒西裝褲只要 NT$1,152，形狀正是規則要的；腰圍要用官網尺寸工具或到貨確認。",
+      "pairing": "深色款＋白牛津＋針織 Polo；可以等「輕鬆西裝套裝 NT$2,980」成套買。",
+      "gender": "men",
+      "in_stock": true,
+      "size_chart": {},
+      "size": {
+        "a": {
+          "size": null,
+          "reason": "沒有尺寸表"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": null,
+        "final_reason": "尺寸表與評論都不足，到貨試穿為準。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "no_chart",
+          "level": 1,
+          "level_name": "注意",
+          "label": "沒有尺寸表",
+          "detail": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.2,
+      "overall": 3.48,
+      "avg5": 3.5,
+      "rank_score": 3.28,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 1152.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 13,
       "prev_rank": null
     },
     {
@@ -1508,7 +2295,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 9,
+      "rank": 14,
       "prev_rank": null
     },
     {
@@ -1672,7 +2459,148 @@
         "status": "超出 66%"
       },
       "premium_pct": null,
-      "rank": 10,
+      "rank": 15,
+      "prev_rank": null
+    },
+    {
+      "id": "js-knit",
+      "brand": "jerscy",
+      "label": "JERSCY",
+      "name": "抗起球圓領針織衫",
+      "category": "knit",
+      "slot": "knit",
+      "url": "https://www.jerscy.com.tw/products/2550201",
+      "image": "https://img.shoplineapp.com/media/image_clips/6ad0417c76ffc07ed00cd002/original.jpg",
+      "colors": [
+        "多色（含深焙棕）"
+      ],
+      "price": {
+        "sale": 882,
+        "original": 980,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "棉 55%＋亞克力",
+        "weight": null,
+        "thickness": null,
+        "origin": null,
+        "care": "可機洗、抗起球"
+      },
+      "features": {
+        "fit_name": "適中"
+      },
+      "temps": [
+        12,
+        20
+      ],
+      "experts": {
+        "material": {
+          "score": 3,
+          "comment": "棉 55% 混亞克力，有抗起球處理。"
+        },
+        "fit": {
+          "score": 3,
+          "comment": "適中版型；沒有尺寸表，下擺是否羅紋收口要確認。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "官網沒有評論，車工只能看商品照與品牌一貫水準，到貨要檢查車線。"
+        },
+        "care": {
+          "score": 4,
+          "comment": "可機洗、主打抗起球。"
+        },
+        "function": {
+          "score": 3.5,
+          "comment": "12–20°C，好照顧。"
+        }
+      },
+      "summary": "可機洗抗起球的平價針織；你已經有兩件針織，不急。",
+      "pairing": "深焙棕色＋白 T 露邊，下身深色牛仔。",
+      "gender": "men",
+      "in_stock": true,
+      "size_chart": {},
+      "size": {
+        "a": {
+          "size": null,
+          "reason": "沒有尺寸表"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": null,
+        "final_reason": "尺寸表與評論都不足，到貨試穿為準。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "no_chart",
+          "level": 1,
+          "level_name": "注意",
+          "label": "沒有尺寸表",
+          "detail": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.2,
+      "overall": 3.25,
+      "avg5": 3.3,
+      "rank_score": 3.05,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 882.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 16,
       "prev_rank": null
     },
     {
@@ -1842,7 +2770,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 11,
+      "rank": 17,
       "prev_rank": null
     },
     {
@@ -2013,7 +2941,150 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 12,
+      "rank": 18,
+      "prev_rank": null
+    },
+    {
+      "id": "px-blouson",
+      "brand": "projext",
+      "label": "PROJEXT",
+      "name": "Xolar Technical Blouson Jacket 防潑水闊型機能外套",
+      "category": "outer",
+      "slot": "outer-light",
+      "url": "https://tw.projextco.com/products/xolar-technical-blouson-jacket",
+      "image": "https://img.shoplineapp.com/media/image_clips/6acfbd3f0bf3c3001225ccf8/original.jpg",
+      "colors": [
+        "未標"
+      ],
+      "price": {
+        "sale": 3120,
+        "original": 3280,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "聚酯纖維 100%，防潑水",
+        "weight": null,
+        "thickness": null,
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "zip": null,
+        "zip_note": "未標示拉鍊型式",
+        "fit_name": "闊型 Blouson"
+      },
+      "temps": [
+        16,
+        24
+      ],
+      "experts": {
+        "material": {
+          "score": 3.5,
+          "comment": "100% 聚酯防潑水。"
+        },
+        "fit": {
+          "score": 2.5,
+          "comment": "闊型短版 Blouson，下擺常收口、長度短；沒有尺寸表。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "官網沒有評論，車工只能看商品照與品牌一貫水準，到貨要檢查車線。"
+        },
+        "care": {
+          "score": 3.5,
+          "comment": "聚酯好洗快乾。"
+        },
+        "function": {
+          "score": 4,
+          "comment": "防潑水、可疊穿，16–24°C。"
+        }
+      },
+      "summary": "機能外套候選，但 Blouson 版型通常下擺收口、長度短，要到貨確認。",
+      "pairing": "敞開，內搭比外套長的 T。",
+      "gender": "men",
+      "in_stock": true,
+      "size_chart": {},
+      "size": {
+        "a": {
+          "size": null,
+          "reason": "沒有尺寸表"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": null,
+        "final_reason": "尺寸表與評論都不足，到貨試穿為準。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "no_chart",
+          "level": 1,
+          "level_name": "注意",
+          "label": "沒有尺寸表",
+          "detail": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.2,
+      "overall": 3.17,
+      "avg5": 3.3,
+      "rank_score": 2.97,
+      "budget": {
+        "limit": 5000,
+        "price_twd": 3120.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 19,
       "prev_rank": null
     },
     {
@@ -2187,7 +3258,179 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 13,
+      "rank": 20,
+      "prev_rank": null
+    },
+    {
+      "id": "yg-trousers",
+      "brand": "yangi",
+      "label": "YANGI",
+      "name": "Loose Fit Tailored Trousers / Cloud Cream",
+      "category": "pants",
+      "slot": "pants-chino",
+      "url": "https://www.yangiofficial.com/products/loose-fit-tailored-trousers-cloud-cream",
+      "image": "https://img.shoplineapp.com/media/image_clips/698dfcfde0fd3c9c0aa3ea63/original.jpg",
+      "colors": [
+        "Cloud Cream"
+      ],
+      "price": {
+        "sale": 4940,
+        "original": 6180,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "聚酯 31%、棉 25%、亞克力 22%、嫘縈 15%、尼龍 5%、彈性纖維 2%",
+        "weight": null,
+        "thickness": null,
+        "origin": "布料日本、成衣台灣",
+        "care": null
+      },
+      "features": {
+        "fit_name": "Loose Fit、前打褶"
+      },
+      "size_chart": {
+        "XS": {
+          "waist": 33,
+          "length": 99
+        },
+        "S": {
+          "waist": 35.5,
+          "length": 101.5
+        },
+        "M": {
+          "waist": 38,
+          "length": 101.5
+        },
+        "L": {
+          "waist": 40.5,
+          "length": 104
+        },
+        "XL": {
+          "waist": 43,
+          "length": 104
+        }
+      },
+      "size_note": "官網腰圍、臀圍為全圍，已除以 2；沒有前襠、大腿、褲口",
+      "model": "183cm、腰 31 穿 L",
+      "temps": [
+        16,
+        28
+      ],
+      "experts": {
+        "material": {
+          "score": 3.5,
+          "comment": "日本混紡布、台灣製；亞克力占 22%，摩擦處可能起毛球。"
+        },
+        "fit": {
+          "score": 3.5,
+          "comment": "XL 腰圍平量 43（合 33–34 腰）、褲長 104（多 1）；前打褶 Loose Fit；缺前襠與大腿。"
+        },
+        "build": {
+          "score": 3.5,
+          "comment": "條紋腰裡等細節講究；官網沒有評論。"
+        },
+        "care": {
+          "score": 3,
+          "comment": "混紡含亞克力，建議洗衣袋或手洗。"
+        },
+        "function": {
+          "score": 3,
+          "comment": "米白色，秋冬與冷氣房。"
+        }
+      },
+      "budget_reason": "多 65%；打褶寬直筒的形狀完全對，但米白褲容易髒、價格高。先買 GOOPi P1-S 或 JERSCY 打褶西裝褲。",
+      "summary": "打褶、寬直筒、XL 腰圍剛好，是規則想要的形狀；價格與米白色的實用度是缺點。",
+      "pairing": "上身配黑或深藍針織 Polo，避免全身淺色。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "XL",
+          "reason": "XL：最接近，最大偏差 1cm。長度 104（99–103，+1）、腰圍平量 43（42–44，✓）；尺寸表沒有前襠、大腿、褲口"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "XL",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "budget",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出預算",
+          "detail": "NT$4,940 比上限 NT$3,000 多 64.7%"
+        },
+        {
+          "key": "size_range",
+          "level": 1,
+          "level_name": "注意",
+          "label": "超出尺寸範圍",
+          "detail": "XL 號長度 104cm，超出 1cm（範圍 99–103）"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.5,
+      "overall": 3.35,
+      "avg5": 3.3,
+      "rank_score": 2.85,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 4940.0,
+        "basis": "台灣售價",
+        "over_pct": 64.7,
+        "status": "超出 64.7%"
+      },
+      "premium_pct": null,
+      "rank": 21,
       "prev_rank": null
     },
     {
@@ -2348,7 +3591,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 14,
+      "rank": 22,
       "prev_rank": null
     },
     {
@@ -2504,7 +3747,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 15,
+      "rank": 23,
       "prev_rank": null
     },
     {
@@ -2673,7 +3916,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 16,
+      "rank": 24,
       "prev_rank": null
     },
     {
@@ -2843,7 +4086,185 @@
         "status": "超出 9.3%"
       },
       "premium_pct": null,
-      "rank": 17,
+      "rank": 25,
+      "prev_rank": null
+    },
+    {
+      "id": "pe-henley",
+      "brand": "professor-e",
+      "label": "Professor.Ę",
+      "name": "26FW Double Layered Henley",
+      "category": "tee",
+      "slot": "tee-long",
+      "url": "https://professor-e.com/products/26fw-double-layered-henley-black",
+      "image": "https://professor-e.com/cdn/shop/files/TTL-02-2_p1.jpg",
+      "colors": [
+        "Black",
+        "Grey"
+      ],
+      "price": {
+        "sale": 5201,
+        "original": 5201,
+        "currency": "TWD",
+        "usd": 160,
+        "basis": "官網美元價 US$160 × 32.508 換算（運費另計）"
+      },
+      "fabric": {
+        "composition": "大麻纖維 100%",
+        "weight": null,
+        "thickness": "雙層",
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "fit_name": "雙層亨利領"
+      },
+      "size_chart": {
+        "46": {
+          "shoulder": 50,
+          "chest": 60.5,
+          "length": 65,
+          "sleeve": 59.5
+        },
+        "48": {
+          "shoulder": 52,
+          "chest": 63,
+          "length": 67,
+          "sleeve": 61
+        },
+        "50": {
+          "shoulder": 54.5,
+          "chest": 65.5,
+          "length": 70,
+          "sleeve": 62.5
+        },
+        "52": {
+          "shoulder": 57,
+          "chest": 68,
+          "length": 73,
+          "sleeve": 64
+        }
+      },
+      "model": "180cm／60kg 穿 48",
+      "temps": [
+        20,
+        30
+      ],
+      "experts": {
+        "material": {
+          "score": 4,
+          "comment": "100% 大麻纖維，透氣、越洗越軟，適合高雄。"
+        },
+        "fit": {
+          "score": 3,
+          "comment": "46 號肩 50、胸 60.5（多 0.5）、衣長 65（短 3）；雙層亨利領撐得起臉型。"
+        },
+        "build": {
+          "score": 3.5,
+          "comment": "台灣設計師品牌做工；官網沒有評論。"
+        },
+        "care": {
+          "score": 3,
+          "comment": "麻料易皺，要掛晾。"
+        },
+        "function": {
+          "score": 3.5,
+          "comment": "透氣，20–30°C。"
+        }
+      },
+      "budget_reason": "多 73% 再加運費；麻料亨利衫在高雄很實用，但 Mr. Henley 有 NT$624 的平價替代。",
+      "summary": "布料最適合高雄夏天，衣長短 3cm、價格高。",
+      "pairing": "配卡其打褶褲，領口開一顆釦。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "46",
+          "reason": "46：最接近，最大偏差 3cm。肩寬 50（48–51，✓）、胸寬 60.5（57–60，+0.5）、長度 65（68–71，-3）"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "46",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "46 號長度 65cm，不足 3cm（範圍 68–71）"
+        },
+        {
+          "key": "budget",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出預算",
+          "detail": "NT$5,201 比上限 NT$3,000 多 73.4%"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.7,
+      "overall": 3.38,
+      "avg5": 3.4,
+      "rank_score": 2.68,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 5201.0,
+        "basis": "官網美元價 US$160 × 32.508 換算（運費另計）",
+        "over_pct": 73.4,
+        "status": "超出 73.4%"
+      },
+      "premium_pct": null,
+      "rank": 26,
       "prev_rank": null
     },
     {
@@ -3003,7 +4424,148 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 18,
+      "rank": 27,
+      "prev_rank": null
+    },
+    {
+      "id": "px-pimatee",
+      "brand": "projext",
+      "label": "PROJEXT",
+      "name": "Pima Cotton Boxy Tee 匹馬棉立體剪裁 Tee",
+      "category": "tee",
+      "slot": "tee-light",
+      "url": "https://tw.projextco.com/products/pima-cotton-boxy-tee",
+      "image": "https://img.shoplineapp.com/media/image_clips/6a9330987a2c067987457f91/original.jpg",
+      "colors": [
+        "未標"
+      ],
+      "price": {
+        "sale": 1880,
+        "original": 1980,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "棉 64%、莫代爾 28%、彈性纖維 8%（羅紋：棉 70%、聚酯 30%）",
+        "weight": null,
+        "thickness": null,
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "fit_name": "Boxy 立體箱型"
+      },
+      "temps": [
+        24,
+        32
+      ],
+      "experts": {
+        "material": {
+          "score": 3,
+          "comment": "匹馬棉混莫代爾＋8% 彈性纖維，柔軟但可能貼身。"
+        },
+        "fit": {
+          "score": 2.5,
+          "comment": "Boxy 短版剪裁；沒有尺寸表。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "官網沒有評論，車工只能看商品照與品牌一貫水準，到貨要檢查車線。"
+        },
+        "care": {
+          "score": 3,
+          "comment": "莫代爾怕高溫。"
+        },
+        "function": {
+          "score": 3,
+          "comment": "24–32°C。"
+        }
+      },
+      "summary": "柔軟，但 8% 彈性纖維＋Boxy 短版，對肚子不友善。",
+      "pairing": "外搭敞開的襯衫。",
+      "gender": "men",
+      "in_stock": true,
+      "size_chart": {},
+      "size": {
+        "a": {
+          "size": null,
+          "reason": "沒有尺寸表"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": null,
+        "final_reason": "尺寸表與評論都不足，到貨試穿為準。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "no_chart",
+          "level": 1,
+          "level_name": "注意",
+          "label": "沒有尺寸表",
+          "detail": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.2,
+      "overall": 2.85,
+      "avg5": 2.9,
+      "rank_score": 2.65,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 1880.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 28,
       "prev_rank": null
     },
     {
@@ -3173,7 +4735,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 19,
+      "rank": 29,
       "prev_rank": null
     },
     {
@@ -3341,7 +4903,183 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 20,
+      "rank": 30,
+      "prev_rank": null
+    },
+    {
+      "id": "tc-hide",
+      "brand": "taichi",
+      "label": "TAICHI",
+      "name": "顯瘦｜柔彈修飾身形顯著 HIDE（長袖）",
+      "category": "tee",
+      "slot": "tee-long",
+      "url": "https://www.taichi-t.com/products/hide",
+      "image": "https://img.shoplineapp.com/media/image_clips/6a6086348fee90ef44e0fca3/original.png",
+      "colors": [
+        "白",
+        "黑",
+        "灰"
+      ],
+      "price": {
+        "sale": 790,
+        "original": 980,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "重磅羅紋針織（碼重 500g，成分未標）",
+        "weight": "碼重 500g",
+        "thickness": "重磅",
+        "origin": null,
+        "care": "40°C 以下、中性洗劑、不可烘乾"
+      },
+      "features": {
+        "fit_name": "寬鬆直筒、寬肩，羅紋彈性布"
+      },
+      "size_chart": {
+        "S": {
+          "length": 66,
+          "shoulder": 44,
+          "chest": 47,
+          "sleeve": 56
+        },
+        "M": {
+          "length": 68,
+          "shoulder": 46,
+          "chest": 49,
+          "sleeve": 58
+        },
+        "L": {
+          "length": 70,
+          "shoulder": 48,
+          "chest": 51,
+          "sleeve": 60
+        },
+        "XL": {
+          "length": 73,
+          "shoulder": 52,
+          "chest": 55,
+          "sleeve": 63
+        },
+        "2XL": {
+          "length": 76,
+          "shoulder": 55,
+          "chest": 58,
+          "sleeve": 65
+        }
+      },
+      "size_note": "尺寸表為圖片，已判讀；羅紋布有彈性，胸寬是未拉開的數字",
+      "model": "官方模特兒 178cm／75kg 穿 L、178／78 穿 L、180／80 穿 L",
+      "temps": [
+        16,
+        22
+      ],
+      "experts": {
+        "material": {
+          "score": 3.5,
+          "comment": "500g 重磅羅紋，抗皺、回彈好；成分沒寫。"
+        },
+        "fit": {
+          "score": 2,
+          "comment": "羅紋彈性布：L 號胸寬只有 51（少 6），模特兒 178／75 穿 L 是靠彈性撐開，會貼出肚子；2XL 胸 58 才合，但肩 55（多 4）、衣長 76（多 5）。"
+        },
+        "build": {
+          "score": 3.5,
+          "comment": "商品頁顯示 4.9 分、999 則評價，但評論本期沒抓內容。"
+        },
+        "care": {
+          "score": 3.5,
+          "comment": "抗皺好整理，洗標完整。"
+        },
+        "function": {
+          "score": 3,
+          "comment": "長袖，16–22°C。"
+        }
+      },
+      "summary": "直條羅紋有質感，但彈性羅紋布會貼出肚子，對你的身形不推薦。",
+      "pairing": "若要買：2XL 當外層，裡面一件深色重磅 T。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "2XL",
+          "reason": "2XL：最接近，最大偏差 5cm。肩寬 55（48–51，+4）、胸寬 58（57–60，✓）、長度 76（68–71，+5）"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "2XL",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "2XL 號長度 76cm，超出 5cm（範圍 68–71）"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.4,
+      "overall": 3.0,
+      "avg5": 3.1,
+      "rank_score": 2.6,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 790.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 31,
       "prev_rank": null
     },
     {
@@ -3523,7 +5261,169 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 21,
+      "rank": 32,
+      "prev_rank": null
+    },
+    {
+      "id": "cb-denim",
+      "brand": "cubox",
+      "label": "CUBOX",
+      "name": "紳長叛逆期 洗水丹寧褲｜深藍",
+      "category": "pants",
+      "slot": "pants-denim",
+      "url": "https://www.cubox2008.com/products/紳長叛逆期-洗水丹寧褲-深藍-",
+      "image": "https://img.shoplineapp.com/media/image_clips/6ac716eee0157f61e1e2fc83/original.jpg",
+      "colors": [
+        "深藍",
+        "灰"
+      ],
+      "price": {
+        "sale": 2380,
+        "original": 2380,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "棉 90%、聚酯 10%",
+        "weight": null,
+        "thickness": null,
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "fit_name": "直筒（官方說收窄成較俐落的輪廓）"
+      },
+      "size_chart": {
+        "M": {
+          "waist": 38.5,
+          "length": 106,
+          "thigh": 36.5,
+          "leg_opening": 26.5
+        },
+        "L": {
+          "waist": 42,
+          "length": 107,
+          "thigh": 37.5,
+          "leg_opening": 27.5
+        },
+        "XL": {
+          "waist": 44,
+          "length": 108,
+          "thigh": 39,
+          "leg_opening": 28
+        }
+      },
+      "size_note": "官網手工測量 ±2cm；沒有前襠",
+      "temps": [
+        14,
+        26
+      ],
+      "experts": {
+        "material": {
+          "score": 3.5,
+          "comment": "棉 90% 丹寧、皮標。"
+        },
+        "fit": {
+          "score": 2.5,
+          "comment": "L 號腰 42 ✓，但褲長 107（要修 4cm）、褲口 27.5（多 4.5）。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "官網沒有評論，車工只能看商品照與品牌一貫水準，到貨要檢查車線。"
+        },
+        "care": {
+          "score": 3,
+          "comment": "丹寧要反面單獨洗。"
+        },
+        "function": {
+          "score": 3,
+          "comment": "14–26°C。"
+        }
+      },
+      "summary": "腰圍合，但褲口與褲長都偏大；你已經有 4 件牛仔褲。",
+      "pairing": "不必再買牛仔褲。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "L",
+          "reason": "L：最接近，最大偏差 4.5cm。長度 107（99–103，+4）、大腿 37.5（34–35.5，+2）、褲口 27.5（21–23，+4.5）、腰圍平量 42（42–44，✓）；尺寸表沒有前襠"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "L",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "L 號褲口 27.5cm，超出 4.5cm（範圍 21–23）"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.4,
+      "overall": 2.98,
+      "avg5": 3.0,
+      "rank_score": 2.58,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 2380.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 33,
       "prev_rank": null
     },
     {
@@ -3693,7 +5593,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 22,
+      "rank": 34,
       "prev_rank": null
     },
     {
@@ -3862,7 +5762,176 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 23,
+      "rank": 35,
+      "prev_rank": null
+    },
+    {
+      "id": "mh-henley-ls",
+      "brand": "mr-henley",
+      "label": "Mr. Henley By Wisdom",
+      "name": "舒適版長袖亨利衫-藏青",
+      "category": "tee",
+      "slot": "tee-long",
+      "url": "https://www.henley.com.tw/navy-blue-4",
+      "image": "https://image-cdn-flare.qdm.cloud/q6a62a0de00735/image/data/2025/12/24/dfc31e63ffe57576c820fd9305b3a949.jpg",
+      "colors": [
+        "藏青",
+        "純白",
+        "黑"
+      ],
+      "price": {
+        "sale": 624,
+        "original": 780,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "彈性乾爽布（成分未標），不易起皺",
+        "weight": null,
+        "thickness": null,
+        "origin": null,
+        "care": "棉質面料有 5% 內縮水"
+      },
+      "features": {
+        "fit_name": "舒適版（比經典款寬，但官方仍說偏修身）"
+      },
+      "size_chart": {
+        "M": {
+          "shoulder": 43.5,
+          "chest": 51,
+          "sleeve": 61,
+          "length": 68
+        },
+        "L": {
+          "shoulder": 44.5,
+          "chest": 53,
+          "sleeve": 61.5,
+          "length": 70
+        },
+        "XL": {
+          "shoulder": 46,
+          "chest": 54,
+          "sleeve": 62,
+          "length": 72
+        },
+        "2XL": {
+          "shoulder": 47.5,
+          "chest": 55,
+          "sleeve": 62.5,
+          "length": 74
+        }
+      },
+      "size_note": "尺寸圖已判讀；手工測量 ±2cm，棉質面料縮水 5% 內",
+      "temps": [
+        16,
+        24
+      ],
+      "experts": {
+        "material": {
+          "score": 3,
+          "comment": "彈性乾爽、抗皺；成分沒寫，官方說會縮 5% 內。"
+        },
+        "fit": {
+          "score": 2,
+          "comment": "2XL 肩 47.5、胸 55（少 2）、衣長 74；比經典款寬，但胸寬仍不夠，肚子會被勾勒。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "評論 0 則。"
+        },
+        "care": {
+          "score": 3.5,
+          "comment": "抗皺好整理。"
+        },
+        "function": {
+          "score": 3.5,
+          "comment": "藏青亨利領，16–24°C 單穿。"
+        }
+      },
+      "summary": "亨利領和藏青色都適合你，但最大號胸寬仍不夠，只能 2XL 並當內搭或外搭敞開的外套。",
+      "pairing": "2XL 外搭 Lativ 刷毛機能外套或 Type 1 牛仔夾克（敞開），下身卡其打褶褲。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "2XL",
+          "reason": "2XL：最接近，最大偏差 3cm。肩寬 47.5（48–51，-0.5）、胸寬 55（57–60，-2）、長度 74（68–71，+3）"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "2XL",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "2XL 號長度 74cm，超出 3cm（範圍 68–71）"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.4,
+      "overall": 2.85,
+      "avg5": 3.0,
+      "rank_score": 2.45,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 624.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 36,
       "prev_rank": null
     },
     {
@@ -4022,7 +6091,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 24,
+      "rank": 37,
       "prev_rank": null
     },
     {
@@ -4187,7 +6256,171 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 25,
+      "rank": 38,
+      "prev_rank": null
+    },
+    {
+      "id": "mh-thick",
+      "brand": "mr-henley",
+      "label": "Mr. Henley By Wisdom",
+      "name": "極厚T-本白",
+      "category": "tee",
+      "slot": "tee-light",
+      "url": "https://www.henley.com.tw/white-4",
+      "image": "https://image-cdn-flare.qdm.cloud/q6a62a0de00735/image/data/2025/07/06/6963711ae54470851523308627b5eb51.jpg",
+      "colors": [
+        "本白",
+        "黑"
+      ],
+      "price": {
+        "sale": 464,
+        "original": 580,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "三層空氣夾層（成分未標）",
+        "weight": null,
+        "thickness": "極厚、輕",
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "fit_name": "一貫修身"
+      },
+      "size_chart": {
+        "M": {
+          "shoulder": 43.5,
+          "chest": 51,
+          "length": 68
+        },
+        "L": {
+          "shoulder": 44.5,
+          "chest": 53,
+          "length": 70
+        },
+        "XL": {
+          "shoulder": 46,
+          "chest": 54,
+          "length": 72
+        },
+        "2XL": {
+          "shoulder": 47.5,
+          "chest": 55,
+          "length": 74
+        }
+      },
+      "size_note": "官方說「與舒適版亨利衫數據相同」，借用該款尺寸圖（手工測量 ±2cm）",
+      "temps": [
+        24,
+        32
+      ],
+      "experts": {
+        "material": {
+          "score": 3.5,
+          "comment": "三層空氣夾層，厚而輕，不易激凸；成分沒寫。"
+        },
+        "fit": {
+          "score": 1.5,
+          "comment": "最大的 2XL 胸寬只有 55（少 2），一貫修身；白色＋貼身，肚子會很明顯。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "評論 0 則。"
+        },
+        "care": {
+          "score": 3,
+          "comment": "白 T 要分開洗。"
+        },
+        "function": {
+          "score": 3.5,
+          "comment": "夾層不透，24–32°C。"
+        }
+      },
+      "summary": "便宜又厚的白 T，但最大號胸寬都不夠，只適合當內搭。",
+      "pairing": "當白邊內搭，外面套黑 T 或敞開的襯衫。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "2XL",
+          "reason": "2XL：最接近，最大偏差 3cm。肩寬 47.5（48–51，-0.5）、胸寬 55（57–60，-2）、長度 74（68–71，+3）"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "2XL",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "2XL 號長度 74cm，超出 3cm（範圍 68–71）"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.4,
+      "overall": 2.73,
+      "avg5": 2.9,
+      "rank_score": 2.33,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 464.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 39,
       "prev_rank": null
     },
     {
@@ -4362,7 +6595,169 @@
         "status": "超出 16%"
       },
       "premium_pct": null,
-      "rank": 26,
+      "rank": 40,
+      "prev_rank": null
+    },
+    {
+      "id": "cb-plaid",
+      "brand": "cubox",
+      "label": "CUBOX",
+      "name": "新摩登 格紋襯衫｜灰格紋",
+      "category": "shirt",
+      "slot": "shirt-over",
+      "url": "https://www.cubox2008.com/products/新摩登-格紋襯衫-灰格紋-",
+      "image": "https://img.shoplineapp.com/media/image_clips/6acc84e491d82b7be8f5febf/original.jpg",
+      "colors": [
+        "灰格紋",
+        "黑格紋"
+      ],
+      "price": {
+        "sale": 2280,
+        "original": 2280,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "棉 60%、嫘縈 38%、彈性纖維 2%",
+        "weight": null,
+        "thickness": null,
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "fit_name": "寬鬆、衣長到皮帶線"
+      },
+      "size_chart": {
+        "M": {
+          "shoulder": 57.5,
+          "chest": 64.5,
+          "length": 68,
+          "sleeve": 57
+        },
+        "L": {
+          "shoulder": 60,
+          "chest": 67,
+          "length": 69,
+          "sleeve": 57.5
+        },
+        "XL": {
+          "shoulder": 62.5,
+          "chest": 69,
+          "length": 72,
+          "sleeve": 58
+        }
+      },
+      "size_note": "官網手工測量 ±2cm",
+      "temps": [
+        18,
+        24
+      ],
+      "experts": {
+        "material": {
+          "score": 3,
+          "comment": "棉嫘縈混紡，垂墜。"
+        },
+        "fit": {
+          "score": 2,
+          "comment": "最小的 M 號肩寬 57.5（多 6.5）、胸 64.5（多 3.5），寬鬆落肩。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "官網沒有評論，車工只能看商品照與品牌一貫水準，到貨要檢查車線。"
+        },
+        "care": {
+          "score": 3,
+          "comment": "嫘縈怕久泡。"
+        },
+        "function": {
+          "score": 3,
+          "comment": "Overshirt 用，18–24°C。"
+        }
+      },
+      "summary": "灰格紋好搭，但最小的 M 號肩就多 6.5cm。",
+      "pairing": "敞開穿，內搭黑 T。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "M",
+          "reason": "M：最接近，最大偏差 6.5cm。肩寬 57.5（48–51，+6.5）、胸寬 64.5（57–61，+3.5）、長度 68（68–74，✓）"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "M",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "M 號肩寬 57.5cm，超出 6.5cm（範圍 48–51）"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        }
+      ],
+      "penalty": 0.4,
+      "overall": 2.7,
+      "avg5": 2.8,
+      "rank_score": 2.3,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 2280.0,
+        "basis": "台灣售價",
+        "over_pct": null,
+        "status": "預算內"
+      },
+      "premium_pct": null,
+      "rank": 41,
       "prev_rank": null
     },
     {
@@ -4531,7 +6926,7 @@
         "status": "超出 52.7%"
       },
       "premium_pct": null,
-      "rank": 27,
+      "rank": 42,
       "prev_rank": null
     },
     {
@@ -4695,7 +7090,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 28,
+      "rank": 43,
       "prev_rank": null
     },
     {
@@ -4866,7 +7261,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 29,
+      "rank": 44,
       "prev_rank": null
     },
     {
@@ -5034,7 +7429,185 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 30,
+      "rank": 45,
+      "prev_rank": null
+    },
+    {
+      "id": "pe-slate",
+      "brand": "professor-e",
+      "label": "Professor.Ę",
+      "name": "26FW Slate Top",
+      "category": "tee",
+      "slot": "tee-long",
+      "url": "https://professor-e.com/products/26fw-slate-top-black",
+      "image": "https://professor-e.com/cdn/shop/files/TTL-01darkgrey_p1.jpg",
+      "colors": [
+        "Black",
+        "Grey"
+      ],
+      "price": {
+        "sale": 3901,
+        "original": 3901,
+        "currency": "TWD",
+        "usd": 120,
+        "basis": "官網美元價 US$120 × 32.508 換算（運費另計）"
+      },
+      "fabric": {
+        "composition": "棉 100%",
+        "weight": null,
+        "thickness": null,
+        "origin": null,
+        "care": null
+      },
+      "features": {
+        "raglan": true,
+        "raglan_note": "肩寬與袖長合併量（78–84cm），屬連肩袖"
+      },
+      "size_chart": {
+        "46": {
+          "chest": 61,
+          "length": 64
+        },
+        "48": {
+          "chest": 63.5,
+          "length": 67
+        },
+        "50": {
+          "chest": 66,
+          "length": 70
+        },
+        "52": {
+          "chest": 68.5,
+          "length": 73
+        }
+      },
+      "model": "180cm／60kg 穿 48",
+      "temps": [
+        16,
+        24
+      ],
+      "experts": {
+        "material": {
+          "score": 3,
+          "comment": "100% 棉，沒標磅數。"
+        },
+        "fit": {
+          "score": 2.5,
+          "comment": "48 號胸 63.5（多 3.5）、衣長 67；連肩袖會讓肩線下垂。"
+        },
+        "build": {
+          "score": 3.5,
+          "comment": "台灣設計師品牌做工；官網沒有評論。"
+        },
+        "care": {
+          "score": 3,
+          "comment": "純棉，冷水洗。"
+        },
+        "function": {
+          "score": 3,
+          "comment": "16–24°C 單穿。"
+        }
+      },
+      "budget_reason": "多 30% 再加國際運費；設計感強但版型不合，不建議。",
+      "summary": "設計師上衣，但連肩袖＋胸寬偏大，以美元計價還要加運費。",
+      "pairing": "若喜歡：配直筒黑褲、外套敞開。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "48",
+          "reason": "48：最接近，最大偏差 3.5cm。胸寬 63.5（57–60，+3.5）、長度 67（68–71，-1）；尺寸表沒有肩寬"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "48",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "48 號胸寬 63.5cm，超出 3.5cm（範圍 57–60）"
+        },
+        {
+          "key": "raglan",
+          "level": 2,
+          "level_name": "警告",
+          "label": "連肩袖",
+          "detail": "肩寬與袖長合併量（78–84cm），屬連肩袖"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        },
+        {
+          "key": "budget",
+          "level": 1,
+          "level_name": "注意",
+          "label": "超出預算",
+          "detail": "NT$3,901 比上限 NT$3,000 多 30%"
+        }
+      ],
+      "penalty": 0.8,
+      "overall": 2.93,
+      "avg5": 3.0,
+      "rank_score": 2.13,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 3901.0,
+        "basis": "官網美元價 US$120 × 32.508 換算（運費另計）",
+        "over_pct": 30.0,
+        "status": "超出 30%"
+      },
+      "premium_pct": null,
+      "rank": 46,
       "prev_rank": null
     },
     {
@@ -5208,7 +7781,7 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 31,
+      "rank": 47,
       "prev_rank": null
     },
     {
@@ -5371,7 +7944,200 @@
         "status": "預算內"
       },
       "premium_pct": null,
-      "rank": 32,
+      "rank": 48,
+      "prev_rank": null
+    },
+    {
+      "id": "yg-knitpolo",
+      "brand": "yangi",
+      "label": "YANGI",
+      "name": "Knit Polo Shirt / Mint",
+      "category": "knit",
+      "slot": "knit",
+      "url": "https://www.yangiofficial.com/products/knit-polo-shirt-mint",
+      "image": "https://img.shoplineapp.com/media/image_clips/698d996217fdac73a2ddc0e4/original.JPG",
+      "colors": [
+        "Mint",
+        "Mayonnaise"
+      ],
+      "price": {
+        "sale": 3100,
+        "original": 3880,
+        "currency": "TWD"
+      },
+      "fabric": {
+        "composition": "嫘縈＋棉混紡（比例未標）",
+        "weight": null,
+        "thickness": null,
+        "origin": "標示不一致（台灣／中國）",
+        "care": null
+      },
+      "features": {
+        "ribbed_hem": true,
+        "ribbed_hem_note": "袖口與下擺羅紋",
+        "fit_name": "短袖短版"
+      },
+      "size_chart": {
+        "S": {
+          "shoulder": 42.5,
+          "chest": 47.5,
+          "hem_width": 39.5,
+          "length": 55.5
+        },
+        "M": {
+          "shoulder": 44,
+          "chest": 50,
+          "hem_width": 42,
+          "length": 58
+        },
+        "L": {
+          "shoulder": 45.5,
+          "chest": 52.5,
+          "hem_width": 44.5,
+          "length": 60.5
+        },
+        "XL": {
+          "shoulder": 47,
+          "chest": 55,
+          "hem_width": 47,
+          "length": 63
+        }
+      },
+      "size_note": "官網胸寬、下擺為全圍，已除以 2",
+      "model": "183cm 穿 M",
+      "temps": [
+        22,
+        30
+      ],
+      "experts": {
+        "material": {
+          "score": 3,
+          "comment": "嫘縈棉針織，有光澤但比例未標。"
+        },
+        "fit": {
+          "score": 1.5,
+          "comment": "最大的 XL 胸 55（少 2）、衣長 63（短 5），加上羅紋下擺，正好卡在肚子。"
+        },
+        "build": {
+          "score": 3,
+          "comment": "官網沒有評論，車工只能看商品照與品牌一貫水準，到貨要檢查車線。"
+        },
+        "care": {
+          "score": 2.5,
+          "comment": "嫘縈針織怕拉扯變形，要平放晾。"
+        },
+        "function": {
+          "score": 3,
+          "comment": "短袖針織 Polo，22–30°C。"
+        }
+      },
+      "budget_reason": "只超 3%，但版型不合，不建議為它加價。",
+      "summary": "短版＋羅紋下擺＋薄荷色，三項都不利，跳過。",
+      "pairing": "不建議。",
+      "gender": "men",
+      "in_stock": true,
+      "size": {
+        "a": {
+          "size": "XL",
+          "reason": "XL：最接近，最大偏差 5cm。肩寬 47（48–51，-1）、胸寬 55（57–60，-2）、長度 63（68–71，-5）"
+        },
+        "b": {
+          "n": 0,
+          "votes": {},
+          "reactions": {
+            "big": 0,
+            "normal": 0,
+            "small": 0
+          }
+        },
+        "final": "XL",
+        "final_reason": "同身形評論沒有尺寸資料，依尺寸表。"
+      },
+      "review_stats": {
+        "source": "官網沒有評論",
+        "lang": "zh",
+        "has_ratings": false,
+        "total_on_site": 0,
+        "fetched": 0,
+        "body_matched": 0,
+        "counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "body_counts": {
+          "defects": 0,
+          "shrink": 0,
+          "pilling": 0,
+          "collar": 0,
+          "tight": 0,
+          "sheer": 0
+        },
+        "defect_pct": null,
+        "body_defect_pct": null,
+        "tight_pct": null,
+        "sheer_pct": null,
+        "size_votes": {},
+        "fit_reactions": {
+          "big": 0,
+          "normal": 0,
+          "small": 0
+        },
+        "thickness_label": null
+      },
+      "alerts": [
+        {
+          "key": "size_range",
+          "level": 2,
+          "level_name": "警告",
+          "label": "超出尺寸範圍",
+          "detail": "XL 號長度 63cm，不足 5cm（範圍 68–71）"
+        },
+        {
+          "key": "hem",
+          "level": 2,
+          "level_name": "警告",
+          "label": "收口下擺",
+          "detail": "下擺比胸寬小 8cm（> 6cm，等同羅紋下擺）"
+        },
+        {
+          "key": "ribbed_hem",
+          "level": 2,
+          "level_name": "警告",
+          "label": "羅紋下擺",
+          "detail": "袖口與下擺羅紋"
+        },
+        {
+          "key": "small_sample",
+          "level": 1,
+          "level_name": "注意",
+          "label": "評論數或同身形樣本太少",
+          "detail": "評論 0 則、同身形 0 則（門檻 10／3）"
+        },
+        {
+          "key": "budget",
+          "level": 1,
+          "level_name": "注意",
+          "label": "超出預算",
+          "detail": "NT$3,100 比上限 NT$3,000 多 3.3%"
+        }
+      ],
+      "penalty": 1.1,
+      "overall": 2.45,
+      "avg5": 2.6,
+      "rank_score": 1.35,
+      "budget": {
+        "limit": 3000,
+        "price_twd": 3100.0,
+        "basis": "台灣售價",
+        "over_pct": 3.3,
+        "status": "超出 3.3%"
+      },
+      "premium_pct": null,
+      "rank": 49,
       "prev_rank": null
     }
   ],
@@ -5402,9 +8168,90 @@
       "reasons": [
         "缺貨"
       ]
+    },
+    {
+      "id": "pe-denim",
+      "brand": "professor-e",
+      "name": "26FW Faded Black Denim",
+      "url": "https://professor-e.com/products/26fw-faded-black-denim",
+      "reasons": [
+        "超出尺寸範圍：50 號長度 113cm，超出 10cm（範圍 99–103）",
+        "超出預算：NT$8,452 比上限 NT$3,000 多 181.7%"
+      ]
+    },
+    {
+      "id": "cb-polo",
+      "brand": "cubox",
+      "name": "新摩登 條紋 POLO 衫｜黑",
+      "url": "https://www.cubox2008.com/products/新摩登-條紋polo衫-黑-",
+      "reasons": [
+        "超出尺寸範圍：M 號肩寬 63cm，超出 12cm（範圍 48–51）"
+      ]
     }
   ],
   "brands": [
+    {
+      "id": "jerscy",
+      "name": "JERSCY",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://www.jerscy.com.tw/",
+      "notes": null,
+      "size_system": "S–4XL（3XL、4XL 獨立打版）",
+      "metrics": {
+        "material": {
+          "score": 4.5,
+          "basis": "10.9oz 美國棉、台灣製重磅 T，抗菌與抗起球處理。"
+        },
+        "fit": {
+          "score": 3,
+          "basis": "有合身、微寬、寬鬆等版型與 3XL–4XL 獨立打版；但尺寸表在尺寸工具裡，頁面讀不到。"
+        },
+        "build": {
+          "score": 3.5,
+          "basis": "長年熱賣款、創作者實穿多；評論模組是空的。"
+        },
+        "care": {
+          "score": 4,
+          "basis": "抑菌防臭、可機洗抗起球。"
+        },
+        "function": {
+          "score": 4,
+          "basis": "重磅不透、涼感款，適合高雄。"
+        }
+      },
+      "overall": {
+        "material_first": 4.0
+      },
+      "overall_change": null,
+      "strengths": "重磅 T 與打褶西裝褲，價格實在。",
+      "features": "官網用 inffits 尺寸推薦工具；重磅系列 NT$690 起、輕鬆西裝套裝成套 NT$2,980。",
+      "fits_robin": "超級重磅 TEE（L 或 XL）、打褶休閒直筒西裝褲。",
+      "price_band": "NT$690–1,990",
+      "signature_items": [
+        "超級重磅 TEE",
+        "長袖超級重磅 TEE",
+        "打褶休閒直筒西裝褲"
+      ],
+      "changes_vs_last": "10/25 新加入。",
+      "picks": [
+        {
+          "id": "js-heavytee",
+          "name": "超級重磅 TEE（合身版）",
+          "rank_score": 3.45
+        },
+        {
+          "id": "js-pleatpants",
+          "name": "打褶休閒直筒西裝褲",
+          "rank_score": 3.28
+        },
+        {
+          "id": "js-knit",
+          "name": "抗起球圓領針織衫",
+          "rank_score": 3.05
+        }
+      ]
+    },
     {
       "id": "wisdom",
       "name": "WISDOM",
@@ -5464,6 +8311,125 @@
           "id": "wd-techwool",
           "name": "TECH WOOL L/S TOP",
           "rank_score": 2.28
+        }
+      ]
+    },
+    {
+      "id": "taichi",
+      "name": "TAICHI 素T專賣",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://www.taichi-t.com/categories/allproducts",
+      "notes": null,
+      "size_system": "依身形目標分版型（顯瘦、顯壯、顯高）；尺寸表是圖片",
+      "metrics": {
+        "material": {
+          "score": 4,
+          "basis": "100% 精梳棉、標示碼重（440–500g）。"
+        },
+        "fit": {
+          "score": 4,
+          "basis": "依身形目標分版型，有專門遮腹、顯瘦的款式。"
+        },
+        "build": {
+          "score": 3,
+          "basis": "商品頁沒有評論，另有好評頁。"
+        },
+        "care": {
+          "score": 3.5,
+          "basis": "洗標寫得最完整。"
+        },
+        "function": {
+          "score": 4,
+          "basis": "厚挺不透、不黏身，適合高雄。"
+        }
+      },
+      "overall": {
+        "material_first": 3.7
+      },
+      "overall_change": null,
+      "strengths": "素 T 版型選擇多、遮腹款。",
+      "features": "3 件折 100、5 件折 300，滿 NT$1,200 免運；尺寸表是圖片。",
+      "fits_robin": "顯瘦 JOBS（遮腹）、HIDE 長袖。",
+      "price_band": "NT$590–1,480",
+      "signature_items": [
+        "賈伯斯 JOBS",
+        "HIDE",
+        "庫克 COOK"
+      ],
+      "changes_vs_last": "10/25 新加入。",
+      "picks": [
+        {
+          "id": "tc-jobs",
+          "name": "顯瘦｜厚挺遮腹有型 賈伯斯 JOBS（長袖）",
+          "rank_score": 3.35
+        },
+        {
+          "id": "tc-hide",
+          "name": "顯瘦｜柔彈修飾身形顯著 HIDE（長袖）",
+          "rank_score": 2.6
+        }
+      ]
+    },
+    {
+      "id": "yangi",
+      "name": "YANGI",
+      "origin": "台灣（楊艾倫主理）",
+      "status": "verified",
+      "store": "https://www.yangiofficial.com/products",
+      "notes": null,
+      "size_system": "XS–XL（胸圍、腰圍多為全圍，要除以 2）",
+      "metrics": {
+        "material": {
+          "score": 4,
+          "basis": "日本布料、台灣製，棉針織與混紡都講究。"
+        },
+        "fit": {
+          "score": 3.5,
+          "basis": "尺寸表完整（全圍）；長 T 方正，但 Polo 短版、羅紋下擺。"
+        },
+        "build": {
+          "score": 3.5,
+          "basis": "五線拷克、條紋腰裡等細節；評論模組是空的。"
+        },
+        "care": {
+          "score": 3,
+          "basis": "做舊水洗與混紡布需要照顧。"
+        },
+        "function": {
+          "score": 3,
+          "basis": "以造型為主，機能布少。"
+        }
+      },
+      "overall": {
+        "material_first": 3.55
+      },
+      "overall_change": null,
+      "strengths": "日本布料、細節講究、低彩度配色。",
+      "features": "楊艾倫主理；胸圍、腰圍多標全圍；部分夏季款 8 折。",
+      "fits_robin": "Long Sleeve Crewneck L、Loose Fit Tailored Trousers XL。",
+      "price_band": "上衣 NT$1,800–4,500；褲子 NT$4,900–7,700",
+      "signature_items": [
+        "Long Sleeve Crewneck",
+        "Loose Fit Tailored Trousers",
+        "Vintage Distressed Fades Hoodie"
+      ],
+      "changes_vs_last": "10/25 新加入。",
+      "picks": [
+        {
+          "id": "yg-crewneck",
+          "name": "Long Sleeve Crewneck / Faded Black",
+          "rank_score": 3.32
+        },
+        {
+          "id": "yg-trousers",
+          "name": "Loose Fit Tailored Trousers / Cloud Cream",
+          "rank_score": 2.85
+        },
+        {
+          "id": "yg-knitpolo",
+          "name": "Knit Polo Shirt / Mint",
+          "rank_score": 1.35
         }
       ]
     },
@@ -5546,6 +8512,68 @@
           "id": "gp-parallelknit",
           "name": "半高領雙面針織衫",
           "rank_score": 1.72
+        }
+      ]
+    },
+    {
+      "id": "projext",
+      "name": "PROJEXT",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://tw.projextco.com/categories/men",
+      "notes": null,
+      "size_system": "未標示（尺寸表不在頁面文字裡）",
+      "metrics": {
+        "material": {
+          "score": 3.5,
+          "basis": "Xolar 機能布（抗 UV、防潑水、涼感）、匹馬棉混紡。"
+        },
+        "fit": {
+          "score": 2.5,
+          "basis": "Boxy、闊型、修身喇叭褲等，版型偏潮；尺寸表讀不到。"
+        },
+        "build": {
+          "score": 3,
+          "basis": "評論模組是空的。"
+        },
+        "care": {
+          "score": 3.5,
+          "basis": "機能布快乾不皺。"
+        },
+        "function": {
+          "score": 4.5,
+          "basis": "防曬、防潑水、涼感，最貼近高雄氣候。"
+        }
+      },
+      "overall": {
+        "material_first": 3.4
+      },
+      "overall_change": null,
+      "strengths": "綠時尚、機能布。",
+      "features": "男女混合目錄；部分商品 6 折、新品 95 折。",
+      "fits_robin": "Xolar 防風防潑水長寬褲（夏天通勤）。",
+      "price_band": "NT$1,000–3,300",
+      "signature_items": [
+        "Xolar UV 防曬外套",
+        "Xolar 長寬褲",
+        "SKIN X 系列"
+      ],
+      "changes_vs_last": "10/25 新加入。",
+      "picks": [
+        {
+          "id": "px-pants",
+          "name": "Xolar 防風防潑水長寬褲",
+          "rank_score": 3.28
+        },
+        {
+          "id": "px-blouson",
+          "name": "Xolar Technical Blouson Jacket 防潑水闊型機能外套",
+          "rank_score": 2.97
+        },
+        {
+          "id": "px-pimatee",
+          "name": "Pima Cotton Boxy Tee 匹馬棉立體剪裁 Tee",
+          "rank_score": 2.65
         }
       ]
     },
@@ -5724,6 +8752,120 @@
       ]
     },
     {
+      "id": "professor-e",
+      "name": "Professor.Ę",
+      "origin": "台灣",
+      "status": "verified",
+      "store": "https://professor-e.com/collections/men",
+      "notes": "官網只顯示美元，價格依當期匯率換算台幣；運費另計。",
+      "size_system": "46／48／50／52（歐碼）",
+      "metrics": {
+        "material": {
+          "score": 3.5,
+          "basis": "麻、棉等天然纖維為主。"
+        },
+        "fit": {
+          "score": 2.5,
+          "basis": "解構設計、連肩袖多；牛仔褲長度 107–116cm 偏長。"
+        },
+        "build": {
+          "score": 3.5,
+          "basis": "台灣設計師品牌，國際選物店有販售；官網沒有評論。"
+        },
+        "care": {
+          "score": 3,
+          "basis": "麻料易皺、做舊款需要照顧。"
+        },
+        "function": {
+          "score": 3,
+          "basis": "以設計為主。"
+        }
+      },
+      "overall": {
+        "material_first": 3.25
+      },
+      "overall_change": null,
+      "strengths": "解構與做舊設計、天然纖維。",
+      "features": "官網只顯示美元、運費另計；尺寸用 46–52 歐碼。",
+      "fits_robin": "Double Layered Henley 46（麻料適合高雄），但多半超預算。",
+      "price_band": "US$120–880（約 NT$3,900 起）",
+      "signature_items": [
+        "Double Layered Henley",
+        "Work Shirt",
+        "Faded Black Denim"
+      ],
+      "changes_vs_last": "10/25 新加入。",
+      "picks": [
+        {
+          "id": "pe-henley",
+          "name": "26FW Double Layered Henley",
+          "rank_score": 2.68
+        },
+        {
+          "id": "pe-slate",
+          "name": "26FW Slate Top",
+          "rank_score": 2.13
+        }
+      ]
+    },
+    {
+      "id": "mr-henley",
+      "name": "Mr. Henley",
+      "origin": "台灣（Mr. Henley By Wisdom）",
+      "status": "verified",
+      "store": "https://www.henley.com.tw/search?filter_name=%E7%94%B7%E5%A3%AB&filter_tag=%E7%94%B7%E5%A3%AB",
+      "notes": null,
+      "size_system": "M–2XL（為亞洲身形打版）",
+      "metrics": {
+        "material": {
+          "score": 3,
+          "basis": "空氣夾層、彈性乾爽布；成分都沒寫。"
+        },
+        "fit": {
+          "score": 3,
+          "basis": "為亞洲身形打版，但官方說偏修身。"
+        },
+        "build": {
+          "score": 3,
+          "basis": "評論 0 則。"
+        },
+        "care": {
+          "score": 3.5,
+          "basis": "抗皺好整理。"
+        },
+        "function": {
+          "score": 3.5,
+          "basis": "亨利領單穿就有型。"
+        }
+      },
+      "overall": {
+        "material_first": 3.15
+      },
+      "overall_change": null,
+      "strengths": "專做亨利衫、價格低。",
+      "features": "Mr. Henley By Wisdom；男士系列多在 8 折。",
+      "fits_robin": "舒適版長袖亨利衫（藏青），選大一號。",
+      "price_band": "NT$460–880",
+      "signature_items": [
+        "經典亨利衫",
+        "亨利 40",
+        "極厚 T"
+      ],
+      "changes_vs_last": "10/25 新加入。",
+      "picks": [
+        {
+          "id": "mh-henley-ls",
+          "name": "舒適版長袖亨利衫-藏青",
+          "rank_score": 2.45
+        },
+        {
+          "id": "mh-thick",
+          "name": "極厚T-本白",
+          "rank_score": 2.33
+        }
+      ]
+    },
+    {
       "id": "plain-me",
       "name": "plain-me",
       "origin": "台灣",
@@ -5801,6 +8943,63 @@
       ]
     },
     {
+      "id": "cubox",
+      "name": "CUBOX",
+      "origin": "台灣（台北選物店＋自有品牌）",
+      "status": "verified",
+      "store": "https://www.cubox2008.com/products",
+      "notes": null,
+      "size_system": "M–XL（手工測量 ±2cm）",
+      "metrics": {
+        "material": {
+          "score": 3,
+          "basis": "棉、棉嫘縈混紡為主。"
+        },
+        "fit": {
+          "score": 2,
+          "basis": "寬鬆落肩為主，M 號肩寬就 57–63cm。"
+        },
+        "build": {
+          "score": 3,
+          "basis": "評論模組是空的。"
+        },
+        "care": {
+          "score": 3,
+          "basis": "洗標資訊少。"
+        },
+        "function": {
+          "score": 3,
+          "basis": "以造型為主。"
+        }
+      },
+      "overall": {
+        "material_first": 2.9
+      },
+      "overall_change": null,
+      "strengths": "台北街頭選物、自有品牌設計。",
+      "features": "也賣 APOSTLE、A.A 等品牌；指定商品單件 5 折起。",
+      "fits_robin": "版型多半太寬，本期沒有適合的。",
+      "price_band": "NT$1,080–2,880",
+      "signature_items": [
+        "新摩登系列",
+        "紳長叛逆期丹寧",
+        "賽道系列"
+      ],
+      "changes_vs_last": "10/25 新加入。",
+      "picks": [
+        {
+          "id": "cb-denim",
+          "name": "紳長叛逆期 洗水丹寧褲｜深藍",
+          "rank_score": 2.58
+        },
+        {
+          "id": "cb-plaid",
+          "name": "新摩登 格紋襯衫｜灰格紋",
+          "rank_score": 2.3
+        }
+      ]
+    },
+    {
       "id": "mixfit",
       "name": "MIXFIT",
       "origin": "台灣",
@@ -5845,6 +9044,25 @@
       "status": "needs_url",
       "store": null,
       "notes": "找到兩個同名品牌：日本手工改造品牌（STORES，日圓）與英國利物浦選物店（英鎊），都不是台灣賣場。請確認是哪一個。若是日本品牌，尺寸基準用 Size 2 並適用代購溢價規則。",
+      "size_system": null,
+      "metrics": {},
+      "overall": {},
+      "overall_change": null,
+      "strengths": null,
+      "features": null,
+      "fits_robin": null,
+      "price_band": null,
+      "signature_items": [],
+      "changes_vs_last": null,
+      "picks": []
+    },
+    {
+      "id": "voux",
+      "name": "VOUX",
+      "origin": "台灣",
+      "status": "closing",
+      "store": "https://www.voux.com.tw/product-list.ftl?mid=01",
+      "notes": "2026-01 宣布退場：官方說 3/31 停止接單、4/30 停止客服。10/25 官網仍顯示商品與階梯折扣，但商品頁內容錯亂（不同網址顯示同一件、多數標售完）。售後可能已停止，暫不列入選品；確認恢復營運再改回 verified。",
       "size_system": null,
       "metrics": {},
       "overall": {},
@@ -6004,6 +9222,51 @@
         "calendar": false
       },
       {
+        "name": "JERSCY 重磅系列與套裝",
+        "brand": "JERSCY",
+        "start": null,
+        "end": null,
+        "detail": "重磅系列 NT$690 起；輕鬆西裝套裝（外套＋打褶西裝褲）成套 NT$2,980；多數商品約 9 折。",
+        "source": "https://www.jerscy.com.tw/",
+        "calendar": false
+      },
+      {
+        "name": "Mr. Henley 男士系列 8 折",
+        "brand": "Mr. Henley",
+        "start": null,
+        "end": null,
+        "detail": "亨利衫、極厚 T 多在 8 折（例：舒適版長袖亨利衫 NT$624）。",
+        "source": "https://www.henley.com.tw/",
+        "calendar": false
+      },
+      {
+        "name": "PROJEXT 季末與新品",
+        "brand": "PROJEXT",
+        "start": null,
+        "end": null,
+        "detail": "部分商品 6 折、新品約 95 折。",
+        "source": "https://tw.projextco.com/categories/men",
+        "calendar": false
+      },
+      {
+        "name": "YANGI 夏季款折扣",
+        "brand": "YANGI",
+        "start": null,
+        "end": null,
+        "detail": "部分夏季款約 8 折（例：Loose Fit Tailored Trousers NT$4,940、Knit Polo NT$3,100）。",
+        "source": "https://www.yangiofficial.com/products",
+        "calendar": false
+      },
+      {
+        "name": "CUBOX 指定商品 5 折起",
+        "brand": "CUBOX",
+        "start": null,
+        "end": null,
+        "detail": "指定商品單件 5 折起（多為舊款）。",
+        "source": "https://www.cubox2008.com/products",
+        "calendar": false
+      },
+      {
         "name": "雙 12（預估）",
         "brand": "各品牌",
         "start": "2026-12-12",
@@ -6023,6 +9286,11 @@
         "brand": "Filter017",
         "detail": "滿 NT$5,000 本島免運。",
         "source": "https://www.crealivedept.com/categories/filter017"
+      },
+      {
+        "brand": "TAICHI",
+        "detail": "全店滿 3 件折 NT$100、滿 5 件折 NT$300；滿 NT$1,200 本島免運（10/30 00:00 截止）。",
+        "source": "https://www.taichi-t.com/"
       }
     ]
   },
@@ -6045,6 +9313,14 @@
             "ESPIONAGE Wide Officer Pants 米色"
           ],
           "note": "全身淺色要靠合身的 T 撐住，衣長 68 剛好蓋褲頭。"
+        },
+        {
+          "title": "重磅黑 T＋打褶西裝褲",
+          "pieces": [
+            "JERSCY 超級重磅 TEE 黑（L）",
+            "JERSCY 打褶休閒直筒西裝褲"
+          ],
+          "note": "新品牌組合：10.9oz 重磅 T 不透不黏，配打褶褲夏天上班也成立（褲子要先確認腰圍）。"
         }
       ],
       "t24": [
@@ -6104,6 +9380,15 @@
             "ESPIONAGE Wide Officer Pants 米色"
           ],
           "note": "Type 1 有腰帶收口，一定要敞開。"
+        },
+        {
+          "title": "厚長 T＋敞開外套",
+          "pieces": [
+            "TAICHI 賈伯斯 JOBS 長袖 黑（L 或 XL）",
+            "Lativ 機能休閒連帽外套 卡其（L，敞開）",
+            "GOOPi P1-S 定番黑褲"
+          ],
+          "note": "9.8oz 厚棉直筒留肚子空間，外套敞開拉長線條。"
         }
       ],
       "tcold": [
@@ -6129,6 +9414,21 @@
     }
   },
   "self_review": [
+    {
+      "area": "品牌",
+      "finding": "Robin 10/25 指定加入 YANGI、Professor.Ę、JERSCY、PROJEXT、Mr. Henley、TAICHI、VOUX、CUBOX。",
+      "change": "全部寫進 config/brands.json；7 個確認官網可下單（verified），VOUX 已宣布退出市場、官網商品連結錯亂，標為 closing 不選品。"
+    },
+    {
+      "area": "尺寸表",
+      "finding": "JERSCY（尺寸工具）、TAICHI（圖片）、Mr. Henley、PROJEXT 的尺寸表都不是頁面文字，讀不到數字。",
+      "change": "新增 size_fallback（官方實穿者身高體重或版型說明推估）與「沒有尺寸表」注意（−0.1）；沒有任何依據時寫「到貨試穿為準」。TAICHI、Mr. Henley 的尺寸圖已用內建瀏覽器判讀成數字；JERSCY、PROJEXT 下期再讀。"
+    },
+    {
+      "area": "匯率",
+      "finding": "Professor.Ę 官網只顯示美元。",
+      "change": "候選檔 fx 加 USD 32.508（2026-10-22 收盤），價格欄附換算依據；台灣品牌不算代購溢價。"
+    },
     {
       "area": "規則",
       "finding": "原規則是為 MUSINSA 設計（韓文評論、Global 溢價、goodsNo）。台灣品牌多半沒有評論，也沒有原產地價。",

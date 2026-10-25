@@ -18,6 +18,7 @@ from ccloth_lib import (DATA, analyze_reviews, brands, compact_reviews, fmt, loa
                         save_json, size_deviation)
 
 TPE = timezone(timedelta(hours=8))
+BRANDS = {b["id"]: b for b in brands()["brands"]}
 EXPERT_KEYS = ["material", "fit", "build", "care", "function"]
 
 
@@ -32,7 +33,7 @@ def add_alert(alerts, r, key, level, label, detail):
 def price_twd(item, fx):
     p = item.get("price", {})
     if p.get("sale") is not None:
-        return float(p["sale"]), "台灣售價"
+        return float(p["sale"]), p.get("basis") or "台灣售價"
     if p.get("origin_price") is not None and fx.get(p.get("origin_currency")):
         return round(p["origin_price"] * fx[p["origin_currency"]]), "原產地售價換算"
     return None, None
@@ -47,13 +48,18 @@ def pct_alert(alerts, r, key, value, count, cfg):
         add_alert(alerts, r, key, 2, cfg["label"], f"{fmt(value)}%（約 {count} 人）> {cfg['warn_pct']}%")
 
 
-def final_size(a, b_stats, chart, category, r):
-    """A 與 B 衝突時：同身形 ≥ 5 人（或 ≥ 3 人且 ≥ 75% 一致）穿同一號，且該號偏差 ≤ 2.5cm，才改用 B。"""
+def final_size(a, b_stats, chart, category, r, fallback=None):
+    """A 與 B 衝突時：同身形 ≥ 5 人（或 ≥ 3 人且 ≥ 75% 一致）穿同一號，且該號偏差 ≤ 2.5cm，才改用 B。
+    尺寸表與評論都沒有時，用候選檔的 size_fallback（例如官方實穿者身高體重、版型說明）。"""
     a_size = a["size"]
     votes = b_stats.get("size_votes") or {}
     total = sum(votes.values())
     if not votes:
-        return a_size, "同身形評論沒有尺寸資料，依尺寸表。" if a_size else "尺寸表與評論都不足，到貨試穿為準。"
+        if a_size:
+            return a_size, "同身形評論沒有尺寸資料，依尺寸表。"
+        if fallback and fallback.get("size"):
+            return fallback["size"], f"官網沒有可讀的尺寸表，也沒有同身形評論；{fallback.get('reason', '')}到貨試穿為準。"
+        return None, "尺寸表與評論都不足，到貨試穿為準。"
     b_size, b_n = next(iter(votes.items()))
     if a_size is None:
         return b_size, f"尺寸表缺數字，依同身形評論多數（{b_n}/{total} 人穿 {b_size}）。"
@@ -78,11 +84,14 @@ def score_item(item, r, fx):
         excluded_reasons.append("缺貨")
     if item.get("gender") == "women":
         excluded_reasons.append("女裝")
+    brand = BRANDS.get(item.get("brand"), {})
+    if brand.get("status") not in (None, "verified"):
+        excluded_reasons.append(f"品牌狀態 {brand.get('status')}：{brand.get('notes', '')}")
 
     chart = item.get("size_chart") or {}
     a = recommend_from_chart(chart, cat, r) if chart else {"size": None, "reason": "沒有尺寸表", "evals": {}}
     rv = analyze_reviews(item.get("reviews"), r)
-    final, final_reason = final_size(a, rv, chart, cat, r)
+    final, final_reason = final_size(a, rv, chart, cat, r, item.get("size_fallback"))
 
     # 尺寸範圍
     sr = r["alerts"]["size_range"]
@@ -97,6 +106,10 @@ def score_item(item, r, fx):
                       f"{'超出' if d > 0 else '不足'} {fmt(abs(d))}cm（範圍 {fmt(lo)}–{fmt(hi)}）")
             lv = 1 if ev["max_dev"] <= sr["note_max_cm"] else 2 if ev["max_dev"] <= sr["warn_max_cm"] else 3
             add_alert(alerts, r, "size_range", lv, sr["label"], detail)
+
+    if not chart:
+        nc = r["alerts"]["no_chart"]
+        add_alert(alerts, r, "no_chart", nc["level"], nc["label"], nc["note"])
 
     # 收口下擺
     hr = r["hem_rule"]

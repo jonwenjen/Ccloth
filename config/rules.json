@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-25",
+  "version": "2026-10-25b",
   "notes": "Ccloth 選品規則。scripts/score.py 與網站都讀這份檔案；改規則只改這裡，並在 docs/run-log.md 記一筆。",
 
   "profile": {
@@ -75,7 +75,8 @@
     },
     "rise_severe_below_cm": 25,
     "one_way_zip": { "label": "單向拉鍊外套", "level": 1, "applies_to": ["outer"] },
-    "small_sample": { "label": "評論數或同身形樣本太少", "level": 1, "min_reviews": 10, "min_body_matched": 3 }
+    "small_sample": { "label": "評論數或同身形樣本太少", "level": 1, "min_reviews": 10, "min_body_matched": 3 },
+    "no_chart": { "label": "沒有尺寸表", "level": 1, "note": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明" }
   },
 
   "exclusions": ["缺貨", "女裝"],
