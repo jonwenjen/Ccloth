@@ -48,4 +48,6 @@ python3 scripts/validate.py
 
 - MIXFIT、1973、Resurrection 還沒找到可以下單的官方賣場（詳見 `config/brands.json` 的 notes）。把網址填進 `store`、`status` 改成 `verified`，下一期就會納入。
 - VOUX 已宣布退出台灣市場，標為 `closing`，不選品。
-- 尺寸表不是文字的品牌（JERSCY、PROJEXT 等）：候選檔可寫 `size_fallback`（官方實穿者或版型說明），並自動加「沒有尺寸表」注意。
+- 尺寸表是圖片的品牌（TAICHI、Mr. Henley、JERSCY、PROJEXT）每月用內建瀏覽器判讀；真的讀不到才寫 `size_fallback`，並自動加「沒有尺寸表」注意。
+- 2026-10-25 起每月以「近 2 個月上架、當季與下一季要穿」的單品為主；季節依 `config/rules.json → climate`（中央氣象署高雄站平年值＋近 5 年實測）判斷未來 3 個月穿不穿得到。
+- 網站的選物、穿搭、衣櫥、已購都會顯示商品圖（圖片網址存在候選檔與 `data/orders.json`）。

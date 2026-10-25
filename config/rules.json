@@ -1,24 +1,39 @@
 {
-  "version": "2026-10-25b",
+  "version": "2026-10-25c",
   "notes": "Ccloth 選品規則。scripts/score.py 與網站都讀這份檔案；改規則只改這裡，並在 docs/run-log.md 記一筆。",
-
   "profile": {
     "name": "Robin",
     "height_cm": 175,
     "weight_kg": 75,
-    "body_flat_cm": { "shoulder": 44, "chest": 48, "waist": 43.5 },
+    "body_flat_cm": {
+      "shoulder": 44,
+      "chest": 48,
+      "waist": 43.5
+    },
     "body_note": "有點肚子",
     "skin_tone": "黃偏黑",
     "goal": "43 歲穿出 35 歲感",
     "city": "高雄",
-    "city_coords": { "lat": 22.63, "lon": 120.30 }
+    "city_coords": {
+      "lat": 22.63,
+      "lon": 120.3
+    }
   },
-
   "size_base": {
-    "top_outer": { "korean": "L (100)", "japanese": "Size 2", "taiwan": "依尺寸表對照版型範圍", "never_size_up_for_waist": true },
-    "pants": { "waist_inch": [33, 34], "length_note": "Short（褲長 100–102cm）" }
+    "top_outer": {
+      "korean": "L (100)",
+      "japanese": "Size 2",
+      "taiwan": "依尺寸表對照版型範圍",
+      "never_size_up_for_waist": true
+    },
+    "pants": {
+      "waist_inch": [
+        33,
+        34
+      ],
+      "length_note": "Short（褲長 100–102cm）"
+    }
   },
-
   "categories": {
     "tee": "T 恤（短袖、長袖、Polo）",
     "knit": "針織（毛衣、開襟）",
@@ -26,13 +41,81 @@
     "outer": "外套",
     "pants": "長褲"
   },
-
   "fit_ranges": {
-    "tee":   { "shoulder": [48, 51], "chest": [57, 60], "length": [68, 71] },
-    "knit":  { "shoulder": [48, 51], "chest": [57, 60], "length": [68, 71] },
-    "shirt": { "shoulder": [48, 51], "chest": [57, 61], "length": [68, 74] },
-    "outer": { "shoulder": [47, 51], "chest": [57, 62] },
-    "pants": { "length": [99, 103], "rise": [30, 32], "thigh": [34, 35.5], "leg_opening": [21, 23], "waist": [42, 44] }
+    "tee": {
+      "shoulder": [
+        48,
+        51
+      ],
+      "chest": [
+        57,
+        60
+      ],
+      "length": [
+        68,
+        71
+      ]
+    },
+    "knit": {
+      "shoulder": [
+        48,
+        51
+      ],
+      "chest": [
+        57,
+        60
+      ],
+      "length": [
+        68,
+        71
+      ]
+    },
+    "shirt": {
+      "shoulder": [
+        48,
+        51
+      ],
+      "chest": [
+        57,
+        61
+      ],
+      "length": [
+        68,
+        74
+      ]
+    },
+    "outer": {
+      "shoulder": [
+        47,
+        51
+      ],
+      "chest": [
+        57,
+        62
+      ]
+    },
+    "pants": {
+      "length": [
+        99,
+        103
+      ],
+      "rise": [
+        30,
+        32
+      ],
+      "thigh": [
+        34,
+        35.5
+      ],
+      "leg_opening": [
+        21,
+        23
+      ],
+      "waist": [
+        42,
+        44
+      ]
+    }
   },
   "fit_notes": {
     "tee": "硬挺微落肩、直筒不收口",
@@ -42,98 +125,387 @@
     "pants": "單打褶、微寬直筒優先；waist 為平量，由 33–34 腰換算（鬆緊腰可放寬）"
   },
   "measurement_labels": {
-    "shoulder": "肩寬", "chest": "胸寬", "length": "長度", "sleeve": "袖長", "hem_width": "下擺寬",
-    "waist": "腰圍平量", "hip": "臀圍", "rise": "前襠", "thigh": "大腿", "leg_opening": "褲口"
+    "shoulder": "肩寬",
+    "chest": "胸寬",
+    "length": "長度",
+    "sleeve": "袖長",
+    "hem_width": "下擺寬",
+    "waist": "腰圍平量",
+    "hip": "臀圍",
+    "rise": "前襠",
+    "thigh": "大腿",
+    "leg_opening": "褲口"
   },
-
   "hem_rule": {
-    "applies_to": ["tee", "knit", "shirt", "outer"],
+    "applies_to": [
+      "tee",
+      "knit",
+      "shirt",
+      "outer"
+    ],
     "warn_diff_cm": 6,
     "severe_diff_cm": 15,
     "text": "上衣下擺平量比胸寬小超過 6cm 視為收口下擺（等同羅紋下擺禁令）；差距 ≥ 15cm 屬嚴重"
   },
-
   "levels": {
-    "1": { "name": "注意", "penalty": 0.1 },
-    "2": { "name": "警告", "penalty": 0.3 },
-    "3": { "name": "嚴重", "penalty": null, "exclude": true }
+    "1": {
+      "name": "注意",
+      "penalty": 0.1
+    },
+    "2": {
+      "name": "警告",
+      "penalty": 0.3
+    },
+    "3": {
+      "name": "嚴重",
+      "penalty": null,
+      "exclude": true
+    }
   },
-
   "alerts": {
-    "defects":   { "label": "縮水／起毛球／領口鬆垮", "warn_pct": 5,  "severe_pct": 12, "severe_min_count": 8, "applies_to": ["tee", "knit", "shirt", "outer", "pants"] },
-    "tight":     { "label": "貼身顯肚",           "warn_pct": 10, "severe_pct": 25, "severe_min_count": 8, "applies_to": ["tee", "knit", "shirt", "outer"] },
-    "sheer":     { "label": "薄透",               "warn_pct": 15, "severe_pct": 35, "severe_min_count": 8, "applies_to": ["tee", "knit"] },
-    "size_range": { "label": "超出尺寸範圍", "note_max_cm": 2.5, "warn_max_cm": 8 },
-    "budget":     { "label": "超出預算", "note_max_pct": 50, "warn_max_pct": 100 },
-    "premium":    { "label": "代購／跨境溢價", "note_pct": 20, "warn_pct": 50 },
+    "defects": {
+      "label": "縮水／起毛球／領口鬆垮",
+      "warn_pct": 5,
+      "severe_pct": 12,
+      "severe_min_count": 8,
+      "applies_to": [
+        "tee",
+        "knit",
+        "shirt",
+        "outer",
+        "pants"
+      ]
+    },
+    "tight": {
+      "label": "貼身顯肚",
+      "warn_pct": 10,
+      "severe_pct": 25,
+      "severe_min_count": 8,
+      "applies_to": [
+        "tee",
+        "knit",
+        "shirt",
+        "outer"
+      ]
+    },
+    "sheer": {
+      "label": "薄透",
+      "warn_pct": 15,
+      "severe_pct": 35,
+      "severe_min_count": 8,
+      "applies_to": [
+        "tee",
+        "knit"
+      ]
+    },
+    "size_range": {
+      "label": "超出尺寸範圍",
+      "note_max_cm": 2.5,
+      "warn_max_cm": 8
+    },
+    "budget": {
+      "label": "超出預算",
+      "note_max_pct": 50,
+      "warn_max_pct": 100
+    },
+    "premium": {
+      "label": "代購／跨境溢價",
+      "note_pct": 20,
+      "warn_pct": 50
+    },
     "banned_features": {
-      "raglan":     { "label": "連肩袖", "level": 2 },
-      "ribbed_hem": { "label": "羅紋下擺", "level": 2 },
-      "slim":       { "label": "Slim 褲", "level": 2, "applies_to": ["pants"] },
-      "low_rise":   { "label": "低腰", "level": 2, "applies_to": ["pants"] },
-      "thin_soft":  { "label": "薄軟布", "level": 2 }
+      "raglan": {
+        "label": "連肩袖",
+        "level": 2
+      },
+      "ribbed_hem": {
+        "label": "羅紋下擺",
+        "level": 2
+      },
+      "slim": {
+        "label": "Slim 褲",
+        "level": 2,
+        "applies_to": [
+          "pants"
+        ]
+      },
+      "low_rise": {
+        "label": "低腰",
+        "level": 2,
+        "applies_to": [
+          "pants"
+        ]
+      },
+      "thin_soft": {
+        "label": "薄軟布",
+        "level": 2
+      }
     },
     "rise_severe_below_cm": 25,
-    "one_way_zip": { "label": "單向拉鍊外套", "level": 1, "applies_to": ["outer"] },
-    "small_sample": { "label": "評論數或同身形樣本太少", "level": 1, "min_reviews": 10, "min_body_matched": 3 },
-    "no_chart": { "label": "沒有尺寸表", "level": 1, "note": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明" }
+    "one_way_zip": {
+      "label": "單向拉鍊外套",
+      "level": 1,
+      "applies_to": [
+        "outer"
+      ]
+    },
+    "small_sample": {
+      "label": "評論數或同身形樣本太少",
+      "level": 1,
+      "min_reviews": 10,
+      "min_body_matched": 3
+    },
+    "no_chart": {
+      "label": "沒有尺寸表",
+      "level": 1,
+      "note": "官網尺寸表不是文字或沒提供時，建議尺寸只能參考實穿者與版型說明"
+    },
+    "new_arrival": {
+      "label": "不是近 2 個月上架",
+      "level": 1,
+      "days": 62,
+      "note": "Robin 2026-10-25 指定：每月找近 2 個月上架的單品。舊款仍列出（經典款常年販售），但標注意。",
+      "unknown_label": "上架日不明"
+    },
+    "season_fit": {
+      "label": "未來 3 個月用不到",
+      "level_none": 2,
+      "level_one": 1,
+      "one_label": "只適合未來 3 個月中的 1 個月",
+      "overlap_min_c": 2,
+      "note": "單品適穿溫度與高雄未來 3 個月的常見氣溫（白天高溫到夜間低溫）重疊至少 2°C 才算那個月穿得到"
+    }
   },
-
-  "exclusions": ["缺貨", "女裝"],
-
+  "exclusions": [
+    "缺貨",
+    "女裝"
+  ],
   "ranking": {
     "formula": "rank = overall − Σ penalties；同分比五項平均",
     "max_items": 100
   },
-
   "reviews": {
-    "body_filter": { "height_cm": [173, 177], "weight_kg": [73, 77] },
+    "body_filter": {
+      "height_cm": [
+        173,
+        177
+      ],
+      "weight_kg": [
+        73,
+        77
+      ]
+    },
     "low_star_max": 3,
     "low_star_note": "有星等的網站只算 1–3 星；沒有星等的網站（如 Lativ）全部評論都算，但一樣先刪否定片語再比對",
-    "fetch": { "screening_reviews": 200, "screening_pages": 10, "sizing_reviews": 600, "sizing_pages": 30, "interval_ms": 250, "blocked_cooldown_min": 3 },
-    "fallback_order": ["品牌官網評論", "原產地站評論（韓國站／日本站，含英譯）", "台灣電商評論（momo、蝦皮、PChome、Yahoo）", "Dcard／PTT 討論"],
+    "fetch": {
+      "screening_reviews": 200,
+      "screening_pages": 10,
+      "sizing_reviews": 600,
+      "sizing_pages": 30,
+      "interval_ms": 250,
+      "blocked_cooldown_min": 3
+    },
+    "fallback_order": [
+      "品牌官網評論",
+      "原產地站評論（韓國站／日本站，含英譯）",
+      "台灣電商評論（momo、蝦皮、PChome、Yahoo）",
+      "Dcard／PTT 討論"
+    ],
     "keywords": {
       "shrink": {
-        "zh": ["縮水", "縮了", "變小", "變短", "縮一號", "洗完變小", "洗後變小", "洗完變短"],
-        "ko": ["수축", "줄어"],
-        "en": ["shrink", "shrank", "shrunk"]
+        "zh": [
+          "縮水",
+          "縮了",
+          "變小",
+          "變短",
+          "縮一號",
+          "洗完變小",
+          "洗後變小",
+          "洗完變短"
+        ],
+        "ko": [
+          "수축",
+          "줄어"
+        ],
+        "en": [
+          "shrink",
+          "shrank",
+          "shrunk"
+        ]
       },
       "pilling": {
-        "zh": ["起毛球", "毛球", "起球", "結球"],
-        "ko": ["보풀", "필링"],
-        "en": ["pilling", "pills", "pilled", "fuzz balls"]
+        "zh": [
+          "起毛球",
+          "毛球",
+          "起球",
+          "結球"
+        ],
+        "ko": [
+          "보풀",
+          "필링"
+        ],
+        "en": [
+          "pilling",
+          "pills",
+          "pilled",
+          "fuzz balls"
+        ]
       },
       "collar": {
-        "zh": ["領口鬆", "領口變形", "領口垮", "領子鬆", "領口變大", "領口荷葉", "領口變鬆"],
-        "ko": ["목 늘어남", "목늘어남", "목이 늘어"],
-        "en": ["collar stretched", "neckline stretched", "neck stretched", "collar lost shape"]
+        "zh": [
+          "領口鬆",
+          "領口變形",
+          "領口垮",
+          "領子鬆",
+          "領口變大",
+          "領口荷葉",
+          "領口變鬆"
+        ],
+        "ko": [
+          "목 늘어남",
+          "목늘어남",
+          "목이 늘어"
+        ],
+        "en": [
+          "collar stretched",
+          "neckline stretched",
+          "neck stretched",
+          "collar lost shape"
+        ]
       },
       "tight": {
-        "zh": ["貼身", "顯肚", "凸肚", "肚子很明顯", "肚子明顯", "肚子太貼", "太貼", "太合身", "偏緊", "太緊", "緊身", "卡肚", "顯胖"],
-        "ko": ["몸매 부각", "달라붙", "뱃살"],
-        "en": ["clingy", "tight on belly", "shows belly", "too tight", "skin tight"]
+        "zh": [
+          "貼身",
+          "顯肚",
+          "凸肚",
+          "肚子很明顯",
+          "肚子明顯",
+          "肚子太貼",
+          "太貼",
+          "太合身",
+          "偏緊",
+          "太緊",
+          "緊身",
+          "卡肚",
+          "顯胖"
+        ],
+        "ko": [
+          "몸매 부각",
+          "달라붙",
+          "뱃살"
+        ],
+        "en": [
+          "clingy",
+          "tight on belly",
+          "shows belly",
+          "too tight",
+          "skin tight"
+        ]
       },
       "sheer": {
-        "zh": ["會透", "很透", "有點透", "偏透", "透光", "透膚", "太薄", "很薄", "偏薄", "薄到", "看得到內衣", "激凸"],
-        "ko": ["얇아", "비침"],
-        "en": ["see-through", "see through", "sheer", "too thin", "very thin"]
+        "zh": [
+          "會透",
+          "很透",
+          "有點透",
+          "偏透",
+          "透光",
+          "透膚",
+          "太薄",
+          "很薄",
+          "偏薄",
+          "薄到",
+          "看得到內衣",
+          "激凸"
+        ],
+        "ko": [
+          "얇아",
+          "비침"
+        ],
+        "en": [
+          "see-through",
+          "see through",
+          "sheer",
+          "too thin",
+          "very thin"
+        ]
       }
     },
     "negations": {
-      "zh": ["不會縮水", "沒縮水", "沒有縮水", "不縮水", "不太縮", "不起毛球", "沒有起毛球", "不會起毛球", "不會起球", "沒起球", "沒有毛球",
-             "領口不會鬆", "領口不易變形", "領口不會變形", "不會透", "不透", "不會太薄", "不會很薄", "不薄", "不會貼身", "不貼身",
-             "遮肚", "修飾肚子", "不顯肚", "蓋住肚子", "不會顯肚", "不會太緊", "不緊"],
-      "ko": ["보풀 없어요", "보풀이 없", "보풀 안", "뱃살 커버", "뱃살커버", "비침이 없어서", "비침 없", "비치지 않", "줄어들지 않", "수축 없", "안 줄어"],
-      "en": ["no pilling", "didn't shrink", "did not shrink", "doesn't shrink", "no shrinkage", "not see-through", "not see through", "not sheer", "not too thin", "not clingy", "hides belly"]
+      "zh": [
+        "不會縮水",
+        "沒縮水",
+        "沒有縮水",
+        "不縮水",
+        "不太縮",
+        "不起毛球",
+        "沒有起毛球",
+        "不會起毛球",
+        "不會起球",
+        "沒起球",
+        "沒有毛球",
+        "領口不會鬆",
+        "領口不易變形",
+        "領口不會變形",
+        "不會透",
+        "不透",
+        "不會太薄",
+        "不會很薄",
+        "不薄",
+        "不會貼身",
+        "不貼身",
+        "遮肚",
+        "修飾肚子",
+        "不顯肚",
+        "蓋住肚子",
+        "不會顯肚",
+        "不會太緊",
+        "不緊"
+      ],
+      "ko": [
+        "보풀 없어요",
+        "보풀이 없",
+        "보풀 안",
+        "뱃살 커버",
+        "뱃살커버",
+        "비침이 없어서",
+        "비침 없",
+        "비치지 않",
+        "줄어들지 않",
+        "수축 없",
+        "안 줄어"
+      ],
+      "en": [
+        "no pilling",
+        "didn't shrink",
+        "did not shrink",
+        "doesn't shrink",
+        "no shrinkage",
+        "not see-through",
+        "not see through",
+        "not sheer",
+        "not too thin",
+        "not clingy",
+        "hides belly"
+      ]
     },
-    "ignore_substrings": ["透氣", "透風", "通透", "輕薄外套", "輕薄款"]
+    "ignore_substrings": [
+      "透氣",
+      "透風",
+      "通透",
+      "輕薄外套",
+      "輕薄款"
+    ]
   },
-
   "budget": {
-    "limits_twd": { "tee": 3000, "knit": 3000, "shirt": 3000, "pants": 3000, "outer": 5000 },
+    "limits_twd": {
+      "tee": 3000,
+      "knit": 3000,
+      "shirt": 3000,
+      "pants": 3000,
+      "outer": 5000
+    },
     "over_requires": "budget_reason"
   },
-
   "premium": {
     "formula": "台灣售價 ÷（原產地售價 × 匯率）− 1",
     "applies_when": "同一件商品有原產地官方售價（韓國、日本進口款）；台灣本土品牌不適用",
@@ -142,73 +514,464 @@
     "origin_only_label": "僅原產地站",
     "origin_only_rule": "台灣沒有通路時，用原產地售價換算台幣判斷預算"
   },
-
   "experts": {
-    "material": { "label": "材質", "role": "面料紡織", "looks_at": "成分、磅數、厚度" },
-    "fit":      { "label": "版型", "role": "打版師", "looks_at": "以 Robin 身形為準，離規則幾 cm、有沒有踩禁令" },
-    "build":    { "label": "車工", "role": "品管", "looks_at": "滿意度與評論量" },
-    "care":     { "label": "保養", "role": "保養", "looks_at": "縮水、起毛球、領口的實際評論比例與洗滌方式" },
-    "function": { "label": "機能", "role": "機能", "looks_at": "高雄氣候、彈性、雙向拉鍊、適用場合" }
+    "material": {
+      "label": "材質",
+      "role": "面料紡織",
+      "looks_at": "成分、磅數、厚度"
+    },
+    "fit": {
+      "label": "版型",
+      "role": "打版師",
+      "looks_at": "以 Robin 身形為準，離規則幾 cm、有沒有踩禁令"
+    },
+    "build": {
+      "label": "車工",
+      "role": "品管",
+      "looks_at": "滿意度與評論量"
+    },
+    "care": {
+      "label": "保養",
+      "role": "保養",
+      "looks_at": "縮水、起毛球、領口的實際評論比例與洗滌方式"
+    },
+    "function": {
+      "label": "機能",
+      "role": "機能",
+      "looks_at": "高雄氣候、彈性、雙向拉鍊、適用場合"
+    }
   },
-  "item_weights":  { "material": 0.25, "fit": 0.30, "build": 0.15, "care": 0.20, "function": 0.10 },
+  "item_weights": {
+    "material": 0.25,
+    "fit": 0.3,
+    "build": 0.15,
+    "care": 0.2,
+    "function": 0.1
+  },
   "brand_lists": [
     {
       "id": "material_first",
       "label": "材質優先",
       "focus": "面料成分、磅數、產地、評論裡的保養表現",
-      "weights": { "material": 0.40, "build": 0.20, "care": 0.20, "fit": 0.10, "function": 0.10 }
+      "weights": {
+        "material": 0.4,
+        "build": 0.2,
+        "care": 0.2,
+        "fit": 0.1,
+        "function": 0.1
+      }
     }
   ],
-
   "style": {
     "age_goal": "43 歲穿出 35 歲感",
-    "do": ["乾淨俐落的結構感上衣，肩線微落但不垮", "微寬直筒、單打褶褲", "低彩度底色＋一個亮點（襯衫或配件）", "質感面料取代大 Logo", "衣長蓋過褲頭 5–8cm，修飾肚子"],
-    "avoid": ["過度 Oversize（肩寬超過 55cm 的寬鬆 T）", "大面積卡通／聯名印花", "緊身、Slim、低腰", "羅紋收口下擺卡在肚子", "薄軟會貼身的布料"],
+    "do": [
+      "乾淨俐落的結構感上衣，肩線微落但不垮",
+      "微寬直筒、單打褶褲",
+      "低彩度底色＋一個亮點（襯衫或配件）",
+      "質感面料取代大 Logo",
+      "衣長蓋過褲頭 5–8cm，修飾肚子"
+    ],
+    "avoid": [
+      "過度 Oversize（肩寬超過 55cm 的寬鬆 T）",
+      "大面積卡通／聯名印花",
+      "緊身、Slim、低腰",
+      "羅紋收口下擺卡在肚子",
+      "薄軟會貼身的布料"
+    ],
     "palette": {
-      "good": ["深藍", "海軍藍", "橄欖綠", "卡其", "焦糖", "酒紅", "炭灰", "黑", "米白", "白", "牛仔藍", "磚紅"],
-      "careful": ["淺灰（要配深色）", "芥末黃（只放小面積）", "粉色（選灰粉、不選嫩粉）"],
-      "avoid": ["螢光色", "接近膚色的土黃大面積", "灰綠暗淡色貼臉"]
+      "good": [
+        "深藍",
+        "海軍藍",
+        "橄欖綠",
+        "卡其",
+        "焦糖",
+        "酒紅",
+        "炭灰",
+        "黑",
+        "米白",
+        "白",
+        "牛仔藍",
+        "磚紅"
+      ],
+      "careful": [
+        "淺灰（要配深色）",
+        "芥末黃（只放小面積）",
+        "粉色（選灰粉、不選嫩粉）"
+      ],
+      "avoid": [
+        "螢光色",
+        "接近膚色的土黃大面積",
+        "灰綠暗淡色貼臉"
+      ]
     }
   },
-
   "capsule_slots": [
-    { "id": "tee-dark",     "label": "深色重磅短 T",          "category": "tee",   "hint": "黑、深藍、炭灰；單穿或內搭" },
-    { "id": "tee-light",    "label": "白／米白重磅 T",         "category": "tee",   "hint": "白邊內搭、夏天單穿" },
-    { "id": "tee-long",     "label": "長袖 T／華夫格",         "category": "tee",   "hint": "秋冬內搭、16–24°C 單穿" },
-    { "id": "shirt-bright", "label": "亮色或條紋襯衫",         "category": "shirt", "hint": "20–24°C 敞開外搭的亮點" },
-    { "id": "shirt-over",   "label": "Overshirt／工裝襯衫",    "category": "shirt", "hint": "丹寧、燈芯絨、厚棉" },
-    { "id": "knit",         "label": "針織衫",                 "category": "knit",  "hint": "圓領或開襟，16–20°C" },
-    { "id": "outer-light",  "label": "輕量機能夾克",           "category": "outer", "hint": "防潑水、雙向拉鍊優先，16–24°C" },
-    { "id": "outer-warm",   "label": "保暖外套",               "category": "outer", "hint": "教練夾克、牛仔、大衣，16°C 以下" },
-    { "id": "pants-chino",  "label": "單打褶微寬卡其褲",       "category": "pants", "hint": "卡其、橄欖綠" },
-    { "id": "pants-denim",  "label": "深色直筒牛仔褲",         "category": "pants", "hint": "深藍、黑" },
-    { "id": "pants-dress",  "label": "西裝感寬褲",             "category": "pants", "hint": "黑、炭灰，正式場合" },
-    { "id": "pants-light",  "label": "輕薄機能長褲",           "category": "pants", "hint": "高雄夏天、彈性、快乾" }
+    {
+      "id": "tee-dark",
+      "label": "深色重磅短 T",
+      "category": "tee",
+      "hint": "黑、深藍、炭灰；單穿或內搭"
+    },
+    {
+      "id": "tee-light",
+      "label": "白／米白重磅 T",
+      "category": "tee",
+      "hint": "白邊內搭、夏天單穿"
+    },
+    {
+      "id": "tee-long",
+      "label": "長袖 T／華夫格",
+      "category": "tee",
+      "hint": "秋冬內搭、16–24°C 單穿"
+    },
+    {
+      "id": "shirt-bright",
+      "label": "亮色或條紋襯衫",
+      "category": "shirt",
+      "hint": "20–24°C 敞開外搭的亮點"
+    },
+    {
+      "id": "shirt-over",
+      "label": "Overshirt／工裝襯衫",
+      "category": "shirt",
+      "hint": "丹寧、燈芯絨、厚棉"
+    },
+    {
+      "id": "knit",
+      "label": "針織衫",
+      "category": "knit",
+      "hint": "圓領或開襟，16–20°C"
+    },
+    {
+      "id": "outer-light",
+      "label": "輕量機能夾克",
+      "category": "outer",
+      "hint": "防潑水、雙向拉鍊優先，16–24°C"
+    },
+    {
+      "id": "outer-warm",
+      "label": "保暖外套",
+      "category": "outer",
+      "hint": "教練夾克、牛仔、大衣，16°C 以下"
+    },
+    {
+      "id": "pants-chino",
+      "label": "單打褶微寬卡其褲",
+      "category": "pants",
+      "hint": "卡其、橄欖綠"
+    },
+    {
+      "id": "pants-denim",
+      "label": "深色直筒牛仔褲",
+      "category": "pants",
+      "hint": "深藍、黑"
+    },
+    {
+      "id": "pants-dress",
+      "label": "西裝感寬褲",
+      "category": "pants",
+      "hint": "黑、炭灰，正式場合"
+    },
+    {
+      "id": "pants-light",
+      "label": "輕薄機能長褲",
+      "category": "pants",
+      "hint": "高雄夏天、彈性、快乾"
+    }
   ],
-
   "temperature_bands": [
-    { "id": "t28",   "label": "28°C 以上", "min": 28,  "max": 99, "base": "單穿重磅上衣＋白邊內搭", "slots": ["tee-dark", "tee-light", "pants-light", "pants-chino"] },
-    { "id": "t24",   "label": "24–28°C",   "min": 24,  "max": 28, "base": "單穿，或薄襯衫敞開外搭", "slots": ["tee-dark", "tee-light", "shirt-bright", "pants-chino", "pants-light"] },
-    { "id": "t20",   "label": "20–24°C",   "min": 20,  "max": 24, "base": "深色 T＋亮色襯衫或 Overshirt 敞開", "slots": ["tee-dark", "tee-long", "shirt-bright", "shirt-over", "pants-chino", "pants-denim"] },
-    { "id": "t16",   "label": "16–20°C",   "min": 16,  "max": 20, "base": "深色 T＋針織或雙向拉鍊夾克", "slots": ["tee-dark", "tee-long", "knit", "outer-light", "pants-denim", "pants-dress"] },
-    { "id": "tcold", "label": "16°C 以下", "min": -99, "max": 16, "base": "針織＋夾克或大衣", "slots": ["tee-long", "knit", "outer-warm", "pants-denim", "pants-dress"] }
+    {
+      "id": "t28",
+      "label": "28°C 以上",
+      "min": 28,
+      "max": 99,
+      "base": "單穿重磅上衣＋白邊內搭",
+      "slots": [
+        "tee-dark",
+        "tee-light",
+        "pants-light",
+        "pants-chino"
+      ]
+    },
+    {
+      "id": "t24",
+      "label": "24–28°C",
+      "min": 24,
+      "max": 28,
+      "base": "單穿，或薄襯衫敞開外搭",
+      "slots": [
+        "tee-dark",
+        "tee-light",
+        "shirt-bright",
+        "pants-chino",
+        "pants-light"
+      ]
+    },
+    {
+      "id": "t20",
+      "label": "20–24°C",
+      "min": 20,
+      "max": 24,
+      "base": "深色 T＋亮色襯衫或 Overshirt 敞開",
+      "slots": [
+        "tee-dark",
+        "tee-long",
+        "shirt-bright",
+        "shirt-over",
+        "pants-chino",
+        "pants-denim"
+      ]
+    },
+    {
+      "id": "t16",
+      "label": "16–20°C",
+      "min": 16,
+      "max": 20,
+      "base": "深色 T＋針織或雙向拉鍊夾克",
+      "slots": [
+        "tee-dark",
+        "tee-long",
+        "knit",
+        "outer-light",
+        "pants-denim",
+        "pants-dress"
+      ]
+    },
+    {
+      "id": "tcold",
+      "label": "16°C 以下",
+      "min": -99,
+      "max": 16,
+      "base": "針織＋夾克或大衣",
+      "slots": [
+        "tee-long",
+        "knit",
+        "outer-warm",
+        "pants-denim",
+        "pants-dress"
+      ]
+    }
   ],
-
   "order_verdicts": {
-    "ok":      { "label": "符合規則", "meaning": "可以直接穿" },
-    "styling": { "label": "注意穿法", "meaning": "可以穿，但要用特定穿法（例如敞開、內搭深色）" },
-    "check":   { "label": "到貨確認", "meaning": "先看實物，或洗後觀察" },
-    "return":  { "label": "建議退換", "meaning": "違反硬性規則，還能退的話建議退" }
+    "ok": {
+      "label": "符合規則",
+      "meaning": "可以直接穿"
+    },
+    "styling": {
+      "label": "注意穿法",
+      "meaning": "可以穿，但要用特定穿法（例如敞開、內搭深色）"
+    },
+    "check": {
+      "label": "到貨確認",
+      "meaning": "先看實物，或洗後觀察"
+    },
+    "return": {
+      "label": "建議退換",
+      "meaning": "違反硬性規則，還能退的話建議退"
+    }
   },
-
   "sales_reminders": {
     "calendar_within_days": 45,
     "push_within_days": 7,
     "calendar_title_prefix": "[Ccloth]"
   },
-
   "privacy": {
-    "never_write": ["訂單編號", "收件人", "地址", "電話", "Email", "信用卡末四碼"],
+    "never_write": [
+      "訂單編號",
+      "收件人",
+      "地址",
+      "電話",
+      "Email",
+      "信用卡末四碼"
+    ],
     "reason": "repo 是公開的"
+  },
+  "climate": {
+    "city": "高雄",
+    "station": "高雄站（467440，中央氣象署）",
+    "normals_period": "1991–2020",
+    "normals": {
+      "tx": [
+        19.7,
+        20.7,
+        23.0,
+        25.7,
+        27.8,
+        28.9,
+        29.4,
+        28.9,
+        28.5,
+        26.9,
+        24.5,
+        21.2
+      ],
+      "tmax": [
+        24.2,
+        25.0,
+        27.0,
+        29.3,
+        31.0,
+        32.1,
+        32.7,
+        32.1,
+        31.8,
+        30.1,
+        28.1,
+        25.3
+      ],
+      "tmin": [
+        16.2,
+        17.2,
+        19.7,
+        22.8,
+        25.2,
+        26.3,
+        26.7,
+        26.3,
+        25.9,
+        24.4,
+        21.6,
+        17.9
+      ],
+      "rain_days": [
+        3.2,
+        3.2,
+        3.6,
+        5.4,
+        9.2,
+        12.9,
+        13.2,
+        16.7,
+        10.1,
+        4.2,
+        2.8,
+        2.8
+      ],
+      "days_tmax_ge30": [
+        0.0,
+        0.5,
+        3.4,
+        13.0,
+        24.2,
+        26.4,
+        28.9,
+        27.2,
+        27.6,
+        17.9,
+        4.3,
+        0.3
+      ]
+    },
+    "recent": {
+      "years": "近 5 年（2021–2026）同月實測",
+      "11": {
+        "tx": [
+          24.6,
+          25.0,
+          23.5,
+          23.7,
+          23.3
+        ],
+        "max": [
+          31.7,
+          32.9,
+          33.9,
+          30.8,
+          31.5
+        ],
+        "min": [
+          17.7,
+          19.9,
+          13.0,
+          13.1,
+          15.3
+        ]
+      },
+      "12": {
+        "tx": [
+          21.2,
+          19.0,
+          20.9,
+          19.0,
+          20.6
+        ],
+        "max": [
+          28.1,
+          30.0,
+          31.5,
+          28.5,
+          31.4
+        ],
+        "min": [
+          15.2,
+          7.7,
+          11.1,
+          10.3,
+          13.0
+        ]
+      },
+      "1": {
+        "tx": [
+          20.4,
+          18.6,
+          18.6,
+          17.2,
+          18.4
+        ],
+        "max": [
+          27.7,
+          30.1,
+          29.1,
+          25.8,
+          27.7
+        ],
+        "min": [
+          13.0,
+          9.0,
+          9.5,
+          8.1,
+          8.7
+        ]
+      },
+      "2": {
+        "tx": [
+          18.0,
+          19.8,
+          21.2,
+          17.9,
+          20.8
+        ],
+        "max": [
+          29.0,
+          31.8,
+          32.5,
+          28.2,
+          30.9
+        ],
+        "min": [
+          10.8,
+          11.5,
+          10.8,
+          9.6,
+          11.8
+        ]
+      }
+    },
+    "method": "每月常見氣溫 = 平年值的平均最低～平均最高，再加上近 5 年月均溫比平年值偏差（近年 12、1 月偏冷約 1°C）；寒流低溫取近 5 年該月最低溫。",
+    "horizon_months": 3,
+    "sources": [
+      {
+        "title": "中央氣象署｜氣候月平均（1991–2020）",
+        "url": "https://www.cwa.gov.tw/V8/C/C/Statistics/monthlymean.html"
+      },
+      {
+        "title": "中央氣象署｜每月氣象",
+        "url": "https://www.cwa.gov.tw/V8/C/C/Statistics/monthlydata.html"
+      }
+    ]
+  },
+  "new_arrival_rule": {
+    "days": 62,
+    "text": "每月選品以近 2 個月上架的單品為主，並挑當季與下一季要穿的；上架日優先用商品 id 建立時間、官網 published_at、季度標示（26AW）或首則評論日。"
   }
 }

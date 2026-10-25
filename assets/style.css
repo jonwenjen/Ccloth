@@ -98,7 +98,8 @@ main { max-width: 760px; margin: 0 auto; padding: 18px 16px 40px; }
   content: ""; position: absolute; top: 7px; left: 50%; margin-left: -5px; width: 10px; height: 10px; border-radius: 50%;
   border: 2px solid var(--line); background: var(--bg);
 }
-.tag-head { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: start; }
+.tag-head { display: grid; grid-template-columns: 76px 1fr auto; gap: 12px; align-items: start; }
+@media (min-width: 520px) { .tag-head { grid-template-columns: 104px 1fr auto; } }
 .rank { font: 700 34px/0.9 var(--num); color: var(--denim); min-width: 1.4em; }
 .rank small { display: block; font: 500 12px/1.4 var(--body); color: var(--muted); margin-top: 4px; }
 .who { font-size: 13px; color: var(--muted); }
@@ -175,6 +176,42 @@ details.more[open] > summary::after { content: "－"; }
 .excluded { margin-top: 22px; font-size: 14px; }
 .excluded > summary { cursor: pointer; color: var(--muted); }
 .excluded li { margin: 6px 0; }
+
+/* ---------- 商品圖 */
+.thumb { display: block; object-fit: cover; background: #fff; border: 1px solid var(--line); border-radius: 4px; flex: none; }
+.thumb.lg { width: 100%; aspect-ratio: 3 / 4; }
+.thumb.md { width: 64px; height: 80px; }
+.thumb.sm { width: 40px; height: 50px; border-radius: 3px; }
+.thumb.ph { display: grid; place-items: center; font-size: 11px; color: var(--muted); background: color-mix(in srgb, var(--line) 45%, var(--paper)); }
+.pic { position: relative; display: block; text-decoration: none; }
+.rank-badge {
+  position: absolute; left: -6px; top: -8px; min-width: 28px; height: 28px; padding: 0 6px; border-radius: 14px;
+  background: var(--denim); color: #fff; font: 700 17px/28px var(--num); text-align: center; box-shadow: 0 0 0 2px var(--paper);
+}
+.moved { color: var(--muted); }
+.badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.badge { font-size: 12px; line-height: 1.5; padding: 1px 7px; border-radius: 3px; background: color-mix(in srgb, var(--line) 55%, transparent); color: var(--ink); }
+.badge.new { background: var(--ok-bg); color: var(--ok); font-weight: 700; }
+.badge.weak { background: var(--l1-bg); color: var(--l1); }
+.pieces { list-style: none; padding: 0 !important; margin: 8px 0; display: grid; gap: 6px; }
+.piece { display: flex; gap: 8px; align-items: center; font-size: 14px; }
+.slot .piece { font-size: 13px; align-items: flex-start; }
+.row.with-pic { display: flex; gap: 12px; align-items: flex-start; }
+.row.with-pic > div { flex: 1; min-width: 0; }
+
+/* ---------- 未來 3 個月氣溫 */
+.clim { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; margin-bottom: 14px; }
+.clim h3 { font-size: 15px; margin-bottom: 6px; }
+.clim ul { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 8px; }
+.clim li { display: grid; grid-template-columns: 3em 1fr; gap: 0 10px; align-items: baseline; font-size: 14px; }
+.clim li > b { font: 700 18px/1 var(--num); }
+.clim .range { font: 600 18px/1.2 var(--num); }
+.clim .meta, .clim .bands-mini { grid-column: 2; font-size: 12px; color: var(--muted); }
+.bands-mini { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+.chip.sm { font-size: 12px; padding: 1px 8px; }
+.chip.ghost { border-style: dashed; color: var(--muted); }
+.bands .chip small { font-size: 11px; color: var(--muted); }
+.bands .chip[aria-pressed="true"] small { color: inherit; opacity: .8; }
 
 /* ---------- 一般清單 */
 .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }

@@ -8,11 +8,12 @@
   3. 專家五項加權 → 綜合分；rank = 綜合分 − 扣分；同分比五項平均；上限 100 件
   4. 品牌綜合分（依 brand_lists 權重）、與上月比較
   5. 已購單品的版型核對、清單去除已買
+  6. 高雄未來 3 個月氣候（平年值＋近 5 年偏差）→ 每件單品適穿月份；近 2 個月上架判斷
 """
 from __future__ import annotations
 
 import sys
-from datetime import datetime, timezone, timedelta
+from datetime import date, datetime, timezone, timedelta
 
 from ccloth_lib import (DATA, analyze_reviews, brands, compact_reviews, fmt, load_json, recommend_from_chart, rules,
                         save_json, size_deviation)
@@ -20,6 +21,63 @@ from ccloth_lib import (DATA, analyze_reviews, brands, compact_reviews, fmt, loa
 TPE = timezone(timedelta(hours=8))
 BRANDS = {b["id"]: b for b in brands()["brands"]}
 EXPERT_KEYS = ["material", "fit", "build", "care", "function"]
+
+
+def climate_horizon(r, run_date: date):
+    """未來 N 個月（從下個月起）的常見氣溫：平年值平均低溫～平均高溫，加上近 5 年月均溫偏差；另列寒流低溫與熱天高溫。"""
+    c = r.get("climate")
+    if not c:
+        return None
+    n = c.get("horizon_months", 3)
+    bands = r["temperature_bands"]
+    months = []
+    y, m = run_date.year, run_date.month
+    for _ in range(n):
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+        nm = c["normals"]
+        tx, hi, lo = nm["tx"][m - 1], nm["tmax"][m - 1], nm["tmin"][m - 1]
+        rec = c.get("recent", {}).get(str(m))
+        anomaly = round(sum(rec["tx"]) / len(rec["tx"]) - tx, 1) if rec else 0.0
+        low, high = round(lo + anomaly, 1), round(hi + anomaly, 1)
+        cold = min(rec["min"]) if rec else None
+        hot = max(rec["max"]) if rec else None
+        hit = [b["id"] for b in bands if b["min"] < high and b["max"] > low]
+        extra = []  # 偶爾會遇到：寒流（近 5 年最低溫 < 16°C）、熱天（平年 ≥ 30°C 天數 ≥ 3 天）
+        if cold is not None and cold < 16 and "tcold" not in hit:
+            extra.append("tcold")
+        if nm["days_tmax_ge30"][m - 1] >= 3 and "t28" not in hit:
+            extra.append("t28")
+        months.append({"year": y, "month": m, "low": low, "high": high, "mean": round(tx + anomaly, 1),
+                       "anomaly": anomaly, "cold_snap": cold, "hot_day": hot, "bands": hit, "occasional": extra,
+                       "rain_days": nm["rain_days"][m - 1], "days_tmax_ge30": nm["days_tmax_ge30"][m - 1]})
+    return {"from": run_date.isoformat(), "months": months, "method": c.get("method"),
+            "station": c.get("station"), "period": c.get("normals_period"), "sources": c.get("sources", [])}
+
+
+def season_fit(temps, horizon, r):
+    """單品適穿溫度與每個月常見氣溫重疊 ≥ overlap_min_c 才算那個月穿得到。"""
+    if not horizon or not temps:
+        return None
+    need = r["alerts"]["season_fit"]["overlap_min_c"]
+    ok = []
+    for mo in horizon["months"]:
+        overlap = min(temps[1], mo["high"]) - max(temps[0], mo["low"])
+        if overlap >= need:
+            ok.append(mo["month"])
+    return ok
+
+
+def arrival(item, run_date: date, r):
+    """近 2 個月上架：listed_at（商品 id 時間、published_at、首則評論日）或 new_flag（官網新品分類、26AW 標示）。"""
+    cfg = r["alerts"]["new_arrival"]
+    listed = item.get("listed_at")
+    src = item.get("listed_source")
+    if listed:
+        days = (run_date - date.fromisoformat(listed)).days
+        return {"is_new": days <= cfg["days"], "listed_at": listed, "days": days, "source": src}
+    if item.get("new_flag"):
+        return {"is_new": True, "listed_at": None, "days": None, "source": src}
+    return {"is_new": False, "listed_at": None, "days": None, "source": src}
 
 
 def level_name(r, lv):
@@ -75,7 +133,7 @@ def final_size(a, b_stats, chart, category, r, fallback=None):
     return a_size, f"同身形評論多數穿 {b_size}（{b_n}/{total} 人），但{why}，仍以尺寸表 {a_size} 為準。"
 
 
-def score_item(item, r, fx):
+def score_item(item, r, fx, horizon=None, run_date=None):
     cat = item["category"]
     alerts = []
     excluded_reasons = []
@@ -151,6 +209,28 @@ def score_item(item, r, fx):
         add_alert(alerts, r, "small_sample", ss["level"], ss["label"],
                   f"評論 {rv['fetched']} 則、同身形 {rv['body_matched']} 則（門檻 {ss['min_reviews']}／{ss['min_body_matched']}）")
 
+    # 近 2 個月上架
+    arr = arrival(item, run_date, r) if run_date else None
+    na = a_cfg.get("new_arrival")
+    if arr and na and not arr["is_new"]:
+        if arr["listed_at"]:
+            add_alert(alerts, r, "new_arrival", na["level"], na["label"],
+                      f"{arr['listed_at']} 上架，已 {arr['days']} 天（> {na['days']} 天）" + (f"；依據：{arr['source']}" if arr.get("source") else ""))
+        else:
+            add_alert(alerts, r, "new_arrival", na["level"], na["unknown_label"], arr.get("source") or "官網沒有上架日，也不在新品分類")
+
+    # 未來 3 個月適穿
+    months = season_fit(item.get("temps"), horizon, r)
+    sf = a_cfg.get("season_fit")
+    if sf and months is not None:
+        names = "、".join(f"{m} 月" for m in months)
+        rng = "、".join(f"{mo['month']} 月 {fmt(mo['low'])}–{fmt(mo['high'])}°C" for mo in horizon["months"])
+        t = item["temps"]
+        if not months:
+            add_alert(alerts, r, "season_fit", sf["level_none"], sf["label"], f"適穿 {t[0]}–{t[1]}°C；未來 3 個月常見 {rng}")
+        elif len(months) == 1:
+            add_alert(alerts, r, "season_fit", sf["level_one"], sf["one_label"], f"適穿 {t[0]}–{t[1]}°C，只對到 {names}")
+
     # 預算
     twd, price_basis = price_twd(item, fx)
     limit = r["budget"]["limits_twd"][cat]
@@ -201,6 +281,8 @@ def score_item(item, r, fx):
         "rank_score": rank_score,
         "budget": budget,
         "premium_pct": premium,
+        "arrival": arr,
+        "season_months": months,
     })
     return out, excluded_reasons
 
@@ -267,13 +349,15 @@ def main(month: str):
     if cand is None:
         sys.exit(f"找不到 data/candidates/{month}.json")
     fx = (cand.get("fx") or {}).get("rates", {})
+    run_date = date.fromisoformat(cand.get("collected_at") or datetime.now(TPE).date().isoformat())
+    horizon = climate_horizon(r, run_date)
     prev_report = load_json(DATA / "report.json")
     if prev_report and prev_report.get("month") == month:
         prev_report = load_json(DATA / "history" / f"{prev_month(month)}.json")
 
     kept, excluded = [], []
     for it in cand["items"]:
-        scored, reasons = score_item(it, r, fx)
+        scored, reasons = score_item(it, r, fx, horizon, run_date)
         if reasons:
             excluded.append({"id": it["id"], "brand": it["brand"], "name": it["name"], "url": it.get("url"), "reasons": reasons})
         elif scored["rank_score"] is None:
@@ -299,7 +383,10 @@ def main(month: str):
         "model": cand.get("model"),
         "summary": cand.get("summary"),
         "fx": cand.get("fx"),
-        "counts": {"candidates": len(cand["items"]), "picked": len(kept), "excluded": len(excluded)},
+        "counts": {"candidates": len(cand["items"]), "picked": len(kept), "excluded": len(excluded),
+                   "new": sum(1 for i in kept if (i.get("arrival") or {}).get("is_new")),
+                   "season_ok": sum(1 for i in kept if i.get("season_months") and len(i["season_months"]) >= 2)},
+        "climate": horizon,
         "items": kept,
         "excluded": excluded,
         "brands": score_brands(cand, r, kept, prev_report),

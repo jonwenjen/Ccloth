@@ -10,7 +10,7 @@
   const VERDICT_CLASS = { ok: 'lvok', styling: 'lv1', check: 'lv1', return: 'lv3' };
 
   const S = { rules: null, brands: {}, report: null, orders: { items: [] }, repoList: { items: [] },
-              list: [], retired: new Set(), filter: { cat: 'all', brand: 'all', budget: false, gaps: false },
+              list: [], retired: new Set(), filter: { cat: 'all', brand: 'all', budget: false, gaps: false, fresh: false, season: false },
               band: null, todayBand: null, orderFilter: 'all' };
 
   // ---------------------------------------------------------------- 小工具
@@ -32,6 +32,23 @@
   const brandName = (id) => (S.brands[id] ? S.brands[id].name : id);
   const slotLabel = (id) => (S.rules.capsule_slots.find((s) => s.id === id) || {}).label || '未分類';
   const activeOrders = () => S.orders.items.filter((o) => !['cancelled', 'refunded'].includes(o.status) && !o.retired && !S.retired.has(o.id));
+  const bandLabel = (id) => (S.rules.temperature_bands.find((b) => b.id === id) || {}).label || id;
+  const monthsText = (ms) => (!ms || !ms.length ? '未來 3 個月用不到' : ms.length === 3 ? `${ms[0]}–${ms[2]} 月都穿得到` : `${ms.join('、')} 月`);
+  // 商品圖：已購（訂單信或官網）、本月單品、清單都用 id 找；圖片載入失敗就換成類別字樣
+  function imgFor(id) {
+    const o = S.orders.items.find((x) => x.id === id); if (o && o.image) return o.image;
+    const it = (S.report.items || []).find((x) => x.id === id); if (it && it.image) return it.image;
+    const l = S.list.find((x) => x.id === id); return l && l.image ? l.image : null;
+  }
+  const catOf = (id) => {
+    const o = S.orders.items.find((x) => x.id === id) || (S.report.items || []).find((x) => x.id === id) || S.list.find((x) => x.id === id);
+    return o ? o.category : null;
+  };
+  function thumb(src, alt, cls = '', cat = null) {
+    const ph = esc(CAT[cat] || '圖');
+    if (!src) return `<span class="thumb ph ${cls}" aria-hidden="true">${ph}</span>`;
+    return `<img class="thumb ${cls}" src="${esc(src)}" alt="${esc(alt || '')}" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-ph="${ph}" onerror="this.outerHTML='<span class=&quot;thumb ph ${cls}&quot; aria-hidden=&quot;true&quot;>'+this.dataset.ph+'</span>'">`;
+  }
 
   async function getJSON(path, fallback) {
     try { const r = await fetch(path, { cache: 'no-cache' }); if (!r.ok) throw new Error(r.status); return await r.json(); }
@@ -112,7 +129,7 @@
       S.list = S.list.filter((x) => x.id !== it.id);
       toast(`已從清單移除：${it.name}`);
     } else {
-      S.list.push({ id: it.id, brand: it.brand, name: it.name, url: it.url, category: it.category, slot: it.slot,
+      S.list.push({ id: it.id, brand: it.brand, name: it.name, url: it.url, category: it.category, slot: it.slot, image: it.image,
                     size: it.size && it.size.final, price_at_add: it.budget && it.budget.price_twd,
                     temps: it.temps, added: new Date().toISOString().slice(0, 10) });
       toast(`已加入清單：${it.name}`);
@@ -139,6 +156,8 @@
         <option value="all">全部品牌</option>
         ${brandsInReport.map((b) => `<option value="${esc(b)}" ${f.brand === b ? 'selected' : ''}>${esc(brandName(b))}</option>`).join('')}
       </select>
+      <button class="chip" data-toggle="fresh" aria-pressed="${f.fresh}">只看近 2 個月新品</button>
+      <button class="chip" data-toggle="season" aria-pressed="${f.season}">只看未來 3 個月適穿</button>
       <button class="chip" data-toggle="budget" aria-pressed="${f.budget}">只看預算內</button>
       <button class="chip" data-toggle="gaps" aria-pressed="${f.gaps}">只看衣櫥缺口</button>`;
     $('#pick-filters').querySelectorAll('[data-cat]').forEach((b) => b.onclick = () => { f.cat = b.dataset.cat; renderPicks(); });
@@ -148,7 +167,8 @@
     const gaps = gapSlots();
     const items = S.report.items.filter((it) =>
       (f.cat === 'all' || it.category === f.cat) && (f.brand === 'all' || it.brand === f.brand) &&
-      (!f.budget || !it.budget.over_pct) && (!f.gaps || gaps.has(it.slot)));
+      (!f.budget || !it.budget.over_pct) && (!f.gaps || gaps.has(it.slot)) &&
+      (!f.fresh || (it.arrival && it.arrival.is_new)) && (!f.season || (it.season_months && it.season_months.length >= 2)));
     const list = $('#pick-list');
     list.innerHTML = items.length ? items.map(itemCard).join('') : '<li class="empty">沒有符合條件的單品，換個篩選試試。</li>';
     list.querySelectorAll('[data-add]').forEach((b) => b.onclick = () => toggleList(S.report.items.find((i) => i.id === b.dataset.add)));
@@ -191,15 +211,19 @@
     const label = it.label && it.label !== brandName(it.brand) ? `${esc(brandName(it.brand))}｜${esc(it.label)}` : esc(brandName(it.brand));
     const alerts = (it.alerts || []).map((a) => `<li class="alert lv${a.level}"><b>${esc(a.level_name)}</b>${esc(a.label)}：${esc(a.detail)}</li>`).join('');
     const added = inList(it.id);
+    const arr = it.arrival || {};
+    const fresh = arr.is_new ? `<span class="badge new">新品${arr.listed_at ? ' ' + esc(arr.listed_at.slice(5).replace('-', '/')) + ' 上架' : ''}</span>` : '';
+    const season = it.season_months ? `<span class="badge ${it.season_months.length >= 2 ? '' : 'weak'}">${esc(monthsText(it.season_months))}</span>` : '';
     return `<li class="tag" id="item-${esc(it.id)}">
       <div class="tag-head">
-        <div class="rank">${it.rank}<small>${esc(moved)}</small></div>
+        <a class="pic" href="${esc(it.url)}" target="_blank" rel="noopener" aria-label="${esc(it.name)} 商品圖">${thumb(it.image, it.name, 'lg', it.category)}<span class="rank-badge">${it.rank}</span></a>
         <div>
-          <p class="who">${label}｜${esc(CAT[it.category])}</p>
+          <p class="who">${label}｜${esc(CAT[it.category])}｜<span class="moved">${esc(moved)}</span></p>
           <h3><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a></h3>
           <p><span class="price">NT$${num(p.sale)}${p.original && p.original !== p.sale ? `<s>${num(p.original)}</s>` : ''}</span>
              <span class="budget ${b.over_pct ? 'over' : ''}">${esc(b.status || '')}</span></p>
           <p class="score">綜合 ${fmt2(it.overall)}　排序分 ${fmt2(it.rank_score)}</p>
+          ${fresh || season ? `<p class="badges">${fresh}${season}</p>` : ''}
         </div>
         <div class="label" title="建議尺寸"><b>${esc(it.size.final || '?')}</b><span>建議尺寸</span></div>
       </div>
@@ -255,7 +279,9 @@
       <div class="block"><h4>材質與保養</h4>
         <dl class="kv"><dt>成分</dt><dd>${esc(f.composition || '未標示')}</dd><dt>產地</dt><dd>${esc(f.origin || '未標示')}</dd>
         <dt>洗滌</dt><dd>${esc(f.care || '未標示')}</dd><dt>適穿溫度</dt><dd>${it.temps ? `${it.temps[0]}–${it.temps[1]}°C` : '—'}</dd>
-        <dt>衣櫥格</dt><dd>${esc(slotLabel(it.slot))}</dd><dt>顏色</dt><dd>${esc((it.colors || []).join('、'))}</dd></dl>
+        <dt>衣櫥格</dt><dd>${esc(slotLabel(it.slot))}</dd><dt>顏色</dt><dd>${esc((it.colors || []).join('、'))}</dd>
+        <dt>上架</dt><dd>${it.arrival ? (it.arrival.listed_at ? `${esc(it.arrival.listed_at)}（${esc(it.arrival.source || '')}）` : esc(it.arrival.source || '不明')) : '—'}</dd>
+        <dt>未來 3 個月</dt><dd>${esc(monthsText(it.season_months))}</dd></dl>
         ${notes ? `<ul>${notes}</ul>` : ''}</div>`;
   }
 
@@ -284,10 +310,10 @@
   // ---------------------------------------------------------------- 穿搭
   function wardrobePool() {
     const reportById = Object.fromEntries(S.report.items.map((i) => [i.id, i]));
-    const owned = activeOrders().filter((o) => o.slot).map((o) => ({ id: o.id, name: `${o.brand} ${o.name}${o.color ? '（' + o.color + '）' : ''}`, slot: o.slot, temps: o.temps, src: '已購' }));
+    const owned = activeOrders().filter((o) => o.slot).map((o) => ({ id: o.id, name: `${o.brand} ${o.name}${o.color ? '（' + o.color + '）' : ''}`, slot: o.slot, temps: o.temps, src: '已購', image: o.image, category: o.category }));
     const listed = S.list.map((x) => {
       const it = reportById[x.id] || x;
-      return { id: x.id, name: `${brandName(x.brand)} ${x.name}`, slot: it.slot, temps: it.temps, src: '清單' };
+      return { id: x.id, name: `${brandName(x.brand)} ${x.name}`, slot: it.slot, temps: it.temps, src: '清單', image: it.image || x.image, category: it.category || x.category };
     }).filter((x) => x.slot);
     return [...owned, ...listed];
   }
@@ -314,20 +340,47 @@
     return out;
   }
 
+  function climatePanel() {
+    const c = S.report.climate;
+    if (!c || !c.months) return '';
+    const rows = c.months.map((m) => `<li><b>${m.month} 月</b>
+        <span class="range">${fmt(m.low)}–${fmt(m.high)}°C</span>
+        <span class="meta">均溫 ${fmt(m.mean)}°C${m.anomaly ? `（近 5 年比平年 ${m.anomaly > 0 ? '+' : ''}${fmt(m.anomaly)}）` : ''}｜寒流最低 ${fmt(m.cold_snap)}°C｜雨天 ${fmt(m.rain_days)} 天</span>
+        <span class="bands-mini">${m.bands.map((b) => `<button class="chip sm" data-band="${b}">${esc(bandLabel(b))}</button>`).join('')}${(m.occasional || []).map((b) => `<button class="chip sm ghost" data-band="${b}" title="偶爾">偶爾 ${esc(bandLabel(b))}</button>`).join('')}</span></li>`).join('');
+    return `<section class="clim" aria-label="高雄未來 3 個月氣溫"><h3>高雄未來 3 個月</h3><ul>${rows}</ul>
+      <p class="tape-note">${esc(c.station || '')} ${esc(c.period || '')} 平年值，加上近 5 年同月偏差。${(c.sources || []).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join('、')}</p></section>`;
+  }
+  const bandMonths = (id) => ((S.report.climate || {}).months || []).filter((m) => m.bands.includes(id)).map((m) => m.month);
+
+  function pieceRow(text, ref) {
+    const src = ref ? imgFor(ref) : null;
+    const it = ref && (S.report.items || []).find((x) => x.id === ref);
+    const link = it ? `<a href="#item-${esc(ref)}" data-jump="${esc(ref)}">${esc(text)}</a>` : esc(text);
+    return `<li class="piece">${thumb(src, text, 'sm', ref ? catOf(ref) : null)}<span>${link}</span></li>`;
+  }
+
   function renderOutfits() {
     const bands = S.rules.temperature_bands;
     const band = bands.find((b) => b.id === S.band) || bands[2];
     const expert = ((S.report.outfits || {}).bands || {})[band.id] || [];
     const auto = autoOutfits(band);
     $('#tab-outfits').innerHTML = `<h2>依溫度穿搭（${esc(S.rules.profile.city)}）</h2>
-      <div class="bands" role="group" aria-label="溫度帶">${bands.map((b) => `<button class="chip ${b.id === S.todayBand ? 'today' : ''}" data-band="${b.id}" aria-pressed="${b.id === band.id}">${esc(b.label)}${b.id === S.todayBand ? '（今天）' : ''}</button>`).join('')}</div>
+      ${climatePanel()}
+      <div class="bands" role="group" aria-label="溫度帶">${bands.map((b) => { const ms = bandMonths(b.id); return `<button class="chip ${b.id === S.todayBand ? 'today' : ''}" data-band="${b.id}" aria-pressed="${b.id === band.id}">${esc(b.label)}${b.id === S.todayBand ? '（今天）' : ''}${ms.length ? `<small>　${ms.join('、')} 月</small>` : ''}</button>`; }).join('')}</div>
       <p class="base"><b>基本層次：</b>${esc(band.base)}</p>
       <h3 class="section-h">專家搭配</h3>
-      ${expert.map((o) => `<div class="outfit"><h3>${esc(o.title)}</h3><ol>${o.pieces.map((p) => `<li>${esc(p)}</li>`).join('')}</ol><p class="note">${esc(o.note)}</p></div>`).join('') || '<p class="empty">這期沒有這個溫度帶的專家搭配。</p>'}
+      ${expert.map((o) => `<div class="outfit"><h3>${esc(o.title)}</h3><ol class="pieces">${o.pieces.map((p, i) => pieceRow(p, (o.refs || [])[i])).join('')}</ol><p class="note">${esc(o.note)}</p></div>`).join('') || '<p class="empty">這期沒有這個溫度帶的專家搭配。</p>'}
       <h3 class="section-h">自動配（已購＋清單）</h3>
-      ${auto.map((o, i) => `<div class="outfit"><h3>組合 ${i + 1}</h3><ol>${o.pieces.map((p) => `<li>${esc(p.name)}<span class="meta">　${esc(p.src)}｜${esc(slotLabel(p.slot))}</span></li>`).join('')}</ol></div>`).join('') ||
+      ${auto.map((o, i) => `<div class="outfit"><h3>組合 ${i + 1}</h3><ol class="pieces">${o.pieces.map((p) => `<li class="piece">${thumb(p.image, p.name, 'sm', p.category)}<span>${esc(p.name)}<span class="meta">　${esc(p.src)}｜${esc(slotLabel(p.slot))}</span></span></li>`).join('')}</ol></div>`).join('') ||
         '<p class="empty">已購與清單裡還湊不出這個溫度的完整組合。到「選物」加幾件到清單，這裡會自動更新。</p>'}`;
+    $('#tab-outfits').querySelectorAll('[data-jump]').forEach((a) => a.onclick = (e) => { e.preventDefault(); jumpTo(a.dataset.jump); });
     $('#tab-outfits').querySelectorAll('[data-band]').forEach((b) => b.onclick = () => { S.band = b.dataset.band; renderOutfits(); });
+  }
+
+  function jumpTo(id) {
+    S.filter = { cat: 'all', brand: 'all', budget: false, gaps: false, fresh: false, season: false };
+    location.hash = 'picks'; renderPicks();
+    setTimeout(() => document.getElementById('item-' + id)?.scrollIntoView({ block: 'start' }), 50);
   }
 
   // ---------------------------------------------------------------- 衣櫥
@@ -351,14 +404,10 @@
       <div class="slots">${cells.map(({ s, have, want, state, sugg }) => `<div class="slot ${state}">
         <h3>${esc(s.label)}</h3><p class="hint">${esc(s.hint)}</p>
         <p class="state">${state === 'full' ? `已有 ${have.length} 件` : state === 'planned' ? '清單補上' : '缺'}</p>
-        ${have.length || want.length ? `<ul>${have.slice(0, 4).map((o) => `<li>${esc(o.brand)} ${esc(o.name)}</li>`).join('')}${want.map((x) => `<li>（清單）${esc(x.name)}</li>`).join('')}</ul>` : ''}
-        ${state === 'gap' && sugg.length ? `<ul>${sugg.map((i) => `<li>本月可補：<a href="#item-${esc(i.id)}" data-jump="${esc(i.id)}">${esc(brandName(i.brand))} ${esc(i.name)}</a></li>`).join('')}</ul>` : ''}
+        ${have.length || want.length ? `<ul class="pieces">${have.slice(0, 4).map((o) => `<li class="piece">${thumb(o.image, o.name, 'sm', o.category)}<span>${esc(o.brand)} ${esc(o.name)}</span></li>`).join('')}${want.map((x) => `<li class="piece">${thumb(x.image || imgFor(x.id), x.name, 'sm', x.category)}<span>（清單）${esc(x.name)}</span></li>`).join('')}</ul>` : ''}
+        ${state === 'gap' && sugg.length ? `<ul class="pieces">${sugg.map((i) => `<li class="piece">${thumb(i.image, i.name, 'sm', i.category)}<span>本月可補：<a href="#item-${esc(i.id)}" data-jump="${esc(i.id)}">${esc(brandName(i.brand))} ${esc(i.name)}</a></span></li>`).join('')}</ul>` : ''}
       </div>`).join('')}</div>`;
-    $('#tab-wardrobe').querySelectorAll('[data-jump]').forEach((a) => a.onclick = (e) => {
-      e.preventDefault(); S.filter = { cat: 'all', brand: 'all', budget: false, gaps: false };
-      location.hash = 'picks'; renderPicks();
-      setTimeout(() => document.getElementById('item-' + a.dataset.jump)?.scrollIntoView({ block: 'start' }), 50);
-    });
+    $('#tab-wardrobe').querySelectorAll('[data-jump]').forEach((a) => a.onclick = (e) => { e.preventDefault(); jumpTo(a.dataset.jump); });
   }
 
   // ---------------------------------------------------------------- 清單
@@ -373,9 +422,9 @@
       const it = reportById[x.id];
       const now = it ? it.budget.price_twd : x.price_now;
       const change = x.price_at_add && now && now !== x.price_at_add ? `（加入時 NT$${num(x.price_at_add)}）` : '';
-      return `<li class="row"><h3><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(brandName(x.brand))} ${esc(x.name)}</a></h3>
+      return `<li class="row with-pic">${thumb(x.image || imgFor(x.id), x.name, 'md', x.category)}<div><h3><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(brandName(x.brand))} ${esc(x.name)}</a></h3>
         <p class="meta">${esc(CAT[x.category] || '')}｜${esc(slotLabel(x.slot))}｜建議 ${esc(x.size || (it && it.size.final) || '—')}｜NT$${num(now)}${change}｜${local ? (repoIds.has(x.id) ? '已同步' : '只在這支手機') : '已同步（這支手機沒有）'}</p>
-        ${local ? `<p><button class="btn ghost" data-remove="${esc(x.id)}">從清單移除</button></p>` : ''}</li>`;
+        ${local ? `<p><button class="btn ghost" data-remove="${esc(x.id)}">從清單移除</button></p>` : ''}</div></li>`;
     };
     $('#tab-list').innerHTML = `<h2>我的清單</h2>
       <p class="lead">清單存在這支手機的瀏覽器裡。按「同步到 GitHub」會開一個 Issue，在 GitHub 按 Submit 後，15 號的分析就會匯入、重新檢查價格，買過的會自動移除。</p>
@@ -416,13 +465,13 @@
       <ul class="rows">${shown.map((o) => {
         const retired = o.retired || S.retired.has(o.id);
         const ck = checks[o.id];
-        return `<li class="row"><p><span class="pill ${VERDICT_CLASS[o.verdict] || ''}">${esc(V[o.verdict] ? V[o.verdict].label : o.verdict)}</span>
+        return `<li class="row with-pic">${o.url ? `<a href="${esc(o.url)}" target="_blank" rel="noopener">${thumb(o.image, o.name, 'md', o.category)}</a>` : thumb(o.image, o.name, 'md', o.category)}<div><p><span class="pill ${VERDICT_CLASS[o.verdict] || ''}">${esc(V[o.verdict] ? V[o.verdict].label : o.verdict)}</span>
           <span class="meta">${esc(o.date)}｜${esc(o.shop)}${o.status === 'ordered' ? '｜運送中' : ''}${retired ? '｜已淘汰' : ''}</span></p>
           <h3>${esc(o.brand)} ${esc(o.name)}</h3>
           <p class="meta">${esc(o.color || '')}${o.size ? `｜${esc(o.size)}` : ''}｜NT$${num(o.price)}${o.qty > 1 ? ` × ${o.qty}` : ''}｜${esc(slotLabel(o.slot))}${o.temps ? `｜${o.temps[0]}–${o.temps[1]}°C` : ''}</p>
           <p>${esc(o.verdict_reason || '')}</p>
-          ${ck ? `<p class="meta">實測對照：最大偏差 ${fmt(ck.max_dev)}cm</p>` : ''}
-          <p><button class="btn ghost" data-retire="${esc(o.id)}" aria-pressed="${retired}">${retired ? '取消已淘汰' : '標為已淘汰'}</button></p></li>`;
+          ${ck ? `<p class="meta">實測對照（${esc(o.size || '')}）：最大偏差 ${fmt(ck.max_dev)}cm${o.measurements ? '｜' + Object.entries(o.measurements).map(([k, v]) => `${esc(S.rules.measurement_labels[k] || k)} ${fmt(v)}`).join('、') : ''}</p>` : ''}
+          <p><button class="btn ghost" data-retire="${esc(o.id)}" aria-pressed="${retired}">${retired ? '取消已淘汰' : '標為已淘汰'}</button></p></div></li>`;
       }).join('') || '<li class="empty">沒有符合的單品。</li>'}</ul>`;
     $('#tab-orders').querySelectorAll('[data-v]').forEach((b) => b.onclick = () => { S.orderFilter = b.dataset.v; renderOrders(); });
     $('#tab-orders').querySelectorAll('[data-retire]').forEach((b) => b.onclick = () => {
@@ -482,6 +531,8 @@
       [a.one_way_zip.label, '注意', '—', '—'],
       [a.small_sample.label, '注意', '—', '—'],
       ...(a.no_chart ? [[a.no_chart.label, '注意', '—', '—']] : []),
+      ...(a.new_arrival ? [[`${a.new_arrival.label}（> ${a.new_arrival.days} 天）`, '注意', '—', '—']] : []),
+      ...(a.season_fit ? [[a.season_fit.label, a.season_fit.one_label, '3 個月都用不到', '—']] : []),
     ].map((r) => `<tr>${r.map((c) => `<td>${esc(lv(c))}</td>`).join('')}</tr>`).join('');
     const sr = S.report.self_review || [];
     $('#tab-method').innerHTML = `<div class="method"><h2>選品方法</h2>
@@ -494,6 +545,7 @@
       <h3 class="section-h">分級提醒</h3>
       <div class="table-wrap"><table><thead><tr><th>項目</th><th>注意 −${R.levels['1'].penalty}</th><th>警告 −${R.levels['2'].penalty}</th><th>嚴重（剔除）</th></tr></thead><tbody>${alertRows}</tbody></table></div>
       <p class="tape-note" style="margin-top:6px">排序：${esc(R.ranking.formula)}，上限 ${R.ranking.max_items} 件。缺貨與女裝不列入。</p>
+      ${R.climate ? `<h3 class="section-h">新品與季節</h3><p>${esc((R.new_arrival_rule || {}).text || '')} 季節：${esc(R.climate.method)} 單品適穿溫度與那個月的常見氣溫重疊至少 ${a.season_fit ? a.season_fit.overlap_min_c : 2}°C，才算那個月穿得到。</p>` : ''}
       <h3 class="section-h">排雷評論</h3>
       <p>只看身高 ${R.reviews.body_filter.height_cm.join('–')}cm、體重 ${R.reviews.body_filter.weight_kg.join('–')}kg 的評論算同身形。否定片語（例如「不會縮水」「遮肚」）先刪掉再比對關鍵字。${esc(R.reviews.low_star_note)}。</p>
       <h3 class="section-h">預算</h3>

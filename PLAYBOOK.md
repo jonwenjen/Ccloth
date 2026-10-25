@@ -49,7 +49,7 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
 - `from:service@plain-me.com 訂購成功`、蝦皮 `賣家名稱: plainme`
 - `from:(goopi OR crealivedept OR whiterock2008 OR lativ)`，以及 brands.json 每個品牌的 `order_mail_hints`
 
-每件新單品加進 `data/orders.json`：
+每件新單品加進 `data/orders.json`（MUSINSA 的 goodsNo 在訂單信商品圖網址裡：`.../goods_img/日期/{goodsNo}/...`；官方實測尺寸用 `scripts/browser/musinsa_actual_size.js` 在 musinsa.com 頁面跑）：
 
 | 欄位 | 說明 |
 |---|---|
@@ -57,7 +57,8 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
 | `date` `shop` `status` | status：ordered／delivered／cancelled／refunded |
 | `brand` `name` `color` `size` `price` `qty` | 照信件 |
 | `category` `slot` `role` `temps` | 類別、12 格衣櫥哪一格、角色、適穿溫度 [低, 高] |
-| `goodsNo` `composition` `measurements` | 能查到就補；measurements 為該尺寸實測平量 cm |
+| `goodsNo` `composition` `measurements` | 能查到就補；measurements 為該尺寸官方實測平量 cm |
+| `url` `image` | 商品頁與商品圖（訂單信或官網），網站的衣櫥、穿搭、已購會顯示 |
 | `verdict` `verdict_reason` | ok／styling／check／return，理由寫出差幾 cm、要怎麼穿 |
 
 取消、退款要把原本那件改 status，不要刪除。**絕對不要寫訂單編號、收件人、地址、電話。**
@@ -76,17 +77,37 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
 
 ## 6. 選品（目標 1、5–7、12、14）
 
+### 6.0 新品與季節（2026-10-25 起）
+
+- **只找近 2 個月上架的單品**（`rules.json → alerts.new_arrival.days` = 62 天），挑**當季與下一季**要穿的。上個月以前上架的舊款仍可列（經典款），但會標「不是近 2 個月上架」注意。
+- 每件候選寫 `listed_at`（YYYY-MM-DD）與 `listed_source`，依據優先順序：
+  1. Shopline 網站（GOOPi、Filter017／Crealive、YANGI、JERSCY、TAICHI、PROJEXT、CUBOX）：商品 id 前 8 碼是建立時間。`scripts/browser/shopline_new.js` 會列出近 62 天上架的商品（含上架日、價格、圖）。
+  2. WHITEROCK（WISDOM）商品頁 HTML 有 `published_at`；Professor.Ę（Shopify）用 `/products/{handle}.json` 的 `published_at`。
+  3. Lativ：首則評論日（評論 API）；還沒有評論就寫 `new_flag: true` 並說明。
+  4. plain-me：在「新品服飾」分類（`/men/products/new/new-clothes`）就寫 `new_flag: true`，`listed_source: "官網新品分類"`。
+  5. Mr. Henley：商品圖網址裡的上傳日期。
+- **高雄未來 3 個月氣候**在 `rules.json → climate`（中央氣象署高雄站平年值＋近 5 年同月實測）。每年 1 月更新一次 `recent`（把去年 11–2 月的實測加進去、刪掉最舊的一年）：中央氣象署「每月氣象」頁的資料檔是 `/V8/C/C/Statistics/MonthlyData/MOD/{年}_{月}.html`，可在 cwa.gov.tw 頁面用 fetch 讀。
+- `score.py` 會算出未來 3 個月每月常見氣溫與溫度帶，單品 `temps` 與那個月重疊 ≥ 2°C 才算穿得到；3 個月都用不到標警告、只對到 1 個月標注意。所以 `temps` 要認真填（短袖重磅 T 約 24–34、長 T 16–26、針織 12–22、輕外套 16–24）。
+
 ### 6.1 範圍
 
 - 只看 `config/brands.json` 裡 `status: verified` 的品牌（目前 12 個：plain-me、GOOPiMADE、WISDOM、Filter017、Lativ、YANGI、Professor.Ę、JERSCY、PROJEXT、Mr. Henley、TAICHI、CUBOX）。`needs_url` 的品牌在 run-log 提醒 Robin 補網址；`closing`（VOUX）不選品。
-- 新品牌每月至少看 2–3 件，優先補衣櫥缺口與高雄氣候適用的款式。
+- 每個品牌先掃近 2 個月新品，挑男裝上衣、褲子、外套中適合未來 3 個月的 2–4 件；品牌近 2 個月沒有新衣服就在 brand_scores 的 `changes_vs_last` 寫明。
+- 上月入選單品若還在賣，價格與庫存要重新確認（候選檔可沿用，但 listed_at 不變，會自動變成舊款）。
 - 先算衣櫥缺口（12 格：已購＋清單），缺的格子優先找；每格都至少找 1–2 件候選。
 - 女裝、缺貨不列入（缺貨可以放進候選檔並設 `in_stock: false`，會自動列在剔除）。
 
 ### 6.2 抓資料
 
 - **一般品牌**：WebFetch 類別頁拿商品列表，再 WebFetch 商品頁拿尺寸表、成分、產地、洗標、版型描述、模特兒資訊、評論。同一個網站一次只抓一頁（GOOPi 會限流）。
-- **尺寸表是圖片的品牌**（TAICHI、Mr. Henley、JERSCY、PROJEXT）：用內建瀏覽器打開商品頁，列出描述區圖片，逐張打開判讀「尺寸表」「模特兒資訊」「試穿報告」。TAICHI 的尺寸圖通常在描述最後幾張；Mr. Henley 在商品圖最後一張；極厚 T 官方說與舒適版亨利衫同尺寸。讀不到時寫 `size_fallback`：`{"size": "L", "reason": "官方實穿者 177／71 穿 L…"}`，沒有依據就不寫（網站會顯示「到貨試穿為準」）。
+- **尺寸表是圖片的品牌**：用內建瀏覽器打開圖片網址，用 `zoom` 放大表格判讀。
+  - TAICHI：商品描述最後幾張（尺寸表、模特兒資訊、試穿報告、商品資訊）。
+  - Mr. Henley：商品圖最後一張；極厚 T 官方說與舒適版亨利衫同尺寸。
+  - JERSCY：尺寸表在 inffits 彈窗，頁面載入後讀 `document.getElementById('stImage').src`；點 `#tab_info` 再讀一次就是成分與產地圖。
+  - PROJEXT：描述區最後一張 1080×1620 的圖（Size Reference）。
+  - 長圖或要裁一段時，用 `https://images.weserv.nl/?url=<圖片網址去掉 https://>&cx=0&cy=<上>&cw=1080&ch=<高>` 只看那一段（內建瀏覽器在背景時，捲動後截圖可能不會更新，開新網址才會重繪）。
+  - 讀不到時寫 `size_fallback`：`{"size": "L", "reason": "官方實穿者 177／71 穿 L…"}`，沒有依據就不寫（網站會顯示「到貨試穿為準」）。
+- **Shopline 官方評價**：`/api/merchants/{merchant_id}/products/{商品 id}/product_review_comments?page=N&limit=50`，用 `scripts/browser/shopline_reviews.js` 抓最新 200 則。只有星等與內容，沒有尺寸與身高體重；最新 200 則常全是 5 星（店家可能沒公開低星），`reviews.source` 要寫明。
 - **美元標價**（Professor.Ę）：`price.sale` 填換算後台幣，`price.basis` 寫「官網美元價 US$x × 匯率 換算（運費另計）」，候選檔 `fx.rates.USD` 記匯率與日期。
 - **Lativ**：尺寸表是圖片、評論走 API（WebFetch 被 robots.txt 擋）。用 Claude 桌面版內建瀏覽器：
   1. 開任一 Lativ 商品頁。
@@ -112,6 +133,8 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
   "fx": { "date": "…", "rates": { "KRW": 0.0232, "JPY": 0.21 } },   // 有進口款才需要
   "items": [ {
     "id": "lv-75321", "brand": "lativ", "label": "實際品牌", "name": "…",
+    "listed_at": "2026-09-04", "listed_source": "首則評論日",   // 或 "new_flag": true
+
     "category": "tee|knit|shirt|outer|pants", "slot": "12 格衣櫥 id", "url": "…", "image": "…",
     "colors": ["…"], "in_stock": true, "gender": "men",
     "price": { "sale": 750, "original": 790, "currency": "TWD", "origin_price": null, "origin_currency": null },
@@ -130,7 +153,7 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
                     "signature_items": ["…"], "changes_vs_last": "…" } },
   "trends": { "sources": [], "this_season": [], "next_season": [], "timeless": [], "unfavorable": [] },
   "discounts": { "events": [], "coupons": [] },
-  "outfits": { "bands": { "t28": [ { "title": "…", "pieces": ["…"], "note": "…" } ], "t24": [], "t20": [], "t16": [], "tcold": [] } },
+  "outfits": { "bands": { "t28": [ { "title": "…", "pieces": ["…"], "refs": ["已購或候選 id 或 null，網站用來顯示商品圖"], "note": "…" } ], "t24": [], "t20": [], "t16": [], "tcold": [] } },
   "self_review": [ { "area": "…", "finding": "…", "change": "…" } ]
 }
 ```
