@@ -153,7 +153,7 @@ python3 scripts/validate.py
 ## 9. 發布
 
 1. 在 `docs/run-log.md` 最上面加一筆：日期、模型、候選／入選／剔除數、自我審查改了什麼、待改進。
-2. `git add -A && git commit -m "Ccloth M 月報"`，`git push origin main`。
+2. `git add -A && git commit -m "Ccloth M 月報"`，然後 `git push origin main && git push origin main:gh-pages`（網站從 `gh-pages` 分支發布，它永遠和 `main` 同一個 commit）。
 3. 等 1–2 分鐘用 WebFetch 確認網站已更新（頁尾會顯示月份）。
 
 ## 10. 推播摘要

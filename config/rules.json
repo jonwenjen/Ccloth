@@ -177,7 +177,7 @@
     { "id": "shirt-bright", "label": "亮色或條紋襯衫",         "category": "shirt", "hint": "20–24°C 敞開外搭的亮點" },
     { "id": "shirt-over",   "label": "Overshirt／工裝襯衫",    "category": "shirt", "hint": "丹寧、燈芯絨、厚棉" },
     { "id": "knit",         "label": "針織衫",                 "category": "knit",  "hint": "圓領或開襟，16–20°C" },
-    { "id": "outer-light",  "label": "雙向拉鍊輕夾克",         "category": "outer", "hint": "防潑水、機能，16–20°C" },
+    { "id": "outer-light",  "label": "輕量機能夾克",           "category": "outer", "hint": "防潑水、雙向拉鍊優先，16–24°C" },
     { "id": "outer-warm",   "label": "保暖外套",               "category": "outer", "hint": "教練夾克、牛仔、大衣，16°C 以下" },
     { "id": "pants-chino",  "label": "單打褶微寬卡其褲",       "category": "pants", "hint": "卡其、橄欖綠" },
     { "id": "pants-denim",  "label": "深色直筒牛仔褲",         "category": "pants", "hint": "深藍、黑" },

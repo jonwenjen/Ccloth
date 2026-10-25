@@ -18,6 +18,7 @@
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const num = (n) => (n == null ? '—' : Number(n).toLocaleString('zh-TW'));
   const fmt = (n) => (n == null ? '—' : String(Math.round(n * 10) / 10));
+  const fmt2 = (n) => (n == null ? '—' : Number(n).toFixed(2));
   const store = {
     get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } },
@@ -198,7 +199,7 @@
           <h3><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a></h3>
           <p><span class="price">NT$${num(p.sale)}${p.original && p.original !== p.sale ? `<s>${num(p.original)}</s>` : ''}</span>
              <span class="budget ${b.over_pct ? 'over' : ''}">${esc(b.status || '')}</span></p>
-          <p class="score">綜合 ${fmt(it.overall)}　排序分 ${fmt(it.rank_score)}</p>
+          <p class="score">綜合 ${fmt2(it.overall)}　排序分 ${fmt2(it.rank_score)}</p>
         </div>
         <div class="label" title="建議尺寸"><b>${esc(it.size.final || '?')}</b><span>建議尺寸</span></div>
       </div>
@@ -232,7 +233,7 @@
     const notes = Object.entries(it.features || {}).filter(([k, v]) => k.endsWith('_note') && v).map(([, v]) => `<li>${esc(v)}</li>`).join('');
     const pct = (v) => (v == null ? '—' : `${fmt(v)}%`);
     return `
-      <div class="block"><h4>專家評分（綜合 ${fmt(it.overall)}，五項平均 ${fmt(it.avg5)}）</h4><ul class="experts">${experts}</ul>
+      <div class="block"><h4>專家評分（綜合 ${fmt2(it.overall)}，五項平均 ${fmt2(it.avg5)}）</h4><ul class="experts">${experts}</ul>
         <p class="tape-note">權重：材質 ${w.material * 100}%、版型 ${w.fit * 100}%、車工 ${w.build * 100}%、保養 ${w.care * 100}%、機能 ${w.function * 100}%。扣分 ${fmt(it.penalty)}。</p></div>
       <div class="block"><h4>搭配建議</h4><p>${esc(it.pairing || '—')}</p></div>
       <div class="block"><h4>尺寸建議</h4>
@@ -452,7 +453,7 @@
         const m = b.metrics || {};
         const score = (b.overall || {})[L.id];
         const change = b.overall_change != null ? `（較上月 ${b.overall_change > 0 ? '+' : ''}${fmt(b.overall_change)}）` : '';
-        return `<div class="brand"><div class="brand-head"><h3><a href="${esc(b.store)}" target="_blank" rel="noopener">${esc(b.name)}</a></h3><span class="big">${fmt(score)}</span></div>
+        return `<div class="brand"><div class="brand-head"><h3><a href="${esc(b.store)}" target="_blank" rel="noopener">${esc(b.name)}</a></h3><span class="big">${fmt2(score)}</span></div>
           <p class="meta">${esc(b.origin || '')}｜${esc(b.price_band || '')}｜${esc(b.size_system || '')}${esc(change)}</p>
           <div class="bars">${['material', 'build', 'care', 'fit', 'function'].map((k) => m[k] ? `<div class="bar" title="${esc(m[k].basis)}"><span>${labels[k]}</span><span class="fill"><i style="width:${m[k].score * 20}%"></i></span><span class="n">${fmt(m[k].score)}</span></div>` : '').join('')}</div>
           <dl class="kv"><dt>強項</dt><dd>${esc(b.strengths || '—')}</dd><dt>特點</dt><dd>${esc(b.features || '—')}</dd>

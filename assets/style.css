@@ -78,7 +78,9 @@ main { max-width: 760px; margin: 0 auto; padding: 18px 16px 40px; }
 .section-h { font-size: 17px; margin: 26px 0 10px; }
 
 /* ---------- 篩選 */
-.filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.filters { display: flex; gap: 6px; margin: 0 -16px 14px; padding: 0 16px 4px; overflow-x: auto; scrollbar-width: none; }
+.filters::-webkit-scrollbar { display: none; }
+.filters > * { flex: none; }
 .chip {
   border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 5px 12px;
   font-size: 14px; cursor: pointer; color: var(--ink);
@@ -90,13 +92,13 @@ main { max-width: 760px; margin: 0 auto; padding: 18px 16px 40px; }
 .tags { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
 .tag {
   position: relative; background: var(--paper); border: 1px solid var(--line); border-radius: 6px;
-  padding: 16px 16px 12px;
+  padding: 22px 16px 12px;
 }
 .tag::before { /* 吊牌打孔 */
-  content: ""; position: absolute; top: 14px; right: 14px; width: 10px; height: 10px; border-radius: 50%;
+  content: ""; position: absolute; top: 7px; left: 50%; margin-left: -5px; width: 10px; height: 10px; border-radius: 50%;
   border: 2px solid var(--line); background: var(--bg);
 }
-.tag-head { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: start; padding-right: 18px; }
+.tag-head { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: start; }
 .rank { font: 700 34px/0.9 var(--num); color: var(--denim); min-width: 1.4em; }
 .rank small { display: block; font: 500 12px/1.4 var(--body); color: var(--muted); margin-top: 4px; }
 .who { font-size: 13px; color: var(--muted); }
@@ -235,7 +237,8 @@ details.more[open] > summary::after { content: "－"; }
 textarea.json { width: 100%; min-height: 140px; font: 12px/1.4 ui-monospace, Menlo, monospace; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 4px; padding: 8px; }
 
 @media (min-width: 640px) {
-  .tag { padding: 18px 20px 14px; }
+  .tag { padding: 22px 20px 14px; }
+  .filters { flex-wrap: wrap; margin: 0 0 14px; padding: 0; overflow: visible; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .mark { transition: left .3s ease; }
