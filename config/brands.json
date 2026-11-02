@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-11-03",
   "notes": "status: verified = 已確認官方賣場，每月分析；needs_url = 還沒找到可以下單的官方賣場；closing = 品牌已宣布退場或售後停止。後兩者每月跳過並在網站「品牌」標示。",
   "brands": [
     {
@@ -17,7 +17,10 @@
       "product_url_pattern": "https://www.plain-me.com/men/product-detail/{id}",
       "size_system": "S/M/L/XL（寬版版型，常需降一號）",
       "reviews": "官網沒有評論；有「plain-me 穿搭」實穿照（身高＋尺寸，沒有體重）。評論改看 momo 同款。",
-      "order_mail_hints": ["plain-me", "plainme"]
+      "order_mail_hints": [
+        "plain-me",
+        "plainme"
+      ]
     },
     {
       "id": "goopimade",
@@ -36,7 +39,10 @@
       "product_url_pattern": "https://www.goopi.co/products/{handle}",
       "size_system": "Size 1/2/3（日系編號，基準 Size 2；多數為寬鬆版型）",
       "reviews": "SHOPLINE 評論模組通常是空的；評論改看 Dcard／PTT。",
-      "order_mail_hints": ["goopi", "GOOPiMADE"]
+      "order_mail_hints": [
+        "goopi",
+        "GOOPiMADE"
+      ]
     },
     {
       "id": "wisdom",
@@ -52,7 +58,10 @@
       "product_url_pattern": "https://www.whiterock2008.com.tw/collections/wisdom/products/{handle}",
       "size_system": "S/M/L/XL",
       "reviews": "賣場沒有評論；評論改看 Dcard／PTT／IG。",
-      "order_mail_hints": ["whiterock", "WISDOM"]
+      "order_mail_hints": [
+        "whiterock",
+        "WISDOM"
+      ]
     },
     {
       "id": "filter017",
@@ -73,7 +82,10 @@
       "product_url_pattern": "https://www.crealivedept.com/products/{handle}",
       "size_system": "S/M/L/XL",
       "reviews": "SHOPLINE 評論模組；多數商品沒有評論。",
-      "order_mail_hints": ["crealive", "filter017"]
+      "order_mail_hints": [
+        "crealive",
+        "filter017"
+      ]
     },
     {
       "id": "mixfit",
@@ -81,9 +93,13 @@
       "origin": "台灣",
       "status": "needs_url",
       "store": null,
-      "candidates": ["https://tw.mixfitmag.com/shop.php"],
+      "candidates": [
+        "https://tw.mixfitmag.com/shop.php"
+      ],
       "notes": "目前找到的「混着 MIXFIT」是線上雜誌與店舖地圖，沒有購物車。請提供 MIXFIT 的購物網址。",
-      "order_mail_hints": ["mixfit"]
+      "order_mail_hints": [
+        "mixfit"
+      ]
     },
     {
       "id": "1973",
@@ -91,10 +107,16 @@
       "origin": "台灣（韓系街頭複合網拍，含 Boy London）",
       "status": "needs_url",
       "store": null,
-      "candidates": ["https://www.boy-london.com.tw/"],
+      "candidates": [
+        "https://www.boy-london.com.tw/"
+      ],
       "notes": "找不到名為 1973 的賣場；Boy London 台灣站拒絕自動讀取。請提供 1973 的購物網址。韓國進口款適用代購溢價規則。",
       "premium_applies": true,
-      "order_mail_hints": ["1973", "boy london", "boylondon"]
+      "order_mail_hints": [
+        "1973",
+        "boy london",
+        "boylondon"
+      ]
     },
     {
       "id": "resurrection",
@@ -102,10 +124,15 @@
       "origin": "待確認（日本 Resurrection Tokyo／英國 Resurrection）",
       "status": "needs_url",
       "store": null,
-      "candidates": ["https://resurrection-official.com/", "https://www.resurrection-online.com/"],
+      "candidates": [
+        "https://resurrection-official.com/",
+        "https://www.resurrection-online.com/"
+      ],
       "notes": "找到兩個同名品牌：日本手工改造品牌（STORES，日圓）與英國利物浦選物店（英鎊），都不是台灣賣場。請確認是哪一個。若是日本品牌，尺寸基準用 Size 2 並適用代購溢價規則。",
       "premium_applies": true,
-      "order_mail_hints": ["resurrection"]
+      "order_mail_hints": [
+        "resurrection"
+      ]
     },
     {
       "id": "lativ",
@@ -129,7 +156,9 @@
       "product_url_pattern": "https://www.lativ.com.tw/product/{id}",
       "size_system": "S–XXL",
       "reviews": "官網有評論，身高體重寫在內文開頭（例如「175.85.36」「160/55」），尺寸在品名後；沒有星等。全站最新評論：https://www.lativ.com.tw/comments",
-      "order_mail_hints": ["lativ"]
+      "order_mail_hints": [
+        "lativ"
+      ]
     },
     {
       "id": "yangi",
@@ -148,7 +177,9 @@
       "product_url_pattern": "https://www.yangiofficial.com/products/{handle}",
       "size_system": "XS–XL（胸圍、腰圍多為全圍，要除以 2）",
       "reviews": "評論模組是空的。",
-      "order_mail_hints": ["yangi"]
+      "order_mail_hints": [
+        "yangi"
+      ]
     },
     {
       "id": "professor-e",
@@ -159,12 +190,17 @@
       "store": "https://professor-e.com/collections/men",
       "platform": "Shopify（官網以美元標價）",
       "currency": "USD",
-      "categories": { "men": "https://professor-e.com/collections/men" },
+      "categories": {
+        "men": "https://professor-e.com/collections/men"
+      },
       "product_url_pattern": "https://professor-e.com/products/{handle}",
       "size_system": "46／48／50／52（歐碼）",
       "reviews": "沒有評論。",
       "notes": "官網只顯示美元，價格依當期匯率換算台幣；運費另計。",
-      "order_mail_hints": ["professor-e", "professor.e"]
+      "order_mail_hints": [
+        "professor-e",
+        "professor.e"
+      ]
     },
     {
       "id": "jerscy",
@@ -187,7 +223,9 @@
       "product_url_pattern": "https://www.jerscy.com.tw/products/{id}",
       "size_system": "S–4XL（3XL、4XL 獨立打版）",
       "reviews": "評論模組是空的；商品頁有創作者實穿（身高、體重、尺寸）。尺寸表不在頁面文字裡（用 inffits 尺寸工具），需要內建瀏覽器。",
-      "order_mail_hints": ["jerscy"]
+      "order_mail_hints": [
+        "jerscy"
+      ]
     },
     {
       "id": "projext",
@@ -205,7 +243,9 @@
       "product_url_pattern": "https://tw.projextco.com/products/{handle}",
       "size_system": "未標示（尺寸表不在頁面文字裡）",
       "reviews": "評論模組是空的。",
-      "order_mail_hints": ["projext"]
+      "order_mail_hints": [
+        "projext"
+      ]
     },
     {
       "id": "mr-henley",
@@ -215,11 +255,15 @@
       "added": "2026-10-25",
       "store": "https://www.henley.com.tw/search?filter_name=%E7%94%B7%E5%A3%AB&filter_tag=%E7%94%B7%E5%A3%AB",
       "platform": "QDM",
-      "categories": { "men": "https://www.henley.com.tw/search?filter_name=%E7%94%B7%E5%A3%AB&filter_tag=%E7%94%B7%E5%A3%AB" },
+      "categories": {
+        "men": "https://www.henley.com.tw/search?filter_name=%E7%94%B7%E5%A3%AB&filter_tag=%E7%94%B7%E5%A3%AB"
+      },
       "product_url_pattern": "https://www.henley.com.tw/{handle}",
       "size_system": "M–2XL（為亞洲身形打版）",
       "reviews": "有評論欄位，目前多為 0 則；尺寸表不在頁面文字裡。",
-      "order_mail_hints": ["henley"]
+      "order_mail_hints": [
+        "henley"
+      ]
     },
     {
       "id": "taichi",
@@ -237,7 +281,9 @@
       "product_url_pattern": "https://www.taichi-t.com/products/{handle}",
       "size_system": "依身形目標分版型（顯瘦、顯壯、顯高）；尺寸表是圖片",
       "reviews": "商品頁沒有評論；另有好評頁。",
-      "order_mail_hints": ["taichi"]
+      "order_mail_hints": [
+        "taichi"
+      ]
     },
     {
       "id": "voux",
@@ -248,7 +294,9 @@
       "store": "https://www.voux.com.tw/product-list.ftl?mid=01",
       "platform": "自架",
       "notes": "2026-01 宣布退場：官方說 3/31 停止接單、4/30 停止客服。10/25 官網仍顯示商品與階梯折扣，但商品頁內容錯亂（不同網址顯示同一件、多數標售完）。售後可能已停止，暫不列入選品；確認恢復營運再改回 verified。",
-      "order_mail_hints": ["voux"]
+      "order_mail_hints": [
+        "voux"
+      ]
     },
     {
       "id": "cubox",
@@ -267,10 +315,103 @@
       "product_url_pattern": "https://www.cubox2008.com/products/{handle}",
       "size_system": "M–XL（手工測量 ±2cm）",
       "reviews": "評論模組是空的。",
-      "order_mail_hints": ["cubox"]
+      "order_mail_hints": [
+        "cubox"
+      ]
+    },
+    {
+      "id": "clan",
+      "name": "CLAN",
+      "origin": "台灣（彰化工作室，自有版型寬褲與基本款）",
+      "status": "verified",
+      "added": "2026-11-03",
+      "store": "https://www.clan.com.tw/products",
+      "platform": "SHOPLINE",
+      "categories": {
+        "all": "https://www.clan.com.tw/products"
+      },
+      "product_url_pattern": "https://www.clan.com.tw/products/{handle}",
+      "size_system": "S–XL（腰圍寫鬆緊範圍，平量 cm）",
+      "reviews": "官網評價模組是空的；評價集中在蝦皮。",
+      "notes": "官網只有 7 件（2026-04 上架），商品頁按鈕是「若想購買，請聯絡我們」，主要在蝦皮賣場下單；蝦皮店要登入才能瀏覽，所以新品只能看官網。",
+      "order_mail_hints": [
+        "clan",
+        "蝦皮"
+      ]
+    },
+    {
+      "id": "tranzend",
+      "name": "TRANZEND",
+      "origin": "台灣（機能紳裝、高爾夫、雪季機能）",
+      "status": "verified",
+      "added": "2026-11-03",
+      "store": "https://tranzend.co/collections/all",
+      "platform": "Shopify",
+      "categories": {
+        "all": "https://tranzend.co/products.json?limit=250"
+      },
+      "product_url_pattern": "https://tranzend.co/products/{handle}",
+      "size_system": "S–2XL（平量 cm，商品頁附試穿報告）",
+      "reviews": "官網沒有評論模組。",
+      "notes": "/products.json 有 published_at，可直接判斷上架日；AW26 新品官網 88 折。高雄有門市可試穿。",
+      "order_mail_hints": [
+        "tranzend"
+      ]
+    },
+    {
+      "id": "moos",
+      "name": "MOOS",
+      "origin": "台灣（新竹、台中門市的韓系男裝選物＋正韓選品）",
+      "status": "verified",
+      "added": "2026-11-03",
+      "store": "https://www.koreamoos.com/categories/all-products",
+      "platform": "SHOPLINE",
+      "categories": {
+        "new": "https://www.koreamoos.com/categories/new",
+        "tee": "https://www.koreamoos.com/categories/tee",
+        "outer": "https://www.koreamoos.com/categories/outer",
+        "pants": "https://www.koreamoos.com/categories/pants"
+      },
+      "product_url_pattern": "https://www.koreamoos.com/products/{handle}",
+      "size_system": "F 或 M–XL（商品描述內文字尺寸表，胸圍多為平量；附模特身高體重）",
+      "reviews": "評價模組有，但近期新品多為 0 則。",
+      "notes": "以街頭、寬短版韓系為主；10/23 一次上架 LUVLUVLUV 等韓國選品。",
+      "order_mail_hints": [
+        "moos",
+        "koreamoos"
+      ]
+    },
+    {
+      "id": "clap",
+      "name": "C.L.A.P",
+      "origin": "台灣（MIT 重磅素 T）",
+      "status": "verified",
+      "added": "2026-11-03",
+      "store": "https://www.claptw.com/categories/heavyweight-t-shirt",
+      "platform": "SHOPLINE",
+      "categories": {
+        "short": "https://www.claptw.com/categories/short-sleeve",
+        "long": "https://www.claptw.com/categories/long-sleeve",
+        "heavy": "https://www.claptw.com/categories/heavyweight-t-shirt"
+      },
+      "product_url_pattern": "https://www.claptw.com/products/{handle}",
+      "size_system": "S–4XL（尺寸表與試穿報告都是圖片）",
+      "reviews": "官方評價 API 可抓；Classic Men 33 則全 5 星，多數沒寫內容。",
+      "notes": "長賣款為主，近 2 個月沒有新品（最新是 2024-05 的 Flow）；Sale 區舊款 7 折左右。",
+      "order_mail_hints": [
+        "claptw",
+        "c.l.a.p"
+      ]
     }
   ],
   "order_senders": {
-    "musinsa": { "from": "mail.global@musinsa.com", "subjects": ["Your order has been confirmed", "cancel", "refund"] }
+    "musinsa": {
+      "from": "mail.global@musinsa.com",
+      "subjects": [
+        "Your order has been confirmed",
+        "cancel",
+        "refund"
+      ]
+    }
   }
 }

@@ -2,6 +2,24 @@
 
 最新的在最上面。每次執行在這裡加一筆：日期、模型、數量、自我審查改了什麼、待改進。
 
+## 2026-11-03　加跑：新增 CLAN、TRANZEND、MOOS、C.L.A.P
+
+- 模型：claude-opus-5-5
+- Robin 指示：新增 MONS／CLAN／TRANZEND 並執行一次；MONS 確認後改為「去除 MONS，再新增 MOOS 與 C.L.A.P」。
+- 品牌：20 個（verified 16、needs_url 3、closing 1）。四家新品牌都有官網，標 verified。
+- 結果（月份記為 2026-11）：候選 70、入選 64（34 件近 2 個月新品、55 件未來 3 個月至少 2 個月穿得到）、剔除 6（與上輪相同）。
+- 新品牌 8 件：C.L.A.P London 三釦長袖 XL #16（尺寸幾乎全對，但 2021 年長賣款）、TRANZEND 拉鍊長袖 Polo #26（超預算 63%，尺寸表推 2XL、試穿報告偏 XL）、TRANZEND Base layer #29、MOOS 竹節棉亨利領 XL #37（布薄）、C.L.A.P Classic Men #43、CLAN 比例神褲 #44、MOOS 麂皮夾克 #60、MOOS 馬海毛開襟 #61。
+- 執行日 11/3，未來 3 個月改為 12 月–2 月；8 月底前上架的單品多了「不是近 2 個月上架」注意。
+- Gmail：10/25 後沒有新訂單，只有 10/24 兩筆 MUSINSA 訂單的出貨通知；orders.json 不變。
+- 折扣：移除已結束的 Filter017、Lativ、TAICHI；加入 MOOS 免運（11/6 截止）與包色、TRANZEND AW26 88 折、C.L.A.P Sale；雙 12（距今 39 天）建 Google 日曆提醒。
+- 網站：縮圖支援 cdn.shopify.com（TRANZEND）；資源版本 20261103a。
+
+### 待改進
+
+- CLAN 評價與新品都在蝦皮（要登入），官網只有 7 件；若 Robin 想看蝦皮款，需要他提供商品連結。
+- MOOS、TRANZEND、CLAN 官網沒有評論，排雷只能等到貨；TRANZEND 高雄有門市可試穿。
+- C.L.A.P 近 2 個月沒有新品，之後每月大概只會出現 Sale 舊款。
+
 ## 2026-10-25　第二輪：近 2 個月新品、高雄季節、圖片
 
 - 模型：claude-opus-5-5

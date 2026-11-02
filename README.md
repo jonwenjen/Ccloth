@@ -1,6 +1,6 @@
 # Ccloth
 
-Robin 的台灣男裝選物系統。每月 15 日自動分析 16 個品牌的購物網站（plain-me、GOOPiMADE、WISDOM、Filter017、MIXFIT、1973、Resurrection、Lativ，以及 2026-10-25 加入的 YANGI、Professor.Ę、JERSCY、PROJEXT、Mr. Henley、TAICHI、VOUX、CUBOX），依身形（175cm／75kg，肩 44、胸 48、腰 43.5，有點肚子）、黃偏黑膚色、「43 歲穿出 35 歲感」的目標與膠囊衣櫥缺口挑選單品，結果發布成手機優先的網站。
+Robin 的台灣男裝選物系統。每月 15 日自動分析 20 個品牌的購物網站（plain-me、GOOPiMADE、WISDOM、Filter017、MIXFIT、1973、Resurrection、Lativ，2026-10-25 加入的 YANGI、Professor.Ę、JERSCY、PROJEXT、Mr. Henley、TAICHI、VOUX、CUBOX，以及 2026-11-03 加入的 CLAN、TRANZEND、MOOS、C.L.A.P），依身形（175cm／75kg，肩 44、胸 48、腰 43.5，有點肚子）、黃偏黑膚色、「43 歲穿出 35 歲感」的目標與膠囊衣櫥缺口挑選單品，結果發布成手機優先的網站。
 
 網站：<https://jonwenjen.github.io/Ccloth/>
 
@@ -22,7 +22,7 @@ Robin 的台灣男裝選物系統。每月 15 日自動分析 16 個品牌的購
 
 ```
 config/rules.json        所有選品規則（改規則只改這裡）
-config/brands.json       16 個品牌的賣場網址與狀態（verified = 選品；needs_url = 還沒找到賣場；closing = 品牌退場）
+config/brands.json       20 個品牌的賣場網址與狀態（verified = 選品；needs_url = 還沒找到賣場；closing = 品牌退場）
 data/candidates/M.json   每月候選單品原始資料（評論只留統計欄位）
 data/report.json         網站讀的最新月報；data/history/ 保留每一期
 data/orders.json         購買紀錄（不含訂單編號、收件資料）
@@ -48,6 +48,6 @@ python3 scripts/validate.py
 
 - MIXFIT、1973、Resurrection 還沒找到可以下單的官方賣場（詳見 `config/brands.json` 的 notes）。把網址填進 `store`、`status` 改成 `verified`，下一期就會納入。
 - VOUX 已宣布退出台灣市場，標為 `closing`，不選品。
-- 尺寸表是圖片的品牌（TAICHI、Mr. Henley、JERSCY、PROJEXT）每月用內建瀏覽器判讀；真的讀不到才寫 `size_fallback`，並自動加「沒有尺寸表」注意。
+- 尺寸表是圖片的品牌（TAICHI、Mr. Henley、JERSCY、PROJEXT、C.L.A.P）每月用內建瀏覽器判讀；真的讀不到才寫 `size_fallback`，並自動加「沒有尺寸表」注意。
 - 2026-10-25 起每月以「近 2 個月上架、當季與下一季要穿」的單品為主；季節依 `config/rules.json → climate`（中央氣象署高雄站平年值＋近 5 年實測）判斷未來 3 個月穿不穿得到。
 - 網站的選物、穿搭、衣櫥、已購都會顯示商品圖（圖片網址存在候選檔與 `data/orders.json`）。

@@ -81,8 +81,8 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
 
 - **只找近 2 個月上架的單品**（`rules.json → alerts.new_arrival.days` = 62 天），挑**當季與下一季**要穿的。上個月以前上架的舊款仍可列（經典款），但會標「不是近 2 個月上架」注意。
 - 每件候選寫 `listed_at`（YYYY-MM-DD）與 `listed_source`，依據優先順序：
-  1. Shopline 網站（GOOPi、Filter017／Crealive、YANGI、JERSCY、TAICHI、PROJEXT、CUBOX）：商品 id 前 8 碼是建立時間。`scripts/browser/shopline_new.js` 會列出近 62 天上架的商品（含上架日、價格、圖）。
-  2. WHITEROCK（WISDOM）商品頁 HTML 有 `published_at`；Professor.Ę（Shopify）用 `/products/{handle}.json` 的 `published_at`。
+  1. Shopline 網站（GOOPi、Filter017／Crealive、YANGI、JERSCY、TAICHI、PROJEXT、CUBOX、MOOS、C.L.A.P、CLAN）：商品 id 前 8 碼是建立時間。`scripts/browser/shopline_new.js` 會列出近 62 天上架的商品（含上架日、價格、圖）。
+  2. WHITEROCK（WISDOM）商品頁 HTML 有 `published_at`；Professor.Ę 與 TRANZEND（Shopify）用 `/products.json` 或 `/products/{handle}.json` 的 `published_at`。
   3. Lativ：首則評論日（評論 API）；還沒有評論就寫 `new_flag: true` 並說明。
   4. plain-me：在「新品服飾」分類（`/men/products/new/new-clothes`）就寫 `new_flag: true`，`listed_source: "官網新品分類"`。
   5. Mr. Henley：商品圖網址裡的上傳日期。
@@ -91,7 +91,7 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
 
 ### 6.1 範圍
 
-- 只看 `config/brands.json` 裡 `status: verified` 的品牌（目前 12 個：plain-me、GOOPiMADE、WISDOM、Filter017、Lativ、YANGI、Professor.Ę、JERSCY、PROJEXT、Mr. Henley、TAICHI、CUBOX）。`needs_url` 的品牌在 run-log 提醒 Robin 補網址；`closing`（VOUX）不選品。
+- 只看 `config/brands.json` 裡 `status: verified` 的品牌（目前 16 個：plain-me、GOOPiMADE、WISDOM、Filter017、Lativ、YANGI、Professor.Ę、JERSCY、PROJEXT、Mr. Henley、TAICHI、CUBOX、CLAN、TRANZEND、MOOS、C.L.A.P）。`needs_url` 的品牌在 run-log 提醒 Robin 補網址；`closing`（VOUX）不選品。
 - 每個品牌先掃近 2 個月新品，挑男裝上衣、褲子、外套中適合未來 3 個月的 2–4 件；品牌近 2 個月沒有新衣服就在 brand_scores 的 `changes_vs_last` 寫明。
 - 上月入選單品若還在賣，價格與庫存要重新確認（候選檔可沿用，但 listed_at 不變，會自動變成舊款）。
 - 先算衣櫥缺口（12 格：已購＋清單），缺的格子優先找；每格都至少找 1–2 件候選。
@@ -105,6 +105,9 @@ Gmail 搜尋（從 `data/orders.json` 的 `updated` 日期之後）：
   - Mr. Henley：商品圖最後一張；極厚 T 官方說與舒適版亨利衫同尺寸。
   - JERSCY：尺寸表在 inffits 彈窗，頁面載入後讀 `document.getElementById('stImage').src`；點 `#tab_info` 再讀一次就是成分與產地圖。
   - PROJEXT：描述區最後一張 1080×1620 的圖（Size Reference）。
+  - C.L.A.P：描述區圖片是懶載入，讀 `img[data-src]`；尺寸表（白底「尺寸表」）、試穿報告、模特資訊各一張，衣長常寫「前／後」兩個數字，取後片並在 size_note 註明。
+- **尺寸寫在描述文字的品牌**：MOOS 用「肩寬／胸圍／袖長／衣長」，胸圍 50–65 是平量、100 以上是一圈（÷2）；TRANZEND 尺寸表在商品頁 HTML 的 `<table>`（高爾夫 Polo 有前／後身長，取後身長）；CLAN 腰圍寫鬆緊範圍（取中段，size_note 寫原始範圍）。
+- **CLAN**：新品主要在蝦皮，蝦皮店要登入才能看，不登入；只看官網 clan.com.tw（官網商品頁要私訊下單）。
   - 長圖或要裁一段時，用 `https://images.weserv.nl/?url=<圖片網址去掉 https://>&cx=0&cy=<上>&cw=1080&ch=<高>` 只看那一段（內建瀏覽器在背景時，捲動後截圖可能不會更新，開新網址才會重繪）。
   - 讀不到時寫 `size_fallback`：`{"size": "L", "reason": "官方實穿者 177／71 穿 L…"}`，沒有依據就不寫（網站會顯示「到貨試穿為準」）。
 - **Shopline 官方評價**：`/api/merchants/{merchant_id}/products/{商品 id}/product_review_comments?page=N&limit=50`，用 `scripts/browser/shopline_reviews.js` 抓最新 200 則。只有星等與內容，沒有尺寸與身高體重；最新 200 則常全是 5 星（店家可能沒公開低星），`reviews.source` 要寫明。
